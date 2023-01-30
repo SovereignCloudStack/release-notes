@@ -50,7 +50,7 @@ targeted for R2.
 
 More detailed information on monitoring topics will be continously provided in
 the [corresponding design
-document](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/monitoring.md).
+document](https://github.com/SovereignCloudStack/Docs/blob/main/https://github.com/SovereignCloudStack/standards/tree/main/Design-Docs/monitoring.md).
 
 ### openstack-health-monitor
 
@@ -146,9 +146,9 @@ using k8s capi to bootstrap clusters on SCS clouds for Gardener management.
 As of this writing, the list of SCS defined standards still comprises
 two standards:
 
-* [SCS Flavor naming and standard flavors standard](Design-Docs/flavor-naming.md)
+* [SCS Flavor naming and standard flavors standard](https://github.com/SovereignCloudStack/standards/tree/main/Design-Docs/flavor-naming.md)
 
-* [SCS Image naming and metadata standard](Design-Docs/Image-Properties-Spec.md)
+* [SCS Image naming and metadata standard](https://github.com/SovereignCloudStack/standards/tree/main/Design-Docs/Image-Properties-Spec.md)
 
 As before, we continue to rely on OpenStack and CNCF defined standards
 in addition to this -- the k8s clusters need to pass the conformance
@@ -189,7 +189,7 @@ incorporated and whose release notes we want to link here for convenience:
 
 ## Release tagging
 
-See [Release Numbering scheme](../Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
+See [Release Numbering scheme](https://github.com/SovereignCloudStack/standards/tree/main/Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
 We have added the tag `v2.0.0` to the relevant repositories to designate the `SCS_RELEASE_R1`.
 
 ## List of known issues & restrictions in R1
