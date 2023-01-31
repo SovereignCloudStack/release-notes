@@ -127,7 +127,7 @@ used for the deployment of HAProxy.
 
 ## Deprecations
 
-Deprecations happen according to our [deprecation policy](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Release-Policies.md#deprecation).
+Deprecations happen according to our [deprecation policy](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Release-Policies.md#deprecation).
 
 * Cockpit is deprecated in favor of Boundary by HashiCorp or Teleport
 * ceph-ansible is deprecated in preparation for cephadm
@@ -157,7 +157,7 @@ docker-compose is then no longer available and docker compose must be used inste
 ## Standards Conformance
 
 The clusters created with our cluster-API cluster management solution pass
-the [CNCF conformance tests](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Image-Properties-Spec.md)
+the [CNCF conformance tests](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Image-Properties-Spec.md)
 as reported by [sonobuoy](https://sonobuoy.io/).
 
 The [OpenStack](https://openstack.org/) layer passes the
@@ -176,15 +176,15 @@ of Gaia-X self-descriptions and are closely working with the
 to jointly deliver a standard toolbox for Gaia-X compliant
 infrastructure and service offerings.
 
-The SCS standards for [flavor naming](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/flavor-naming.md) and
-[image metadata](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Image-Properties-Spec.md)
+The SCS standards for [flavor naming](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/flavor-naming.md) and
+[image metadata](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Image-Properties-Spec.md)
 are largely unchanged since R1. We have however
 made progress in our reference implementation fully implementing
 them without any further tweaks.
 
 ## Release Tagging
 
-See [Release Numbering scheme](../Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
+See [Release Numbering scheme](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
 We have added the tag `v3.0.0` to the relevant repositories to designate the `SCS_RELEASE_R2`.
 
 Note that we will release R3 (v4.0.0) in September 2022 and stop providing maintenance
