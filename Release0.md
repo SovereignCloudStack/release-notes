@@ -36,7 +36,7 @@ a complete list. The exact versions of the contained components can be retrieved
 
 ## Get SCS
 
-See [main README](../README.md).
+See [main README](https://github.com/SovereignCloudStack/docs/blob/main/README.md).
 
 ## Known Bugs
 
@@ -72,7 +72,7 @@ the next releases.
 
 ## Release tagging
 
-See [Release Numbering scheme](../Design-Docs/Release-Numbering-Scheme.md).
+See [Release Numbering scheme](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Release-Numbering-Scheme.md).
 The containers have version number v1.0.0 for R0.
 
 ## Updates
@@ -83,4 +83,4 @@ ansible playbooks again. Details are in the
 
 ## Bug reporting
 
-See [main README](../README.md) file.
+See [main README](https://github.com/SovereignCloudStack/docs/blob/main/README.md) file.

@@ -40,7 +40,7 @@ tang from the state of a technical preview to be fully supported.
 * We have used our keystone to keycloak federation to use keycloak as identity
   broker to federate identities from other (SCS) clouds' keycloaks.
   This works well for the Web-Interface; we have still some work to do to also make it smooth
-  also for API/CLI usage. We have [documented the current status](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/IAM-federation/keystone-keycloak-federation.md)
+  also for API/CLI usage. We have [documented the current status](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/IAM-federation/keystone-keycloak-federation.md)
 
 * We believe that Gaia-X self-descriptions should also contain a description of
   technical properties of services; higher-level services and workloads can than
@@ -107,7 +107,7 @@ your cluster management and the workload clusters.
 
 ## Deprecations
 
-Deprecations happen according to our [deprecation policy](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Release-Policies.md#deprecation).
+Deprecations happen according to our [deprecation policy](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Release-Policies.md#deprecation).
 
 * Linux bridge support has been deprecated by the Neutron team and marked as experimental.
   If Linux bridge is used in deployments, migrating to OpenVSwitch is recommended.
@@ -140,7 +140,7 @@ SCS environments. Please note that Release 2 maintenance by the SCS project team
 ## Standards Conformance
 
 The clusters created with our cluster-API cluster management solution pass
-the [CNCF conformance tests](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Image-Properties-Spec.md)
+the [CNCF conformance tests](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Image-Properties-Spec.md)
 as reported by [sonobuoy](https://sonobuoy.io/).
 
 The [OpenStack](https://openstack.org/) layer passes the
@@ -150,7 +150,7 @@ leveraging the stack should easily be able to achieve the
 trademark certification.
 
 Our partner PlusServer has [achieved](https://www.openstack.org/brand/interop/)
-a [BSI C5](https://www.bsi.bund.de/EN/Topics/CloudComputing/Compliance_Criteria_Catalogue/Compliance_Criteria_Catalogue_node.html)
+a [BSI C5](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Empfehlungen-nach-Angriffszielen/Cloud-Computing/Kriterienkatalog-C5/kriterienkatalog-c5_node.html)
 security certification for their SCS implementation pluscloud open.
 
 We are working within [Gaia-X](https://gaia-x.eu/) to further the power
@@ -159,19 +159,19 @@ of Gaia-X self-descriptions and are closely working with the
 to jointly deliver a standard toolbox for Gaia-X compliant
 infrastructure and service offerings.
 
-The SCS standards for [flavor naming](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/flavor-naming.md) and
-[image metadata](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/Image-Properties-Spec.md)
+The SCS standards for [flavor naming](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/flavor-naming.md) and
+[image metadata](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Image-Properties-Spec.md)
 are largely unchanged since R1. We have however
 made progress in our reference implementation fully implementing
 them without any further tweaks. The
-[conformance test for the flavor naming](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/tools/flavor-name-check.py)
+[conformance test for the flavor naming](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/tools/flavor-name-check.py)
 has seen minor improvements; a
-[conformance test for the image metadata](https://github.com/SovereignCloudStack/Docs/blob/main/Design-Docs/tools/image-md-check.py)
+[conformance test for the image metadata](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/tools/image-md-check.py)
 has been added.
 
 ## Release Tagging
 
-See [Release Numbering scheme](../Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
+See [Release Numbering scheme](https://github.com/SovereignCloudStack/standards/blob/main/Design-Docs/Release-Numbering-Scheme.md) -- unchanged from R0.
 We have added the tag `v4.0.0` to the relevant repositories to designate the `SCS_RELEASE_R3`.
 
 Note that we will release R4 (v5.0.0) in March 2023 and stop providing maintenance
