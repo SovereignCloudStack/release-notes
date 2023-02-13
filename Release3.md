@@ -150,7 +150,7 @@ leveraging the stack should easily be able to achieve the
 trademark certification.
 
 Our partner PlusServer has [achieved](https://www.openstack.org/brand/interop/)
-a [BSI C5](https://www.bsi.bund.de/EN/Topics/CloudComputing/Compliance_Criteria_Catalogue/Compliance_Criteria_Catalogue_node.html)
+a [BSI C5](https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Empfehlungen-nach-Angriffszielen/Cloud-Computing/Kriterienkatalog-C5/kriterienkatalog-c5_node.html)
 security certification for their SCS implementation pluscloud open.
 
 We are working within [Gaia-X](https://gaia-x.eu/) to further the power

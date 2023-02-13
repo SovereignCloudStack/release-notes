@@ -202,6 +202,6 @@ Alongside with R2 we published a blog post on some first thoughts on
 We appreciate contribution to strategy and implementation, please join
 our community -- or just leave input on the github issues and PRs.
 Have a look at our [contributor guide](https://scs.community/docs/contributor/).
-We also have worked on a [Code of Conduct](https://github.com/SovereignCloudStack/Docs/pull/26)
+We also have worked on a [Code of Conduct](https://github.com/SovereignCloudStack/standards/pull/26)
 to document the expected behavior of contributors and how we deal with
 cases where individuals fail to meet the expectation.
