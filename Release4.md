@@ -1,7 +1,7 @@
 # Release Notes for SCS Release 4
 
 This document is work in progress for the upcoming Release 4.
-Release 4 will be released in March 2023. 
+Release 4 will be released on March 22nd, 2023. 
 This note will be removed, once Release 4 is released and these notes are valid.
 
 
