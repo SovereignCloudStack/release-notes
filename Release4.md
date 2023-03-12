@@ -7,13 +7,41 @@ This note will be removed, once Release 4 is released and these notes are valid.
 
 ## Scope
 
+Release 4 has been developed alongside a set of associated outcomes. These outcomes comprise of:
+
+* SCS is standardized
+* SCS is federated
+* SCS is continuously built and tested
+* SCS is understandable
+* SCS enables Operators with an excellent toolbox
+
+The SCS project is completly developed in the open, based on the principles of the four opens. Due to this a lot of our work can be tracked and used continously without waiting for the half-year releases. Especially, but not limited to, this included our efforts in regards to documentation and our standards.
+
+One of the major highlights that happened in the R4 development cycle is our work on assuring _SCS is understandable_.
+Be sure to look at [our new documentation entry point](https://docs.scs.community).
+
 ## Component Versions and User-visible improvements (highlights)
+
+* [OpenStack Zed release](https://releases.openstack.org/zed/highlights.html)
+* Ceph Quincy is available, the default release of Ceph is still Pacific.
+* The base infrastructure is provided by
+  [OSISM 5.0.0](https://release.osism.tech/notes/5.0.0.html)
+  which in turn builds on top of kolla and kolla-ansible.
+* In order to avoid having to install the OSISM manager and, if necessary, the OSISM control nodes manually when setting up a new OSISM environment, an ISO image is now available. [osism/node-image](https://github.com/osism/node-image) automatically installs a new node with Ubuntu 22.04 on a software RAID 1 and prepares everything to be able to start directly.
+* The Kubernetes CAPI images have been upgraded from Ubuntu 20.04 to Ubuntu 22.04.
+
 
 ## New Features (Highlights)
 
 ### Operator focused improvements
 
+* The [Openstack Image Manager](https://github.com/osism/openstack-image-manager) has seen many improvements and is the reference command to assure the images available comply with the [SCS Image Standard]( ) // FIXME LINK
+* For Ceph, special playbooks were added to validate the deployment status of the OSD, MON and MGR services in OSISM. The commands for use are `osism validate ceph-osds`, `osism validate ceph-mons`, and `osism validate ceph-mgrs`.
+
 ### SCS Developer focused improvements (testbed and k8s cluster management)
+
+* The testbed has been significantly simplified for new operators and developers and a [Quick Start](https://docs.osism.tech/testbed/quickstart.html) guide has been added
+
 
 ## Upgrade/Migration notes
 
