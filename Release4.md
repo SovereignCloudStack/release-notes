@@ -15,7 +15,7 @@ Release 4 has been developed alongside a set of associated outcomes. These outco
 * SCS is understandable
 * SCS enables Operators with an excellent toolbox
 
-The SCS project is completly developed in the open, based on the principles of the four opens. Due to this a lot of our work can be tracked and used continously without waiting for the half-year releases. Especially, but not limited to, this included our efforts in regards to documentation and our standards.
+The SCS project is completly developed in the open, based on the principles of the four opens. Due to this a lot of our work can be tracked and used continously without waiting for the half-year releases. Especially, but not limited to, this includes our efforts in regards to documentation and our standards.
 
 One of the major highlights that happened in the R4 development cycle is our work on assuring _SCS is understandable_.
 Be sure to look at [our new documentation entry point](https://docs.scs.community).
