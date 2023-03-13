@@ -48,6 +48,18 @@ Be sure to look at [our new documentation entry point](https://docs.scs.communit
 
 ## Deprecations
 
+### Deprecations via OSISM
+
+For these please also refer to the [upstream deprecation notices](https://release.osism.tech/notes/5.0.0.html#deprecations)
+
+* The role osism.services.bird is deprecated. In future, FRRouting (osism.services.frr) will be used.
+* The role osism.services.minikube is deprecated. In future osism.services.k8s will be used.
+* Heat is deprecated in favor of more generic Infrastructure as Code tools like Terraform as of now and will be removed in the future (exact removal date is not yet known)
+* Swift (currently available as Technical Preview) will be removed in favor of Ceph RGW
+* Trove (currently available as Technical Preview) will be removed in favor of Kubernetes database operators
+* Skydive (currently available as Technical Preview) will be removed in the future, the project is not maintained anymore, last commit is 8th Jan 2022 (https://review.opendev.org/c/openstack/kolla/+/869191)
+* The login to a registry with the osism.services.docker role is deprecated in favor of the new osism.commons.docker_login role.
+
 ## Security Fixes
 
 Throughout the Release 4 development cycle, the SCS project issued two security advisories for upstream components:
