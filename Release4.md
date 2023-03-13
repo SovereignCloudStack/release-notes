@@ -74,3 +74,12 @@ Have a look at our [How to contribute page](https://scs.community/contribute/).
 
 ## Thanks
 
+The work for R4 has been done by many contributors from our community.
+The special thanks goes out to our contributors who participate in our community
+on a very regular base - without these the various team calls and events like
+the hackathons would be much less successful and fun.
+
+Of course we are leveraging a huge amount of open source technology that has been
+created by our friends in other communities, many of which are part of the
+CNCF, Linux Foudation, OIF, and others. We participate and contribute where
+we can and definitely want to acknowledge the great work that we build upon.
