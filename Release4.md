@@ -27,9 +27,8 @@ Be sure to look at [our new documentation entry point](https://docs.scs.communit
 * The base infrastructure is provided by
   [OSISM 5.0.0](https://release.osism.tech/notes/5.0.0.html)
   which in turn builds on top of kolla and kolla-ansible.
-* In order to avoid having to install the OSISM manager and, if necessary, the OSISM control nodes manually when setting up a new OSISM environment, an ISO image is now available. [osism/node-image](https://github.com/osism/node-image) automatically installs a new node with Ubuntu 22.04 on a software RAID 1 and prepares everything to be able to start directly.
+* With [osism/node-image](https://github.com/osism/node-image) an iso image for much easier bootstrapping of new OSISM environments is available now
 * The Kubernetes CAPI images have been upgraded from Ubuntu 20.04 to Ubuntu 22.04.
-
 
 ## New Features (Highlights)
 
