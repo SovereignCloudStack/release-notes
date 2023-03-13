@@ -27,6 +27,7 @@ Be sure to look at [our new documentation entry point](https://docs.scs.communit
 * The base infrastructure is provided by
   [OSISM 5.0.0](https://release.osism.tech/notes/5.0.0.html)
   which in turn builds on top of kolla and kolla-ansible.
+* For new deployments of the IaaS reference implementation Ubuntu 22.04 is supported. With Release 5 Ubuntu 22.04 will be the default and required.
 * With [osism/node-image](https://github.com/osism/node-image) an iso image for much easier bootstrapping of new OSISM environments is available now
 * The Kubernetes CAPI images have been upgraded from Ubuntu 20.04 to Ubuntu 22.04.
 
