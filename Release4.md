@@ -51,6 +51,14 @@ Be sure to look at [our new documentation entry point](https://docs.scs.communit
 
 ## Security Fixes
 
+Throughout the Release 4 development cycle, the SCS project issued two security advisories for upstream components:
+
+* In November 2022 an advisory regarding [CVE-2022-3602 and CVE-2022-3786](https://www.openssl.org/news/secadv/20221101.txt) in OpenSSL was issued.
+Our [advisory](https://scs.community/security/2022/11/01/advisory-spookyssl/).
+
+* In February 2023 an advisory regarding [CVE 2022-47951](https://cve.report/CVE-2022-47951) in OpenStack components nova and glance was published.
+Our [advisory](https://scs.community/security/2023/01/24/cve-2022-47951/).
+
 ## Resolved Issues
 
 ## Standards Conformance
