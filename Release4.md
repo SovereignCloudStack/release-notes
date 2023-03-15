@@ -39,6 +39,7 @@ Be sure to look at [our new documentation entry point](https://docs.scs.communit
 
 * The [Openstack Image Manager](https://github.com/osism/openstack-image-manager) has seen many improvements and is the reference command to assure the images available comply with the [SCS Image Standard]( ) // FIXME LINK
 * For Ceph, special playbooks were added to validate the deployment status of the OSD, MON and MGR services in OSISM. The commands for use are `osism validate ceph-osds`, `osism validate ceph-mons`, and `osism validate ceph-mgrs`.
+* The [testbed](https://github.com/osism/testbed) uses per default a proxy for container pulling. This will allow for airgapped installations out of the box. Please note: a full airgap support (with local mirrors, etc.) will follow in a future release.
 
 ### SCS Developer focused improvements (testbed and k8s cluster management)
 
