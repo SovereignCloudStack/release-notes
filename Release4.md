@@ -56,6 +56,7 @@ Our community has creates a growing amount of [blog articles](https://scs.commun
 
 ## Upgrade/Migration notes
 
+* For the IaaS reference implementation, please refer to the [OSISM 5.0.0 Upgrade Notes](https://release.osism.tech/notes/5.0.0.html#upgrade-notes).
 * The k8s Cluster Management solution has an enhanced [upgrade guide](https://docs.scs.community/docs/k8s-cluster-api-provider/doc/Upgrade-Guide) that covers the upgrade of clusters as well as the upgrade of the cluster management server.
 
 ## Removals
