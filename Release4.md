@@ -61,6 +61,9 @@ Our community has creates a growing amount of [blog articles](https://scs.commun
 
 ## Removals
 
+* The ospurge wrapper script has been removed from the osism.services.openstackclient role. The ospurge project is no longer compatible with the current OpenStack SDK. The command openstack project purge can be used as an alternative.
+* The docker-compose package is uninstalled by the osism.commons.docker_compose role. The Compose v2 plugin for Docker is now used instead of the old standalone docker-compose CLI. A dummy script has been added to /usr/local/bin which displays a corresponding message when using docker-compose.
+* Further removals from the IaaS reference implementation, please refer to the [OSISM 5.0.0 Removals Section](https://release.osism.tech/notes/5.0.0.html#removals).
 * The k8s cluster parameter `ETCD_PRIO_BOOST` that was already unused has been removed as announced with R3.
 
 ## Deprecations
