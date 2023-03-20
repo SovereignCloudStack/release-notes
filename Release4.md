@@ -43,6 +43,8 @@ Our community has creates a growing amount of [blog articles](https://scs.commun
 
 * The [Openstack Image Manager](https://github.com/osism/openstack-image-manager) has seen many improvements and is the reference command to assure the images available comply with the [SCS Image Standard]( ) // FIXME LINK
 * For Ceph, special playbooks were added to validate the deployment status of the OSD, MON and MGR services in OSISM. The commands for use are `osism validate ceph-osds`, `osism validate ceph-mons`, and `osism validate ceph-mgrs`.
+* OVN has been updated to version 22.09.
+* OVS has been updated to version 3.0.1.
 * The [testbed](https://github.com/osism/testbed) uses per default a proxy for container pulling. This will allow for airgapped installations out of the box. Please note: a full airgap support (with local mirrors, etc.) will follow in a future release.
 * The efforts to create a well-maintained status page with well-defined interfaces resulted in an OpenAPI specification (within its own [repository](https://github.com/SovereignCloudStack/status-page-openapi)) which is intended to be implementable by multiple implementations. An actual reference implementation of this API is supposed to follow.
 * The dashboard of the [OpenStack Health Monitor](https://github.com/SovereignCloudStack/openstack-health-monitor/) is in use by the SCS operators and has proven helpful a number of times in detecting and addressing issues. That said, it only received a few fixes and minor enhancements, as we plan to replace it with a more generic and more maintainable solution soon.
