@@ -11,14 +11,14 @@ Release 4 has been developed alongside a set of associated outcomes. These outco
 * SCS is understandable
 * SCS enables Operators with an excellent toolbox
 
-The SCS project is completly developed in the open, based on the principles of the four opens. Due to this a lot of our work can be tracked and used continously without waiting for the half-year releases. Especially, but not limited to, this includes our efforts in regards to documentation and our standards.
+The SCS project is completely developed in the open, based on the principles of the four opens. Due to this a lot of our work can be tracked and used continuously without waiting for the half-year releases. Especially, but not limited to, this includes our efforts in regards to documentation and our standards.
 
 One of the major highlights that happened in the R4 development cycle is our work on assuring _SCS is understandable_.
 Be sure to look at [our new documentation entry point](https://docs.scs.community).
 We have created a [systematic approach](https://github.com/SovereignCloudStack/docs/blob/main/community/contribute/adding-docs-guide.md) to structure documentation which already has been implemented for the [OpenStack Image Manager](https://docs.scs.community/docs/category/openstack-image-manager/),
 the [OSISM testbed](https://docs.scs.community/docs/category/osism-testbed/) and the [K8s Cluster API Provider](https://docs.scs.community/docs/category/k8s-cluster-api-provider/). More will follow in a continuous manner.
 
-Our community has creates a growing amount of [blog articles](https://scs.community/blog/) which also help to understand the SCS project, its community and the technology that is worked on.
+Our community has created a growing amount of [blog articles](https://scs.community/blog/) which also help to understand the SCS project, its community and the technology that is worked on.
 
 ## Component Versions and User-visible improvements (highlights)
 
@@ -112,9 +112,9 @@ of more clouds there soon.
 
 ## Release Tagging
 
-The code is OSISM and a number of SCS repositories will receive the `v5.0.0` tag; some repositories use
+The code in OSISM and a number of SCS repositories will receive the `v5.0.0` tag; some repositories use
 `maintained/v5.0.x` and `maintained/v5.x` branches for providing code that only gets bug- and security fixes (5.0.x)
-or only those plus minor, backwards-compatible enhancements (5.x).
+or only those plus selected, backwards-compatible enhancements (5.x).
 
 ## List of known issues & restrictions in R4
 
