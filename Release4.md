@@ -37,7 +37,7 @@ Our community has creates a growing amount of [blog articles](https://scs.commun
 
 ### Operator focused improvements
 
-* The [Openstack Image Manager](https://github.com/osism/openstack-image-manager) has seen many improvements and is the reference command to assure the images available comply with the [SCS Image Standard]( ) // FIXME LINK
+* The [Openstack Image Manager](https://github.com/osism/openstack-image-manager) has seen many improvements and is the reference command to assure the images available comply with the [SCS Image Standard](https://github.com/SovereignCloudStack/standards/blob/main/Drafts/Image-Properties-Spec.md)
 * For Ceph, special playbooks were added to validate the deployment status of the OSD, MON and MGR services in OSISM. The commands for use are `osism validate ceph-osds`, `osism validate ceph-mons`, and `osism validate ceph-mgrs`.
 * OVN has been updated to version 22.09.
 * OVS has been updated to version 3.0.1.
