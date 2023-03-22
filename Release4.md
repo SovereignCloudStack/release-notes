@@ -123,6 +123,7 @@ or only those plus minor, backwards-compatible enhancements (5.x).
 ## List of known issues & restrictions in R4
 
 * The k8s cluster-API code does not work well with OpenStack API endpoints that require trusting a custom CA.
+* The OpenStack component Horizon has two issues when working with Swift endpoints. One issue is a [known bug](https://bugs.launchpad.net/horizon/+bug/1993005) when uploading objects to Swift endpoints. A workaround will be released shortly after R4. The [second issue](https://github.com/osism/issues/issues/488) is that existing Swift containers can not be set to public.
 
 ## Contributing
 
