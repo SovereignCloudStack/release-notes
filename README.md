@@ -40,8 +40,8 @@ See [Release Notes for R4](Release4.md) for more information.
 
 ## Roadmap
 
-We have a 6 month release cadence -- R4 will follow in March 2023.
-Until then, we will provide bugfixes and security fixes for R3.
+We have a 6 month release cadence -- R5 will follow in September 2023.
+Until then, we will provide bugfixes and security fixes for R4.
 
 We do work towards a model where our partners can actually follow our main
 development branches -- right now, our CI needs a bit more coverage though
