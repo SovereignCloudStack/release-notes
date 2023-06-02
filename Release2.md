@@ -166,7 +166,7 @@ leveraging the stack should easily be able to achieve the
 ["OpenStack powered compute"](https://www.openstack.org/brand/interop/)
 trademark certification.
 
-Our partner PlusServer has [achieved](https://www.openstack.org/brand/interop/)
+Our partner plusserver has [achieved](https://www.openstack.org/brand/interop/)
 a [BSI C5](https://www.bsi.bund.de/EN/Topics/CloudComputing/Compliance_Criteria_Catalogue/Compliance_Criteria_Catalogue_node.html)
 security certification for their SCS implementation pluscloud open.
 
