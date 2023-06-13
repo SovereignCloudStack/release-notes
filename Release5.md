@@ -13,6 +13,7 @@ This note will be removed, once Release 5 is released and these notes are valid.
 ### Operator focused improvements
 
 - The [openstack-flavor-manager](https://github.com/osism/openstack-flavor-manager) is now able to create all standard, mandatory SCS flavors for you.
+- [Aptly](https://github.com/osism/helm-charts/tree/gh-pages/aptly) mirror setup (for deb packages) is now available to be deployed alongside OSISM installations. This requires additional infrastructure. Have a look at the [documentation](https://github.com/osism/docs/tree/main/docs/operations/external_services/aptly_external.md) for more details.
 
 ### SCS Developer focused improvements (testbed and k8s cluster management)
 
