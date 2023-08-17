@@ -105,7 +105,7 @@ to test existing implementations for compliance. To run the checker, the tester 
 under test (normal user privileges are sufficient) and standard openstack and kubernetes client tools -- or just
 use the docker container that is provided.
 
-The public clouds based on the SCS reference implementation from PlusServer and Noris/Wavecon are tested automatically
+The public clouds based on the SCS reference implementation from plusserver and Noris/Wavecon are tested automatically
 from us and the live result is visible in [standards page](https://github.com/SovereignCloudStack/standards).
 We will enhance the standardization and test coverage significantly in the next months and we hope to list a number
 of more clouds there soon.
