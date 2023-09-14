@@ -37,9 +37,9 @@ Furthermore a osism role for tuned to optimize system profiles is now present.
 
 * The [openstack-flavor-manager](https://github.com/osism/openstack-flavor-manager) is now able to create all standard, mandatory SCS flavors for you.
 * [Aptly](https://github.com/osism/helm-charts/tree/gh-pages/aptly) mirror setup (for deb packages) is now available to be deployed alongside OSISM installations. This requires additional infrastructure. Have a look at the [documentation](https://github.com/osism/docs/tree/main/docs/operations/external_services/aptly_external.md) for more details.
-* Scaphandre Prometheus Exporter has been added
+* Scaphandre Prometheus Exporter has been added to export power consumption metrics more easily.
 * With `openstack-resource-manager` a new day 2 operations tool has been added.
-* osism role for tuned to optimize system profiles is now present
+* To optimize system profiles an osism role for tuned is now present.
 
 ### SCS Developer focused improvements (testbed and k8s cluster management)
 
