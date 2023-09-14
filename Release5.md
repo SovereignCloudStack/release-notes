@@ -11,16 +11,16 @@ These outcomes are comprised of:
 
 * SCS is standardized
 * SCS is understandable
-* SCS enables
 * SCS is transparent
 * SCS is continuously built and tested
 * SCS is opinionated
+* SCS enables
 
 ## Component Versions and User-visible improvements (highlights)
 
 * The IaaS referencen implementation is based on [OSISM 6.0.0](https://release.osism.tech/notes/6.0.0.html).
-* OpenStack 2023.1 (Antelope)
-* Default Ceph version is now Ceph Quincy
+* [OpenStack 2023.1 (Antelope)](https://releases.openstack.org/antelope/highlights.html)
+* Default Ceph version is now [Ceph Quincy](https://docs.ceph.com/en/reef/releases/quincy/#v17-2-5-quincy)
 * OVN and OVS have been updated to their latest versions (OVN: 23.06.1, OVS: 3.2.0)
 * IPv6 east-west and north-south support
 
