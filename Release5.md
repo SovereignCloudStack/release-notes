@@ -45,11 +45,27 @@ Furthermore a osism role for tuned to optimize system profiles is now present.
 
 ## Upgrade/Migration notes
 
+* For the IaaS reference implementation, please refer to the [OSISM 5.0.0 Upgrade Notes](https://release.osism.tech/notes/6.0.0.html#upgrade-notes).
+
 ## Removals
 
 ## Deprecations
 
+### Deprecations via OSISM
+
+For these please also refer to the [upstream deprecation notices](https://release.osism.tech/notes/6.0.0.html#deprecations).
+  * ...
+
 ## Security Fixes
+
+Throughout the Release 5 development cycle, the SCS project issued two security advisories for upstream components:
+
+* In April 2023 an advisory in Open vSwitch (OvS) ([CVE-2023-1668](https://cve.report/CVE-2023-1668) was issued.
+Our [advisory](https://scs.community/security/2023/04/21/cve-2023-1668/).
+
+* In May 2023 an advisory affecting the OpenStack component Cinder ([CVE-2023-2088](https://cve.report/CVE-2023-2088)) was issued.
+Our [advisory](https://scs.community/security/2023/05/10/cve-2023-2088/).
+
 
 ## Resolved Issues
 
