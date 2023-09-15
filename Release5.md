@@ -45,7 +45,7 @@ Furthermore a osism role for tuned to optimize system profiles is now present.
 
 ## Upgrade/Migration notes
 
-* For the IaaS reference implementation, please refer to the [OSISM 5.0.0 Upgrade Notes](https://release.osism.tech/notes/6.0.0.html#upgrade-notes).
+* For the IaaS reference implementation, please refer to the [OSISM 6.0.0 Upgrade Notes](https://release.osism.tech/notes/6.0.0.html#upgrade-notes).
 
 ## Removals
 
