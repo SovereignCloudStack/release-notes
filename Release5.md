@@ -20,9 +20,11 @@ These outcomes are comprised of:
 
 * The IaaS referencen implementation is based on [OSISM 6.0.0](https://release.osism.tech/notes/6.0.0.html).
 * [OpenStack 2023.1 (Antelope)](https://releases.openstack.org/antelope/highlights.html)
-* Default Ceph version is now [Ceph Quincy](https://docs.ceph.com/en/reef/releases/quincy/#v17-2-5-quincy)
-* OVN and OVS have been updated to their latest versions (OVN: 23.06.1, OVS: 3.2.0)
-* IPv6 east-west and north-south support
+* Default Ceph version is now [Ceph Quincy](https://docs.ceph.com/en/reef/releases/quincy/#v17-2-5-quincy).
+* OVN and OVS have been updated to their latest versions (OVN: 23.06.1, OVS: 3.2.0).
+* IPv6 east-west and north-south support is present and documented upstream.
+* [Cloud-in-a-Box](https://github.com/osism/cloud-in-a-box) now comes with Swift enabled as well as the option
+for secondary NIC for external connectivity.
 
 #### Observability
 
@@ -36,10 +38,10 @@ Furthermore a osism role for tuned to optimize system profiles is now present.
 ### Operator focused improvements
 
 * The [openstack-flavor-manager](https://github.com/osism/openstack-flavor-manager) is now able to create all standard, mandatory SCS flavors for you.
-* [Aptly](https://github.com/osism/helm-charts/tree/gh-pages/aptly) mirror setup (for deb packages) is now available to be deployed alongside OSISM installations. This requires additional infrastructure. Have a look at the [documentation](https://github.com/osism/docs/tree/main/docs/operations/external_services/aptly_external.md) for more details.
 * Scaphandre Prometheus Exporter has been added to export power consumption metrics more easily.
 * With `openstack-resource-manager` a new day 2 operations tool has been added.
 * To optimize system profiles an osism role for tuned is now present.
+* Full support for air-gapped installation and operation of environments.
 
 ### SCS Developer focused improvements (testbed and k8s cluster management)
 
