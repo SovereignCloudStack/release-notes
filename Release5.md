@@ -1,9 +1,6 @@
 # Release Notes for SCS Release 5
 (Release Date: 2023-09-20)
 
-This document is work in progress for the upcoming Release 5.
-This note will be removed, once Release 5 is released and these notes are valid.
-
 ## Scope
 
 Just as our previous release, Release 5 has been developed alongside a set of associated outcomes.
@@ -18,6 +15,8 @@ These outcomes are comprised of:
 
 ## Component Versions and User-visible improvements (highlights)
 
+### IaaS
+
 * The IaaS referencen implementation is based on [OSISM 6.0.0](https://release.osism.tech/notes/6.0.0.html).
 * [OpenStack 2023.1 (Antelope)](https://releases.openstack.org/antelope/highlights.html)
 * Default Ceph version is now [Ceph Quincy](https://docs.ceph.com/en/reef/releases/quincy/#v17-2-5-quincy).
@@ -26,24 +25,56 @@ These outcomes are comprised of:
 * [Cloud-in-a-Box](https://github.com/osism/cloud-in-a-box) now comes with Swift enabled as well as the option
 for secondary NIC for external connectivity.
 
-#### Observability
+### Container Management
 
+* The Kubernetes Cluster Management solution is [available as version 6.0.0](https://github.com/SovereignCloudStack/k8s-cluster-api-provider/blob/main/Release-Notes-R5.md)
+* Kubernetes v1.24 .. 1.27 are officially supported. v1.28 also works (technical preview until officially supported by capo) as do older versions (with downgrading nginx-ingress), matching OCCM and CSI versions.
+* Cluster-API (capi) v1.5.1, Cluster-API provider for Openstack (capo) v0.7.3 
+* The node images now use Ubuntu 22.04, the management host can use Ubuntu 22.04 or Debian 12.
+* Cilium v1.14.1, default now, though Calico (3.26.x) is still supported.
+* Cilium also brings the upcoming gateway API (opt-in) as technical preview.
+* The Harbor container registry can now be rollwed out with each cluster.
+* The clusters can use a registry as cache to upstream dockerhub or gcr registries.
+* The cluster management now works also on OpenStack clouds with a custom CA.
+* Storage snapshots are supported now (fix was also backported to maintained branches).
+* Diskless flavors are supported everywhere (cluster-management, health-monitor).
+* etcd defragmenetation and backup.
+* Controls for pod and service IP ranges.
 
-#### Systems management
+### Preview: Cluster-Stacks
+The old scripts that are used to create, change and delete Kubernetes clusters with
+cluster-api will be replaced by a proper Operator in the next release.
+Design document and technical preview code can be found in the
+[cluster-stacks](https://github.com/SovereignCloudStack/cluster-stacks)
+and [cluster-stack-operator](https://github.com/SovereignCloudStack/cluster-stack-operator)
+repositories. This solution will fit more nicely into the CNCF landscape and
+also allow for easier support of IaaS solutions that do not comply to our SCS
+IaaS standards.
 
-With the `openstack-resource-manager` a new day 2 operations tool has been added.
-Furthermore a osism role for tuned to optimize system profiles is now present.
+### Operations and IAM related
 
-
-### Operator focused improvements
-
+* A number of improvements when using identity federation via OIDC has been added, including
+  addressing openstack CLI usage with PKCE Device Authz Grant, logout, and the usage of a
+  proxy realm in keycloak. Improvements have been contributed to upstream keystone.
+* With the `openstack-resource-manager` a new day 2 operations tool has been added.
+  Furthermore a osism role for tuned to optimize system profiles is now present.
 * The [openstack-flavor-manager](https://github.com/osism/openstack-flavor-manager) is now able to create all standard, mandatory SCS flavors for you.
 * Scaphandre Prometheus Exporter has been added to export power consumption metrics more easily.
-* With `openstack-resource-manager` a new day 2 operations tool has been added.
 * To optimize system profiles an osism role for tuned is now present.
 * Full support for air-gapped installation and operation of environments.
+* A migration script and guide for moving from R4 to R clusters is available.
+* Metering has been improved and a reference billing API implementation is available as PoC.
 
-### SCS Developer focused improvements (testbed and k8s cluster management)
+### SCS Developer focused improvements (Cloud-in-a-Box, testbed and k8s cluster management)
+
+* Documentation on testbed and Cloud-in-a-Box have been reworked.
+* Reflecting CiaB's usage as edge cloud solution, it now receives more automated testing.
+
+### Project Infrastructure
+* zuul.scs.community now complements OSISM's existing zuul infrastructure and is used also
+  by the container layer to execute the CNCF e2e tests.
+* registry.scs.community has been migrated to a new IaaS location (documented in a blog
+  article) and is kept up-to-date now.
 
 ## Upgrade/Migration notes
 
@@ -83,12 +114,34 @@ Our [advisory](https://scs.community/security/2023/05/10/cve-2023-2088/).
 
 
 ## Resolved Issues
+Numerous minor issue have been resolved. The most important steps on the IaaS side probably being the move to ceph Quincy
+to avoid running out of upstream support. On the container side, the fix of storage snapshots is probably most significant.
+
+For details, we again refer to the [OSISM](https://release.osism.tech/notes/6.0.0.html) and
+[k8s-cluster-api-provider](https://github.com/SovereignCloudStack/k8s-cluster-api-provider/blob/main/Release-Notes-R5.md) release notes.
 
 ## Standards Conformance
+A new certfification set is expected in December. It will ensure we
+run all autoamted tests also for all new standards, such as
+[v3 flavor naming](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0100-v3-flavor-naming.md),
+and the (previously included) [v1 standard flavors](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0103-v1-standard-flavors.md) -- which includes the [new SSD flavors](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0110-v1-ssd-flavors.md$a), the [v1 entropy standard](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0101-v1-entropy.md). We have also split image naming and standard image recommendations into [v1 standars images]https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0104-v1-standard-images.md.
+
+Requirements for [k8s version recency](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0210-v1-k8s-new-version-policy.md), [default storage class](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0211-v1-kaas-default-storage-class.md) as well as requirements to the [container registry](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0212-v1-requirements-for-container-registry.md) have been captured.
+
+The IAM area has ssen ADRs on the chosen architecture.
+
+The (design) decisions on the metering work as well as on the status page project have also been
+captured.
+
+The SCS reference implementation follows all approved SCS standards.
+
 
 ## Release Tagging
+Relevant repositories have been tagged with `v6.0.0` tag.
+For some repositories `maintained/v6.x` and `maintained/v6.0.x` branches have been created.
 
 ## List of known issues & restrictions in R5
+Nothing that we are aware of at this point.
 
 ## Contributing
 
@@ -97,3 +150,10 @@ our community -- or just leave input on the github issues and PRs.
 Have a look at our [How to contribute page](https://scs.community/contribute/).
 
 ## Thanks
+
+Our wonderful community of integrators, operators, contractors and volunteers
+made R5 possible. The project management team is employed by the OSB Alliance
+and we as well as the contractors are paid thanks to funding from the German
+Ministry for economic affairs and climate action. We build on top of a lot of
+existing open source code from the CNCF, the OIF and various others and we
+try to contribute back as much as we can.
