@@ -51,6 +51,8 @@ Furthermore a osism role for tuned to optimize system profiles is now present.
 
 * Please check the removals for OSISM in the [upstream removal notices](https://release.osism.tech/notes/6.0.0.html#removals).
 
+* The services `minio.services.osism.tech` and `harbor.services.osism.tech` are deprecated and will be turned of on october 20th, 2023.
+
 ## Deprecations
 
 ### Deprecations via OSISM
