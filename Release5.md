@@ -49,12 +49,16 @@ Furthermore a osism role for tuned to optimize system profiles is now present.
 
 ## Removals
 
+* Please check the removals for OSISM in the [upstream removal notices](https://release.osism.tech/notes/6.0.0.html#removals).
+
 ## Deprecations
 
 ### Deprecations via OSISM
 
 For these please also refer to the [upstream deprecation notices](https://release.osism.tech/notes/6.0.0.html#deprecations).
-  * ...
+
+* It is again noted that the old scripts of the form ``osism-`` will be removed in the future.
+  A note has been added to the scripts showing this when they are executed.
 
 ## Security Fixes
 
@@ -73,7 +77,7 @@ Our [advisory](https://scs.community/security/2023/05/10/cve-2023-2088/).
 
 ## Release Tagging
 
-## List of known issues & restrictions in RX
+## List of known issues & restrictions in R5
 
 ## Contributing
 
