@@ -62,6 +62,13 @@ For these please also refer to the [upstream deprecation notices](https://releas
 * It is again noted that the old scripts of the form ``osism-`` will be removed in the future.
   A note has been added to the scripts showing this when they are executed.
 
+* The following services are deprecated and will be removed with R6 (OSISM 6.1.0):
+  * Patchman
+  * Adminer
+  * Patchman Client
+  * Virtualbmc
+  * Bird
+
 ## Security Fixes
 
 Throughout the Release 5 development cycle, the SCS project issued two security advisories for upstream components:
