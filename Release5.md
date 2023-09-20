@@ -63,7 +63,7 @@ IaaS standards.
 * To optimize system profiles an osism role for tuned is now present.
 * Full support for air-gapped installation and operation of environments.
 * A migration script and guide for moving from R4 to R5 clusters is available.
-* Metering has been improved and a reference billing API implementation is available as PoC.
+* Metering has been improved and a reference billing API implementation is available as technical preview.
 
 ### SCS Developer focused improvements (Cloud-in-a-Box, testbed and k8s cluster management)
 
