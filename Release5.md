@@ -28,7 +28,7 @@ for secondary NIC for external connectivity.
 ### Container Management
 
 * The Kubernetes Cluster Management solution is [available as version 6.0.0](https://github.com/SovereignCloudStack/k8s-cluster-api-provider/blob/main/Release-Notes-R5.md)
-* Kubernetes v1.24 .. 1.27 are officially supported. v1.28 also works (technical preview until officially supported by capo) as do older versions (with downgrading nginx-ingress), matching OCCM and CSI versions.
+* [Kubernetes](https://github.com/kubernetes/kubernetes) v1.24 .. [1.27](https://github.com/kubernetes/kubernetes/releases/tag/v1.27.6) are officially supported. [v1.28](https://github.com/kubernetes/kubernetes/releases/tag/v1.28.2) also works (technical preview until officially supported by capo) as do older versions (with downgrading nginx-ingress), matching OCCM and CSI versions.
 * Cluster-API (capi) v1.5.1, Cluster-API provider for Openstack (capo) v0.7.3 
 * The node images now use Ubuntu 22.04, the management host can use Ubuntu 22.04 or Debian 12.
 * Cilium v1.14.1, default now, though Calico (3.26.x) is still supported.
@@ -112,7 +112,6 @@ Our [advisory](https://scs.community/security/2023/04/21/cve-2023-1668/).
 * In May 2023 an advisory affecting the OpenStack component Cinder ([CVE-2023-2088](https://cve.report/CVE-2023-2088)) was issued.
 Our [advisory](https://scs.community/security/2023/05/10/cve-2023-2088/).
 
-
 ## Resolved Issues
 Numerous minor issue have been resolved. The most important steps on the IaaS side probably being the move to ceph Quincy
 to avoid running out of upstream support. On the container side, the fix of storage snapshots is probably most significant.
@@ -124,7 +123,7 @@ For details, we again refer to the [OSISM](https://release.osism.tech/notes/6.0.
 A new certification set is expected in December. It will ensure we
 run all automated tests also for all new standards, such as
 [v3 flavor naming](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0100-v3-flavor-naming.md),
-and the (previously included) [v1 standard flavors](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0103-v1-standard-flavors.md) -- which includes the [new SSD flavors](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0110-v1-ssd-flavors.md$a), the [v1 entropy standard](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0101-v1-entropy.md). We have also split image naming and standard image recommendations into [v1 standards images]https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0104-v1-standard-images.md.
+and the (previously included) [v1 standard flavors](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0103-v1-standard-flavors.md) -- which includes the [new SSD flavors](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0110-v1-ssd-flavors.md$a), the [v1 entropy standard](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0101-v1-entropy.md). We have also split image naming and standard image recommendations into [v1 standards images](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0104-v1-standard-images.md).
 
 Requirements for [k8s version recency](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0210-v1-k8s-new-version-policy.md), [default storage class](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0211-v1-kaas-default-storage-class.md) as well as requirements to the [container registry](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0212-v1-requirements-for-container-registry.md) have been captured.
 
@@ -133,8 +132,11 @@ The IAM area has seen ADRs on the chosen architecture.
 The (design) decisions on the metering work as well as on the status page project have also been
 captured.
 
-The SCS reference implementation follows all approved SCS standards.
+The standards and the standards compliance of our operators' clouds can be seen in the
+[standards section of our doc pages](https://docs.scs.community/standards) while the raw content is developed
+and discussed in the respective [github standards repository](https://github.com/SovereignCloudStack/standards).
 
+The SCS reference implementation follows all approved SCS standards.
 
 ## Release Tagging
 Relevant repositories have been tagged with `v6.0.0` tag.
