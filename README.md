@@ -49,8 +49,7 @@ See [Release Notes for R5](Release5.md) for more information.
 ## Roadmap
 
 We have a 6 month release cadence -- R6 will follow in March 2024.
-Until then, we will provide bugfixes and security fixes for R.
+Until then (and a bit beyond), we will provide bugfixes and security fixes for R5.
 
 We do work towards a model where our partners can actually follow our main
-development branches -- right now, our CI needs a bit more coverage though
-to make this safe.
+development branches -- our CI is getting better and better to make this safe.
