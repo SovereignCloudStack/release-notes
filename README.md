@@ -38,10 +38,18 @@ for OpenStack 0.7.x, Kubernetes 1.26.x, and Ubuntu 22.04 LTS.
 
 See [Release Notes for R4](Release4.md) for more information.
 
+### Release 5 (2023-09-20)
+
+No stone was left unturned in this release. As such the list of highlights is long, but
+does include OpenStack 2023.1 (Antelope), Ceph Quincy, Cluster Stacks Technical Preview,
+Support for diskless flavors, and IPv6 support for east-west and north-south.
+
+See [Release Notes for R5](Release5.md) for more information.
+
 ## Roadmap
 
-We have a 6 month release cadence -- R5 will follow in September 2023.
-Until then, we will provide bugfixes and security fixes for R4.
+We have a 6 month release cadence -- R6 will follow in March 2024.
+Until then, we will provide bugfixes and security fixes for R.
 
 We do work towards a model where our partners can actually follow our main
 development branches -- right now, our CI needs a bit more coverage though
