@@ -68,7 +68,7 @@ IaaS standards.
 ### SCS Developer focused improvements (Cloud-in-a-Box, testbed and k8s cluster management)
 
 * Documentation on testbed and Cloud-in-a-Box have been reworked.
-* Reflecting CiaB's usage as edge cloud solution, it now receives more automated testing.
+* Reflecting CiaB's usage as edge cloud appliance, it now receives more automated testing.
 
 ### Project Infrastructure
 * zuul.scs.community now complements OSISM's existing zuul infrastructure and is used also
