@@ -17,7 +17,7 @@ These outcomes are comprised of:
 
 ### IaaS
 
-* The IaaS referencen implementation is based on [OSISM 6.0.0](https://release.osism.tech/notes/6.0.0.html).
+* The IaaS reference implementation is based on [OSISM 6.0.0](https://release.osism.tech/notes/6.0.0.html).
 * [OpenStack 2023.1 (Antelope)](https://releases.openstack.org/antelope/highlights.html)
 * Default Ceph version is now [Ceph Quincy](https://docs.ceph.com/en/reef/releases/quincy/#v17-2-5-quincy).
 * OVN and OVS have been updated to their latest versions (OVN: 23.06.1, OVS: 3.2.0).
@@ -33,12 +33,12 @@ for secondary NIC for external connectivity.
 * The node images now use Ubuntu 22.04, the management host can use Ubuntu 22.04 or Debian 12.
 * Cilium v1.14.1, default now, though Calico (3.26.x) is still supported.
 * Cilium also brings the upcoming gateway API (opt-in) as technical preview.
-* The Harbor container registry can now be rollwed out with each cluster.
+* The Harbor container registry can now be rolled out with each cluster.
 * The clusters can use a registry as cache to upstream dockerhub or gcr registries.
 * The cluster management now works also on OpenStack clouds with a custom CA.
 * Storage snapshots are supported now (fix was also backported to maintained branches).
 * Diskless flavors are supported everywhere (cluster-management, health-monitor).
-* etcd defragmenetation and backup.
+* etcd defragmentation and backup.
 * Controls for pod and service IP ranges.
 
 ### Preview: Cluster-Stacks
@@ -57,7 +57,7 @@ IaaS standards.
   addressing openstack CLI usage with PKCE Device Authz Grant, logout, and the usage of a
   proxy realm in keycloak. Improvements have been contributed to upstream keystone.
 * With the `openstack-resource-manager` a new day 2 operations tool has been added.
-  Furthermore a osism role for tuned to optimize system profiles is now present.
+  Furthermore an osism role for tuned to optimize system profiles is now present.
 * The [openstack-flavor-manager](https://github.com/osism/openstack-flavor-manager) is now able to create all standard, mandatory SCS flavors for you.
 * Scaphandre Prometheus Exporter has been added to export power consumption metrics more easily.
 * To optimize system profiles an osism role for tuned is now present.
@@ -84,7 +84,7 @@ IaaS standards.
 
 * Please check the removals for OSISM in the [upstream removal notices](https://release.osism.tech/notes/6.0.0.html#removals).
 
-* The services `minio.services.osism.tech` and `harbor.services.osism.tech` are deprecated and will be turned of on october 20th, 2023.
+* The services `minio.services.osism.tech` and `harbor.services.osism.tech` are deprecated and will be turned of on October 20th, 2023.
 
 ## Deprecations
 
@@ -121,14 +121,14 @@ For details, we again refer to the [OSISM](https://release.osism.tech/notes/6.0.
 [k8s-cluster-api-provider](https://github.com/SovereignCloudStack/k8s-cluster-api-provider/blob/main/Release-Notes-R5.md) release notes.
 
 ## Standards Conformance
-A new certfification set is expected in December. It will ensure we
-run all autoamted tests also for all new standards, such as
+A new certification set is expected in December. It will ensure we
+run all automated tests also for all new standards, such as
 [v3 flavor naming](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0100-v3-flavor-naming.md),
-and the (previously included) [v1 standard flavors](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0103-v1-standard-flavors.md) -- which includes the [new SSD flavors](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0110-v1-ssd-flavors.md$a), the [v1 entropy standard](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0101-v1-entropy.md). We have also split image naming and standard image recommendations into [v1 standars images]https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0104-v1-standard-images.md.
+and the (previously included) [v1 standard flavors](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0103-v1-standard-flavors.md) -- which includes the [new SSD flavors](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0110-v1-ssd-flavors.md$a), the [v1 entropy standard](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0101-v1-entropy.md). We have also split image naming and standard image recommendations into [v1 standards images]https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0104-v1-standard-images.md.
 
 Requirements for [k8s version recency](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0210-v1-k8s-new-version-policy.md), [default storage class](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0211-v1-kaas-default-storage-class.md) as well as requirements to the [container registry](https://github.com/SovereignCloudStack/standards/blob/main/Standards/scs-0212-v1-requirements-for-container-registry.md) have been captured.
 
-The IAM area has ssen ADRs on the chosen architecture.
+The IAM area has seen ADRs on the chosen architecture.
 
 The (design) decisions on the metering work as well as on the status page project have also been
 captured.
