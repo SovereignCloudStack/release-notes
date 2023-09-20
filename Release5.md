@@ -43,11 +43,11 @@ for secondary NIC for external connectivity.
 
 ### Preview: Cluster-Stacks
 The old scripts that are used to create, change and delete Kubernetes clusters with
-cluster-api will be replaced by a proper Operator in the next release.
-Design document and technical preview code can be found in the
+Cluster API will be replaced by a proper Operator in the next release. A description can be found at the
 [cluster-stacks](https://github.com/SovereignCloudStack/cluster-stacks)
 and [cluster-stack-operator](https://github.com/SovereignCloudStack/cluster-stack-operator)
-repositories. This solution will fit more nicely into the CNCF landscape and
+repositories. The technical preview can be tried with the [cluster-stacks-demo](https://github.com/SovereignCloudStack/cluster-stacks-demo).
+This solution will fit more nicely into the CNCF landscape and
 also allow for easier support of IaaS solutions that do not comply to our SCS
 IaaS standards.
 
