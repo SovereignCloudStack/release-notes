@@ -7,7 +7,27 @@ This note will be removed, once Release 6 is released and these notes are valid.
 
 ## Scope
 
+Just as our previous release, Release 6 has been developed alongside a set of [associated outcomes](https://scs.community/2023/12/29/scs-r6-enables/).
+Overall with Release 6 it becomes apparent that SCS is efficient to operate.
+
+* SCS is standardized
+* SCS is understandable
+* SCS enables
+* SCS is transparent
+* SCS is continuously built and tested
+* SCS is opinionated
+* SCS charters new territory.
+
+
 ## Component Versions and User-visible improvements (highlights)
+
+### IaaS
+
+* The IaaS reference implementation is based on [OSISM 7.0.0](https://release.osism.tech/notes/7.0.0.html).
+* [OpenStack 2023.2 (Bobcat)](https://releases.openstack.org/bobcat/highlights.html)
+* Default Ceph version is [Ceph Quincy](https://docs.ceph.com/en/reef/releases/quincy/#v17-2-5-quincy).
+
+
 
 ## New Features (Highlights)
 
@@ -17,7 +37,11 @@ This note will be removed, once Release 6 is released and these notes are valid.
 
 ## Upgrade/Migration notes
 
+* For the IaaS reference implementation, please refer to the [OSISM 7.0.0 Upgrade Notes](https://release.osism.tech/notes/7.0.0.html#upgrade-notes).
+
 ## Removals
+
+* Please check the removals for OSISM in the [upstream removal notices](https://release.osism.tech/notes/7.0.0.html#removals).
 
 ## Deprecations
 
