@@ -27,13 +27,33 @@ Overall with Release 6 it becomes apparent that SCS is efficient to operate.
 * [OpenStack 2023.2 (Bobcat)](https://releases.openstack.org/bobcat/highlights.html)
 * Default Ceph version is [Ceph Quincy](https://docs.ceph.com/en/reef/releases/quincy/#v17-2-5-quincy).
 
+### KaaS
 
+* [k8s-cluster-api-provider](https://github.com/SovereignCloudStack/k8s-cluster-api-provider) (KaaS v1)
+  * Moved to OpenTofu
+  * Migrated to ClusterClass
+  * HTTP_Proxy configurable
+  * OVN LB
+* [Cluster Stacks](https://github.com/SovereignCloudStack/cluster-stacks) (KaaS v2)
+  * First Cluster Stacks for Openstack build
+  * [Cluster Stack Operator](https://github.com/SovereignCloudStack/cluster-stack-operator/)
+    * core component to manage Cluster Stack releases 
+  * [Cluster Stack Provider Openstack](https://github.com/SovereignCloudStack/cluster-stack-provider-openstack)
+    * manages node image release for Openstack
+  * [csctl](https://github.com/SovereignCloudStack/csctl)
+    * builds Cluster Stacks assets
+    * builds node images
+    * tests Cluster Stacks
 
 ## New Features (Highlights)
 
 ### Operator focused improvements
 
 ### SCS Developer focused improvements (testbed and k8s cluster management)
+
+#### KaaS
+* Every component of Cluster Stacks brings a Tilt environment for local test and development
+* With csctl Cluster Stacks assets can be created and tested locally without uploading to GitHub
 
 ## Upgrade/Migration notes
 
@@ -54,6 +74,9 @@ Overall with Release 6 it becomes apparent that SCS is efficient to operate.
 ## Release Tagging
 
 ## List of known issues & restrictions in R6
+
+### KaaS
+* Some features of KaaS v1 are not available yet in KaaS v2 because they are WIP in upstream CAPO
 
 ## Contributing
 
