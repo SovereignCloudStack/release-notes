@@ -35,11 +35,11 @@ Overall with Release 6 it becomes apparent that SCS is efficient to operate.
   * HTTP_Proxy configurable
   * OVN LB
 * [Cluster Stacks](https://github.com/SovereignCloudStack/cluster-stacks) (KaaS v2)
-  * First Cluster Stacks for Openstack build
+  * First Cluster Stacks for OpenStack build
   * [Cluster Stack Operator](https://github.com/SovereignCloudStack/cluster-stack-operator/)
     * core component to manage Cluster Stack releases 
-  * [Cluster Stack Provider Openstack](https://github.com/SovereignCloudStack/cluster-stack-provider-openstack)
-    * manages node image release for Openstack
+  * [Cluster Stack Provider OpenStack](https://github.com/SovereignCloudStack/cluster-stack-provider-openstack)
+    * manages node image release for OpenStack
   * [csctl](https://github.com/SovereignCloudStack/csctl)
     * builds Cluster Stacks assets
     * builds node images
