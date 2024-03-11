@@ -26,6 +26,9 @@ Overall with Release 6 it becomes apparent that SCS is efficient to operate.
 * The IaaS reference implementation is based on [OSISM 7.0.0](https://release.osism.tech/notes/7.0.0.html).
 * [OpenStack 2023.2 (Bobcat)](https://releases.openstack.org/bobcat/highlights.html)
 * Default Ceph version is [Ceph Quincy](https://docs.ceph.com/en/reef/releases/quincy/#v17-2-5-quincy).
+* [OVS](https://www.openvswitch.org) and [OVN](https://www.ovn.org/en/) have been updated and switched to LTS versions.
+  * [OVS 3.3.0](https://mail.openvswitch.org/pipermail/ovs-announce/2024-February/000343.html)
+  * [OVN 24.03.0](https://mail.openvswitch.org/pipermail/ovs-announce/2024-March/000344.html)
 
 ### KaaS
 
