@@ -61,6 +61,12 @@ and delivers the following components:
 * Every component of Cluster Stacks brings a Tilt environment for local test and development
 * With csctl Cluster Stacks assets can be created and tested locally without uploading to GitHub
 
+### Preview: Domain Manager Persona
+
+A Domain Manager role has been established in a [standard draft in SCS](https://docs.scs.community/standards/scs-0302-v1-domain-manager-role) aiming to allow self-service capabilities for customers at the identity API.
+Work is in progress to [contribute this functionality to OpenStack Keystone](https://bugs.launchpad.net/keystone/+bug/2045974) and the corresponding [upstream spec](https://review.opendev.org/c/openstack/keystone-specs/+/903172) is currently under review.
+The feature is expected to be available in the next SCS release.
+
 ## Upgrade/Migration notes
 
 * For the IaaS reference implementation, please refer to the [OSISM 7.0.0 Upgrade Notes](https://release.osism.tech/notes/7.0.0.html#upgrade-notes).
