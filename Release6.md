@@ -81,6 +81,11 @@ The feature is expected to be available in the next SCS release.
 
 ## Resolved Issues
 
+### Preview: proper scope filtering for domain list API
+
+A fix to a bug where listing domains via Keystone API would return domains not intended to be visible to the requesting entity was [contributed and merged upstream](https://bugs.launchpad.net/keystone/+bug/2041611).
+The fix is expected to be available in one of next SCS releases.
+
 ## Standards Conformance
 
 ## Release Tagging
