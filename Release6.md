@@ -51,7 +51,20 @@ and delivers the following components:
     * builds node images
     * tests Cluster Stacks
 
-### Zuul
+### Operations
+
+#### Observability
+
+The [Observability stack reference implementation](https://github.com/SovereignCloudStack/k8s-observability) is based on [dNation Kubernetes monitoring stack v3.5.0](https://github.com/dNationCloud/kubernetes-monitoring-stack)
+and delivers the following components:
+
+* Monitoring of [infrastructure services](https://docs.scs.community/docs/operating-scs/components/monitoring/docs/overview) such as Kubernetes clusters, physical or virtual machines, and infrastructure endpoints
+* [Zuul CI monitoring](https://docs.scs.community/docs/operating-scs/components/monitoring/docs/zuul)
+* [Matrix chat notifications](https://docs.scs.community/docs/operating-scs/components/monitoring/docs/alertmanager)
+* [OAUTH authentication](https://docs.scs.community/docs/operating-scs/components/monitoring/docs/oauth)
+* [IaaS monitoring](https://docs.scs.community/docs/operating-scs/components/monitoring/docs/iaas) is included as a technical preview
+
+#### Zuul
 
 * Created a development deployment for advancement testing.
 * Simplified the installation requirements.
