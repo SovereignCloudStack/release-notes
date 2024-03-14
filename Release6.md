@@ -51,6 +51,19 @@ and delivers the following components:
     * builds node images
     * tests Cluster Stacks
 
+### Zuul
+
+* Created a development deployment for advancement testing.
+* Simplified the installation requirements.
+* Updated the Zuul repository's README file to include complete installation instructions for Terraform an Ansible.
+* Added the clouds data into the ansible vault.
+* Created an independent ansible Zuul role.
+* Moved the custom Zuul tasks from the playbook and incorporated them into the role.
+* Moved the custom Zuul variables from the playbook into the role's variables.
+* Included the installation of Letsencrypt which adds certificates as part of the installation.
+* Added a volume on the VM for the MariaDB instance to use for continuity.
+* Added volumes on the VM for Zookeeper to use for the data snapshots and datalog.
+
 ## New Features (Highlights)
 
 ### Operator focused improvements
