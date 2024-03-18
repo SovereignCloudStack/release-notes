@@ -113,7 +113,10 @@ The feature is expected to be available in the next SCS release.
 * Please check the removals for OSISM in the [upstream removal notices](https://release.osism.tech/notes/7.0.0.html#removals).
 
 ## Deprecations
-
+* KaaSv1 is provided with R6 again, but we do not intned to include it in R7 again.
+  We want to rather focus on the feature completeness of the much more future proof
+  cluster-stacks.
+* The new monitoring stack should be adopted in preference over the old openstack-health-monitor.
 
 ## Security Fixes
 During the R6 development cycle a few security issues were reported and we issued seucirty
@@ -129,9 +132,28 @@ in the upcoming R6 release. These include:
 A fix to a bug where listing domains via Keystone API would return domains not intended to be visible to the requesting entity was [contributed and merged upstream](https://bugs.launchpad.net/keystone/+bug/2041611).
 The fix is expected to be available by the next SCS release.
 
+## Documentation
+The [docs page](https://docs.scs.commnutiy/) has come a long way in the last 6 months.
+It pulls in a lot more content from the various projects and structures it in a much
+more accessible way. Look at the [standards](https://docs.scs.community/standards) pages
+there to get an impression.
+
 ## Standards Conformance
+The standards have evolved, increasing the amount of guarantees that software developers
+and operators have for workloads that work across SCS-compatible clouds.
+The [SCS-compatible IaaS-v4](https://docs.scs.community/standards/scs-compatible-iaas)
+has seen improvements and better test coverage; the OSISM IaaS reference implementation
+fulfills all of these standards in the default configuration.
+
+For the Kubernetes layer, we have our first set of standards almost finalized.
+Some of the standards for [SCS-compatible KaaS-v1](https://docs.scs.community/standards/scs-compatible-kaas)
+are unfortunately hard to test, so are working on adding some more tests before
+we cut it in stone. We aim for both KaaSv1 and v2 to fulfill the standards.
+(Future standards will likely not be fulfilled by KaaSv1 as it's being deprecated.)
 
 ## Release Tagging
+A number of repositories follow OSISM's example and use the `7.0.0` or `v7.0.0` tag
+to denote SCS Release 6.
 
 ## List of known issues & restrictions in R6
 
@@ -164,7 +186,7 @@ a maintained solution while they evaluate the migration to KaaS v2 (cluster-stac
 
 We will address most of the gaps during the next release cycle.
 
-KaaS v1 should not be used for new deployements; we intend to remove it with the next
+KaaS v1 should not be used for new deployments; we intend to remove it with the next
 release (R7).
 
 ## Contributing
