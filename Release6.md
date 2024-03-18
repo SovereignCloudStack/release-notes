@@ -81,6 +81,17 @@ and delivers the following components:
 
 ### Operator focused improvements
 
+The new monitoring stack mentioned above replaces the old
+[openstack-health-monitor](https://github.com/SovereignCloudStack/openstack-health-monitor/).
+Nevertheless, it is currently still in heavy use and has thus seen a few improvements
+responding to challenges observed in real-life clouds:
+* A new [installation guide](https://docs.scs.community/docs/operating-scs/guides/openstack-health-monitor/Debian12-Install)
+* Robustness against leaking volumes even with overloaded cinder API
+* Robustness against leaking ports from OVN LB health-monitor
+* Robustness against leftover keypairs
+* Avoid some followup errors when VM creation failed
+* Logic to startup os-health-mon in tmux windows via `systemctl --user`
+
 ### SCS Developer focused improvements (testbed and k8s cluster management)
 
 #### KaaS
@@ -103,14 +114,20 @@ The feature is expected to be available in the next SCS release.
 
 ## Deprecations
 
+
 ## Security Fixes
+During the R6 development cycle a few security issues were reported and we issued seucirty
+advisories and addressed them via maintenance updates. All of these issues are also fixed
+in the upcoming R6 release. These include:
+* A [OvS vulnerability with crafted Geneve packets and HW acceleration](https://scs.community/de/security/2024/02/20/cve-2023-3966/)
+* A [OVN vulnerability against specific BFD packets](https://scs.community/de/security/2024/03/15/cve-2024-2182/)
 
 ## Resolved Issues
 
 ### Preview: proper scope filtering for domain list API
 
 A fix to a bug where listing domains via Keystone API would return domains not intended to be visible to the requesting entity was [contributed and merged upstream](https://bugs.launchpad.net/keystone/+bug/2041611).
-The fix is expected to be available in one of next SCS releases.
+The fix is expected to be available by the next SCS release.
 
 ## Standards Conformance
 
@@ -118,8 +135,37 @@ The fix is expected to be available in one of next SCS releases.
 
 ## List of known issues & restrictions in R6
 
+### IaaS
+
+#### Loadbalancer service (octavia)
+* Creating loadbalancers at least on upgraded Cloud-in-a-Box installations fails with the
+  error message that the VIP subnet does not exist. [OSISM #890](https://github.com/osism/issues/issues/890)
+* When using `--provider ovn` with a loadbalancer health-monitor, we leak ports `ovn-lb-hm-$SUBNETID` in all
+  but the VIP subnet, if we clean up the LB members before the health-monitor. This is tracked as
+  [OSISM issue #921](https://github.com/osism/issues/issues/921). Deleting the health-monitor before the
+  members or using `openstack loadbalancer delete --cascade` avoids this issue.
+* With amphora loadbalancers, we can end up in situations that LB deletion does no longer work due to
+  a failover or a failed creation of the vrrp port. This is tracked in
+  [OSISM issue #925](https://github.com/osism/issues/issues/925). An upstream fix exists that we expect
+  to get backported in the future.
+
+We expect to resolve these issues with a maintenance update.
+
 ### KaaS
-* Some features of KaaS v1 are not available yet in KaaS v2 because they are WIP in upstream CAPO
+Some features of KaaS v1 are not available yet in KaaS v2 because they are WIP in upstream CAPO.
+This includes the creation of some of the optional components such as e.g. the deployment
+of ingress service, cert-manager, flux, harbor. More importantly, we do not yet have the
+handling of restrctive security groups implemented nor the ability to avoid OpenStack
+scheduling more than one control plane node on the same host (hypervisor).
+
+For this reason, we are including KaaS v1 (k8s-cluster-api-provider) in the R6 release,
+so existing users can upgrade to the latest upstream code and continuing using it as
+a maintained solution while they evaluate the migration to KaaS v2 (cluster-stacks).
+
+We will address most of the gaps during the next release cycle.
+
+KaaS v1 should not be used for new deployements; we intend to remove it with the next
+release (R7).
 
 ## Contributing
 
@@ -128,4 +174,11 @@ our community -- or just leave input on the github issues and PRs.
 Have a look at our [How to contribute page](https://scs.community/contribute/).
 
 ## Thanks
+
+We have had considerable help from many partners and upstream projects during
+the R6 development cycle. We continue to be grateful for the generous support
+from providers that support with infrastructure that we can use for testing and
+development. PlusServer has been particularily generous and also helped us
+finding a few issues during the pre-release phase by upgrading test
+environments and testing them.
 
