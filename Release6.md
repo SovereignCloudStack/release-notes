@@ -84,7 +84,7 @@ and delivers the following components:
 
 ### Operator focused improvements
 
-A kubernetes engine, via [k3s](https://k3s.io), has been introduced to the control plane of the IaaS reference
+A Kubernetes engine, via [k3s](https://k3s.io), has been introduced to the control plane of the IaaS reference
 implementation.
 
 `osism` now deploys Keycloak to k3s via [codecentric/keycloakx](https://github.com/codecentric/helm-charts/blob/master/charts/keycloakx/README.md) helm chart and [CloudNativePG](https://github.com/cloudnative-pg/charts) operator.
@@ -121,7 +121,7 @@ The feature is expected to be available in the next SCS release.
 ### Preview: Central API
 
 To improve the experience of SCS cloud customers, the idea of a "Central API" was discussed. Such API should enable customers to manage various "as-a-Service" resources. For example: OpenStack instances as well as Kubernetes clusters as well as Keycloak OAuth2 clients.
-Read about the tradeoffs and ideas in the [central-api repository](https://github.com/SovereignCloudStack/central-api) and feel free to test out the [POC](https://github.com/SovereignCloudStack/central-api/blob/0422e8ca24667b04b7364ffa461f85c3de51a50a/poc-setup.md).
+Read about the trade-offs and ideas in the [central-api repository](https://github.com/SovereignCloudStack/central-api) and feel free to test out the [POC](https://github.com/SovereignCloudStack/central-api/blob/0422e8ca24667b04b7364ffa461f85c3de51a50a/poc-setup.md).
 
 ### Preview: Keycloak Home-IdP-discovery
 
@@ -246,7 +246,7 @@ handling of restrictive security groups implemented nor the ability to avoid Ope
 Some features of KaaS v1 are not available yet in KaaS v2 because they are WIP in upstream CAPO.
 This includes the creation of some of the optional components such as e.g. the deployment
 of ingress service, cert-manager, flux, harbor. More importantly, we do not yet have the
-handling of restrctive security groups implemented nor the ability to avoid OpenStack
+handling of restrictive security groups implemented nor the ability to avoid OpenStack
 scheduling more than one control plane node on the same host (hypervisor).
 
 For this reason, we are including KaaS v1 (k8s-cluster-api-provider) in the R6 release,
@@ -262,9 +262,9 @@ release (R7).
 
 Since Keycloak is a Java application it requires importing certificates into its certificate store.
 As the Keycloak pod in k3s now runs the service as non-root user, it gets more challenging to import
-custom certificates from arbitrary customers for IdP federation. In case this topic is intersting for
-specific deployments, SCS would be interesting to hear about it and discuss how to implement this in
-a usable way.
+custom certificates from arbitrary customers for IdP federation. In case this topic is interesting for
+specific deployments, the SCS project team would like to hear from users and discuss how to best
+expose such a capability.
 
 ## Contributing
 
