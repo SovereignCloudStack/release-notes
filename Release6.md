@@ -164,7 +164,7 @@ Other security topics were covered in our community blog as well:
 
 ### Security assessments for IaaS
 
-We invested in a range of penetration tests of the IaaS layer and followed up on some insights gathered by the procedures:
+We invested in a range of penetration tests of the IaaS layer which resulted in valuable insights in security issues and probable improvements (e.g. applying hardening measures):
 
 * External pentesting of components (scanning, blackbox testing)
 * Internal pentesting of components with privileged and unprivileged system users (scanning from inside the cluster)
