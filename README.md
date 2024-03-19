@@ -59,7 +59,3 @@ See [Release Notes for R6](Release6.md) for more information.
 
 We have a 6 month release cadence -- R7 will follow in September 2024.
 Until then, we will provide bugfixes and security fixes for R6.
-
-We do work towards a model where our partners can actually follow our main
-development branches -- right now, our CI needs a bit more coverage though
-to make this safe.

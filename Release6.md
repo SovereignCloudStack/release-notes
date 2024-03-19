@@ -1,8 +1,6 @@
 # Release Notes for SCS Release 6	
 
-This document is work in progress for the upcoming Release 6.
-Release 6 will be released in March/2024. 
-This note will be removed, once Release 6 is released and these notes are valid.
+SCS Release 6 has been published on 2024-03-20.
 
 
 ## Scope
@@ -28,16 +26,16 @@ and delivers the following components:
 
 * [OpenStack 2023.2 (Bobcat)](https://releases.openstack.org/bobcat/highlights.html)
 * Default Ceph version is [Ceph Quincy](https://docs.ceph.com/en/reef/releases/quincy/#v17-2-5-quincy)
-* [Ceph Reef](https://docs.ceph.com/en/latest/releases/reef/) is included as a technical preview
+  * [Ceph Reef](https://docs.ceph.com/en/latest/releases/reef/) is included as a technical preview
 * [OVS](https://www.openvswitch.org) and [OVN](https://www.ovn.org/en/) have been updated and switched to LTS versions
   * [OVS 3.3.0](https://mail.openvswitch.org/pipermail/ovs-announce/2024-February/000343.html)
-  * [OVN 24.03.0](https://mail.openvswitch.org/pipermail/ovs-announce/2024-March/000344.html)
+  * [OVN 24.03.1](https://mail.openvswitch.org/pipermail/ovs-announce/2024-March/000344.html)
 
 ### KaaS
 
 * [k8s-cluster-api-provider](https://github.com/SovereignCloudStack/k8s-cluster-api-provider) (KaaS v1)
   * Moved to OpenTofu
-  * Migrated to ClusterClass
+  * Migrated to ClusterClass (last not least to ease the migration to Cluster Stacks)
   * HTTP_Proxy configurable
   * OVN LB
 * [Cluster Stacks](https://github.com/SovereignCloudStack/cluster-stacks) (KaaS v2)
@@ -131,10 +129,6 @@ To improve flexibility of onboarding new customer domains via IdP federation, SC
 mapping of users, groups and roles from OpenID-Connect token claims to the OpenStack Keystone access management.
 
 
-### Upcoming: automated pentesting security pipeline
-
-In the beginning of 2024 we started with the conception and implementation of an automated security pipeline. This pipeline will serve as a security scanning tool that is either triggered by deployments or due to manual activation in your infrastructure. The pipeline will contain six tools: Naabu, httpx, Nuclei, Greenbone (Community Edition), ZAP and DefectDojo. While the first three are meant to discover network-related issues like open ports and attack vectors, GCE and ZAP will deliver deeper security inspections of hosts in your SCS environment. Reports are collected in DefectDojo, allowing an overview over security-related changes and seeing the current state. The pipeline will be available as a platform tool in R7.
-
 ## Upgrade/Migration notes
 
 * For the IaaS reference implementation, please refer to the [OSISM 7.0.0 Upgrade Notes](https://release.osism.tech/notes/7.0.0.html#upgrade-notes).
@@ -164,13 +158,18 @@ in the upcoming R6 release. These include:
 Other security topics were covered in our community blog as well:
 * [Delving into the Technical Depths of Intel-SA-00950 and AMD Cachewarp Vulnerabilities](https://scs.community/2024/01/03/intel-amd-cpu-vulns/)
 
-### Security assessments for IaaS
+### Security assessment for IaaS
 
-We invested in a range of penetration tests of the IaaS layer which resulted in valuable insights in security issues and probable improvements (e.g. applying hardening measures):
+We invested in a range of penetration tests of the IaaS layer which resulted in valuable insight in possible improvements (e.g. applying hardening measures):
 
 * External pentesting of components (scanning, blackbox testing)
 * Internal pentesting of components with privileged and unprivileged system users (scanning from inside the cluster)
 * Scanning and pentesting the environment from a customer workload machine
+
+The vision of SCS is to have continuous security assurance by adding security checks and pentesting tooling
+to our CI pipelines; this is currently in implementation. Next step will then be to also cover other parts
+(beyond the IaaS layer) of our stack with manual and then
+[automated penetration testing](https://github.com/SovereignCloudStack/security-infra-scan-pipeline).
 
 ## Resolved Issues
 
