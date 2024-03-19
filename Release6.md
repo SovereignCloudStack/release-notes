@@ -77,12 +77,19 @@ and delivers the following components:
 * Added a volume on the VM for the MariaDB instance to use for continuity.
 * Added volumes on the VM for Zookeeper to use for the data snapshots and datalog.
 
+### IAM
+
+* Updated Keycloak image to 23.0.6.
+* [Custom SCS-Keycloak image](https://registry.scs.community/harbor/projects/22/repositories/scs-keycloak/artifacts-tab) now includes the [Home-IdP-discovery](https://github.com/sventorben/keycloak-home-idp-discovery) plugin.
+
 ## New Features (Highlights)
 
 ### Operator focused improvements
 
 A kubernetes engine, via [k3s](https://k3s.io), has been introduced to the controlplane of the IaaS reference
 implementation.
+
+`osism` now deploys Keycloak to k3s via [codecentric/keycloakx](https://github.com/codecentric/helm-charts/blob/master/charts/keycloakx/README.md) helm chart and [CloudNativePG](https://github.com/cloudnative-pg/charts) operator.
 
 Rotation of the Octavia Amphora images has been added to the `osism` command. `osism manage image octavia` will rotate
 the image, which is rebuilt on a daily basis.
@@ -116,6 +123,11 @@ The feature is expected to be available in the next SCS release.
 To improve the experience of SCS cloud customers, the idea of a "Central API" was discussed. Such API should enable customers to manage various "as-a-Service" resources. For example: OpenStack instances as well as Kubernetes clusters as well as Keycloak OAuth2 clients.
 Read about the tradeoffs and ideas in the [central-api repository](https://github.com/SovereignCloudStack/central-api) and feel free to test out the [POC](https://github.com/SovereignCloudStack/central-api/blob/0422e8ca24667b04b7364ffa461f85c3de51a50a/poc-setup.md).
 
+### Preview: Keycloak Home-IdP-discovery
+
+To improve flexibility of onboarding new customer domains via IdP federation, SCS now deploys Keycloak with the [Home-IdP-discovery](https://github.com/sventorben/keycloak-home-idp-discovery) plugin. The idea is, that Keystone federates out to a single Keycloak "proxy" realm (called `osism` in the testbed) and using the plugin, Keycloak can identify the user specific realm from an email-format login-ID. Operators can create dedicated realms for each customer and Keycloak uses internal federation to redirect from the "proxy" realm to the specific customer realm. In the customer ream they can configure IdP federation (OpenID-Connect or SAML) to their own IAM solution. The [IAM section](https://docs.scs.community/docs/iam) of the SCS documentation shall be extended to detail the configuration. SCS is working upstream to contribute required enhancements in the
+mapping of users, groups and roles from OpenID-Connect token claims to the OpenStack Keystone access management.
+
 ## Upgrade/Migration notes
 
 * For the IaaS reference implementation, please refer to the [OSISM 7.0.0 Upgrade Notes](https://release.osism.tech/notes/7.0.0.html#upgrade-notes).
@@ -136,7 +148,7 @@ Read about the tradeoffs and ideas in the [central-api repository](https://githu
 
 ## Security Fixes
 
-During the R6 development cycle a few security issues were reported and we issued seucirty
+During the R6 development cycle a few security issues were reported and we issued security
 advisories and addressed them via maintenance updates. All of these issues are also fixed
 in the upcoming R6 release. These include:
 * A [OvS vulnerability with crafted Geneve packets and HW acceleration](https://scs.community/de/security/2024/02/20/cve-2023-3966/)
@@ -155,6 +167,11 @@ The [docs page](https://docs.scs.commnutiy/) has come a long way in the last 6 m
 It pulls in a lot more content from the various projects and structures it in a much
 more accessible way. Look at the [standards](https://docs.scs.community/standards) pages
 there to get an impression.
+
+### IAM
+
+The documentation now contains an [IAM overview document](https://docs.scs.community/docs/iam) which explains current
+limitations for the dynamic mapping of user roles and shall be extended to explain configuration options for Operators.
 
 ## Standards Conformance
 
@@ -210,6 +227,14 @@ We will address most of the gaps during the next release cycle.
 
 KaaS v1 should not be used for new deployments; we intend to remove it with the next
 release (R7).
+
+### IAM
+
+Since Keycloak is a Java application it requires importing certificates into its certificate store.
+As the Keycloak pod in k3s now runs the service as non-root user, it gets more challenging to import
+custom certificates from arbitrary customers for IdP federation. In case this topic is intersting for
+specific deployments, SCS would be interesting to hear about it and discuss how to implement this in
+a usable way.
 
 ## Contributing
 
