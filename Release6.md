@@ -81,6 +81,16 @@ and delivers the following components:
 
 ### Operator focused improvements
 
+A kubernetes engine, via [k3s](https://k3s.io), has been introduced to the control plane of the IaaS reference
+implementation.
+
+`osism` now deploys Keycloak to k3s via [codecentric/keycloakx](https://github.com/codecentric/helm-charts/blob/master/charts/keycloakx/README.md) helm chart and [CloudNativePG](https://github.com/cloudnative-pg/charts) operator.
+
+Rotation of the Octavia Amphora images has been added to the `osism` command. `osism manage image octavia` will rotate
+the image, which is rebuilt on a daily basis.
+
+#### OpenStack Health Monitor
+
 A new monitoring stack will replace the old
 [openstack-health-monitor](https://github.com/SovereignCloudStack/openstack-health-monitor/).
 Nevertheless, it is currently still in heavy use and has thus seen a few improvements
@@ -113,11 +123,14 @@ The feature is expected to be available in the next SCS release.
 * Please check the removals for OSISM in the [upstream removal notices](https://release.osism.tech/notes/7.0.0.html#removals).
 
 ## Deprecations
+
 * KaaSv1 is still provided with R6, but we do not intend to include it in R7 again.
   We want to rather focus on the feature completeness of the much more future-proof
   cluster-stacks.
-* The upcoming new monitoring stack should be adopted in preference over the old
-  openstack-health-monitor.
+
+* In upstream OSISM the role for deploying the Tang service (`osism.services.tang`) has been deprecated.
+  We would like to encourage active contributions in this area via the deprecation, since this piece of
+  code is currently not actively maintained nor -- to our knowledge -- actively used.
 
 ## Security Fixes
 During the R6 development cycle a few security issues were reported and we issued security
