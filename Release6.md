@@ -98,6 +98,7 @@ responding to challenges observed in real-life clouds:
 ### SCS Developer focused improvements (testbed and k8s cluster management)
 
 #### KaaS
+
 * Every component of Cluster Stacks brings a Tilt environment for local test and development
 * With csctl Cluster Stacks assets can be created and tested locally without uploading to GitHub
 
@@ -116,11 +117,13 @@ The feature is expected to be available in the next SCS release.
 * Please check the removals for OSISM in the [upstream removal notices](https://release.osism.tech/notes/7.0.0.html#removals).
 
 ## Deprecations
+
 * KaaSv1 is provided with R6 again, but we do not intned to include it in R7 again.
   We want to rather focus on the feature completeness of the much more future proof
   cluster-stacks.
 
 ## Security Fixes
+
 During the R6 development cycle a few security issues were reported and we issued seucirty
 advisories and addressed them via maintenance updates. All of these issues are also fixed
 in the upcoming R6 release. These include:
@@ -135,12 +138,14 @@ A fix to a bug where listing domains via Keystone API would return domains not i
 The fix is expected to be available by the next SCS release.
 
 ## Documentation
+
 The [docs page](https://docs.scs.commnutiy/) has come a long way in the last 6 months.
 It pulls in a lot more content from the various projects and structures it in a much
 more accessible way. Look at the [standards](https://docs.scs.community/standards) pages
 there to get an impression.
 
 ## Standards Conformance
+
 The standards have evolved, increasing the amount of guarantees that software developers
 and operators have for workloads that work across SCS-compatible clouds.
 The [SCS-compatible IaaS-v4](https://docs.scs.community/standards/scs-compatible-iaas)
@@ -154,6 +159,7 @@ we cut it in stone. We aim for both KaaSv1 and v2 to fulfill the standards.
 (Future standards will likely not be fulfilled by KaaSv1 as it's being deprecated.)
 
 ## Release Tagging
+
 A number of repositories follow OSISM's example and use the `7.0.0` or `v7.0.0` tag
 to denote SCS Release 6.
 
@@ -162,6 +168,7 @@ to denote SCS Release 6.
 ### IaaS
 
 #### Loadbalancer service (octavia)
+
 * Creating loadbalancers at least on upgraded Cloud-in-a-Box installations fails with the
   error message that the VIP subnet does not exist. [OSISM #890](https://github.com/osism/issues/issues/890)
 * When using `--provider ovn` with a loadbalancer health-monitor, we leak ports `ovn-lb-hm-$SUBNETID` in all
@@ -176,6 +183,7 @@ to denote SCS Release 6.
 We expect to resolve these issues with a maintenance update.
 
 ### KaaS
+
 Some features of KaaS v1 are not available yet in KaaS v2 because they are WIP in upstream CAPO.
 This includes the creation of some of the optional components such as e.g. the deployment
 of ingress service, cert-manager, flux, harbor. More importantly, we do not yet have the
