@@ -81,6 +81,8 @@ and delivers the following components:
 
 ### Operator focused improvements
 
+
+
 The new monitoring stack mentioned above replaces the old
 [openstack-health-monitor](https://github.com/SovereignCloudStack/openstack-health-monitor/).
 Nevertheless, it is currently still in heavy use and has thus seen a few improvements
@@ -116,7 +118,6 @@ The feature is expected to be available in the next SCS release.
 * KaaSv1 is provided with R6 again, but we do not intned to include it in R7 again.
   We want to rather focus on the feature completeness of the much more future proof
   cluster-stacks.
-* The new monitoring stack should be adopted in preference over the old openstack-health-monitor.
 
 ## Security Fixes
 During the R6 development cycle a few security issues were reported and we issued seucirty
