@@ -111,6 +111,11 @@ A Domain Manager role has been established in a [standard draft in SCS](https://
 Work is in progress to [contribute this functionality to OpenStack Keystone](https://bugs.launchpad.net/keystone/+bug/2045974) and the corresponding [upstream spec](https://review.opendev.org/c/openstack/keystone-specs/+/903172) is currently under review.
 The feature is expected to be available in the next SCS release.
 
+### Preview: Central API
+
+To improve the experience of SCS cloud customers, the idea of a "Central API" was discussed. Such API should enable customers to manage various "as-a-Service" resources. For example: OpenStack instances as well as Kubernetes clusters as well as Keycloak OAuth2 clients.
+Read about the tradeoffs and ideas in the [central-api repository](https://github.com/SovereignCloudStack/central-api) and feel free to test out the [POC](https://github.com/SovereignCloudStack/central-api/blob/0422e8ca24667b04b7364ffa461f85c3de51a50a/poc-setup.md).
+
 ## Upgrade/Migration notes
 
 * For the IaaS reference implementation, please refer to the [OSISM 7.0.0 Upgrade Notes](https://release.osism.tech/notes/7.0.0.html#upgrade-notes).
