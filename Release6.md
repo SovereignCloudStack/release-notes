@@ -84,6 +84,9 @@ and delivers the following components:
 A kubernetes engine, via [k3s](https://k3s.io), has been introduced to the controlplane of the IaaS reference
 implementation.
 
+Rotation of the Octavia Amphora images has been added to the `osism` command. `osism manage image octavia` will rotate
+the image, which is rebuilt on a daily basis.
+
 The new monitoring stack mentioned above replaces the old
 [openstack-health-monitor](https://github.com/SovereignCloudStack/openstack-health-monitor/).
 Nevertheless, it is currently still in heavy use and has thus seen a few improvements
