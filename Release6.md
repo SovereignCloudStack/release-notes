@@ -122,6 +122,10 @@ The feature is expected to be available in the next SCS release.
   We want to rather focus on the feature completeness of the much more future proof
   cluster-stacks.
 
+* In upstream OSISM the role for deploying the Tang service (`osism.services.tang`) has been deprecated.
+  We would like to encourage active contributions in this area via the deprecation, since this piece of
+  code is currently not actively maintained.
+
 ## Security Fixes
 
 During the R6 development cycle a few security issues were reported and we issued seucirty
