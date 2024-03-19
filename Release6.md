@@ -128,6 +128,11 @@ Read about the tradeoffs and ideas in the [central-api repository](https://githu
 To improve flexibility of onboarding new customer domains via IdP federation, SCS now deploys Keycloak with the [Home-IdP-discovery](https://github.com/sventorben/keycloak-home-idp-discovery) plugin. The idea is, that Keystone federates out to a single Keycloak "proxy" realm (called `osism` in the testbed) and using the plugin, Keycloak can identify the user specific realm from an email-format login-ID. Operators can create dedicated realms for each customer and Keycloak uses internal federation to redirect from the "proxy" realm to the specific customer realm. In the customer ream they can configure IdP federation (OpenID-Connect or SAML) to their own IAM solution. The [IAM section](https://docs.scs.community/docs/iam) of the SCS documentation shall be extended to detail the configuration. SCS is working upstream to contribute required enhancements in the
 mapping of users, groups and roles from OpenID-Connect token claims to the OpenStack Keystone access management.
 
+
+### Upcoming: automated pentesting security pipeline
+
+In the beginning of 2024 we started with the conception and implementation of an automated security pipeline. This pipeline will serve as a security scanning tool that is either triggered by deployments or due to manual activation in your infrastructure. The pipeline will contain six tools: Naabu, httpx, Nuclei, Greenbone (Community Edition), ZAP and DefectDojo. While the first three are meant to discover network-related issues like open ports and attack vectors, GCE and ZAP will deliver deeper security inspections of hosts in your SCS environment. Reports are collected in DefectDojo, allowing an overview over security-related changes and seeing the current state. The pipeline will be available as a platform tool in R7.
+
 ## Upgrade/Migration notes
 
 * For the IaaS reference implementation, please refer to the [OSISM 7.0.0 Upgrade Notes](https://release.osism.tech/notes/7.0.0.html#upgrade-notes).
@@ -156,6 +161,14 @@ in the upcoming R6 release. These include:
 
 Other security topics were covered in our community blog as well:
 * [Delving into the Technical Depths of Intel-SA-00950 and AMD Cachewarp Vulnerabilities](https://scs.community/2024/01/03/intel-amd-cpu-vulns/)
+
+### Security assessments for IaaS
+
+We invested in a range of penetration tests of the IaaS layer and followed up on some insights gathered by the procedures:
+
+* External pentesting of components (scanning, blackbox testing)
+* Internal pentesting of components with privileged and unprivileged system users (scanning from inside the cluster)
+* Scanning and pentesting the environment from a customer workload machine
 
 ## Resolved Issues
 
