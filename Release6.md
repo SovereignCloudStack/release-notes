@@ -81,7 +81,8 @@ and delivers the following components:
 
 ### Operator focused improvements
 
-
+A kubernetes engine, via [k3s](https://k3s.io), has been introduced to the controlplane of the IaaS reference
+implementation.
 
 The new monitoring stack mentioned above replaces the old
 [openstack-health-monitor](https://github.com/SovereignCloudStack/openstack-health-monitor/).
