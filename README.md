@@ -46,10 +46,19 @@ Support for diskless flavors, and IPv6 support for east-west and north-south.
 
 See [Release Notes for R5](Release5.md) for more information.
 
+### Release 6 (2023-03-20)
+
+Along the outcomes that were defined for the R6 development cycle many things have been
+added, improved and fixed through the last six months. The list of highlights is lead by
+the release of Cluster-Stacks, the new KaaS observability stack as well as the IaaS
+reference implementation being updated to OpenStack 2023.2 (Bobcat).
+
+See [Release Notes for R6](Release6.md) for more information.
+
 ## Roadmap
 
-We have a 6 month release cadence -- R6 will follow in March 2024.
-Until then, we will provide bugfixes and security fixes for R5.
+We have a 6 month release cadence -- R7 will follow in September 2024.
+Until then, we will provide bugfixes and security fixes for R6.
 
 We do work towards a model where our partners can actually follow our main
 development branches -- right now, our CI needs a bit more coverage though
