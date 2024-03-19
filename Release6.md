@@ -94,10 +94,10 @@ implementation.
 Rotation of the Octavia Amphora images has been added to the `osism` command. `osism manage image octavia` will rotate
 the image, which is rebuilt on a daily basis.
 
-The new monitoring stack mentioned above replaces the old
-[openstack-health-monitor](https://github.com/SovereignCloudStack/openstack-health-monitor/).
-Nevertheless, it is currently still in heavy use and has thus seen a few improvements
-responding to challenges observed in real-life clouds:
+#### OpenStack Health Monitor
+
+A new version the OpenStack Health Monitor is still being developed. The current version did receive fixes and updates, which include:
+
 * A new [installation guide](https://docs.scs.community/docs/operating-scs/guides/openstack-health-monitor/Debian12-Install)
 * Robustness against leaking volumes even with overloaded cinder API
 * Robustness against leaking ports from OVN LB health-monitor
