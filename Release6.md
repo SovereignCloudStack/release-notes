@@ -154,6 +154,9 @@ in the upcoming R6 release. These include:
 * A [OvS vulnerability with crafted Geneve packets and HW acceleration](https://scs.community/de/security/2024/02/20/cve-2023-3966/)
 * A [OVN vulnerability against specific BFD packets](https://scs.community/de/security/2024/03/15/cve-2024-2182/)
 
+Other security topics were covered in our community blog as well:
+* [Delving into the Technical Depths of Intel-SA-00950 and AMD Cachewarp Vulnerabilities](https://scs.community/2024/01/03/intel-amd-cpu-vulns/)
+
 ## Resolved Issues
 
 ### Preview: proper scope filtering for domain list API
@@ -167,6 +170,14 @@ The [docs page](https://docs.scs.commnutiy/) has come a long way in the last 6 m
 It pulls in a lot more content from the various projects and structures it in a much
 more accessible way. Look at the [standards](https://docs.scs.community/standards) pages
 there to get an impression.
+
+### Highlighted blog posts
+
+* Oct'23: [Progress: OpenStack API access with OpenID Connect in Sovereign Cloud Stack](https://scs.community/2023/10/19/progress-openstack-cli-with-federation/)
+* Nov'23: [Confidential Computing in digital sovereign environments](https://scs.community/tech/2023/11/21/confidential-computing-in-digital-sovereign-environments/)
+* Dec'23: [SCS observability and monitoring - An opinionated proposal](https://scs.community/tech/2023/12/06/mvp-monitoring/)
+* Dec'23: [Cluster Stacks](https://scs.community/2023/12/23/clusterstacks/)
+* Feb'24: [SDN scalability improvements](https://scs.community/2024/02/09/sdn-scalability/)
 
 ### IAM
 
