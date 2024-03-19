@@ -77,6 +77,11 @@ and delivers the following components:
 * Added a volume on the VM for the MariaDB instance to use for continuity.
 * Added volumes on the VM for Zookeeper to use for the data snapshots and datalog.
 
+### IAM
+
+* Updated Keycloak image to 23.0.6.
+* [Custom SCS-Keycloak image](https://registry.scs.community/harbor/projects/22/repositories/scs-keycloak/artifacts-tab) now includes the [Home-IdP-discovery](https://github.com/sventorben/keycloak-home-idp-discovery) plugin.
+
 ## New Features (Highlights)
 
 ### Operator focused improvements
@@ -105,6 +110,7 @@ responding to challenges observed in real-life clouds:
 ### SCS Developer focused improvements (testbed and k8s cluster management)
 
 #### KaaS
+
 * Every component of Cluster Stacks brings a Tilt environment for local test and development
 * With csctl Cluster Stacks assets can be created and tested locally without uploading to GitHub
 
@@ -113,6 +119,21 @@ responding to challenges observed in real-life clouds:
 A Domain Manager role has been established in a [standard draft in SCS](https://docs.scs.community/standards/scs-0302-v1-domain-manager-role) aiming to allow self-service capabilities for customers at the identity API.
 Work is in progress to [contribute this functionality to OpenStack Keystone](https://bugs.launchpad.net/keystone/+bug/2045974) and the corresponding [upstream spec](https://review.opendev.org/c/openstack/keystone-specs/+/903172) is currently under review.
 The feature is expected to be available in the next SCS release.
+
+### Preview: Central API
+
+To improve the experience of SCS cloud customers, the idea of a "Central API" was discussed. Such API should enable customers to manage various "as-a-Service" resources. For example: OpenStack instances as well as Kubernetes clusters as well as Keycloak OAuth2 clients.
+Read about the tradeoffs and ideas in the [central-api repository](https://github.com/SovereignCloudStack/central-api) and feel free to test out the [POC](https://github.com/SovereignCloudStack/central-api/blob/0422e8ca24667b04b7364ffa461f85c3de51a50a/poc-setup.md).
+
+### Preview: Keycloak Home-IdP-discovery
+
+To improve flexibility of onboarding new customer domains via IdP federation, SCS now deploys Keycloak with the [Home-IdP-discovery](https://github.com/sventorben/keycloak-home-idp-discovery) plugin. The idea is, that Keystone federates out to a single Keycloak "proxy" realm (called `osism` in the testbed) and using the plugin, Keycloak can identify the user specific realm from an email-format login-ID. Operators can create dedicated realms for each customer and Keycloak uses internal federation to redirect from the "proxy" realm to the specific customer realm. In the customer ream they can configure IdP federation (OpenID-Connect or SAML) to their own IAM solution. The [IAM section](https://docs.scs.community/docs/iam) of the SCS documentation shall be extended to detail the configuration. SCS is working upstream to contribute required enhancements in the
+mapping of users, groups and roles from OpenID-Connect token claims to the OpenStack Keystone access management.
+
+
+### Upcoming: automated pentesting security pipeline
+
+In the beginning of 2024 we started with the conception and implementation of an automated security pipeline. This pipeline will serve as a security scanning tool that is either triggered by deployments or due to manual activation in your infrastructure. The pipeline will contain six tools: Naabu, httpx, Nuclei, Greenbone (Community Edition), ZAP and DefectDojo. While the first three are meant to discover network-related issues like open ports and attack vectors, GCE and ZAP will deliver deeper security inspections of hosts in your SCS environment. Reports are collected in DefectDojo, allowing an overview over security-related changes and seeing the current state. The pipeline will be available as a platform tool in R7.
 
 ## Upgrade/Migration notes
 
@@ -133,11 +154,23 @@ The feature is expected to be available in the next SCS release.
   code is currently not actively maintained nor -- to our knowledge -- actively used.
 
 ## Security Fixes
+
 During the R6 development cycle a few security issues were reported and we issued security
 advisories and addressed them via maintenance updates. All of these issues are also fixed
 in the upcoming R6 release. These include:
 * A [OvS vulnerability with crafted Geneve packets and HW acceleration](https://scs.community/de/security/2024/02/20/cve-2023-3966/)
 * A [OVN vulnerability against specific BFD packets](https://scs.community/de/security/2024/03/15/cve-2024-2182/)
+
+Other security topics were covered in our community blog as well:
+* [Delving into the Technical Depths of Intel-SA-00950 and AMD Cachewarp Vulnerabilities](https://scs.community/2024/01/03/intel-amd-cpu-vulns/)
+
+### Security assessments for IaaS
+
+We invested in a range of penetration tests of the IaaS layer which resulted in valuable insights in security issues and probable improvements (e.g. applying hardening measures):
+
+* External pentesting of components (scanning, blackbox testing)
+* Internal pentesting of components with privileged and unprivileged system users (scanning from inside the cluster)
+* Scanning and pentesting the environment from a customer workload machine
 
 ## Resolved Issues
 
@@ -147,12 +180,27 @@ A fix to a bug where listing domains via Keystone API would return domains not i
 The fix is expected to be available by the next SCS release.
 
 ## Documentation
+
 The [docs page](https://docs.scs.commnutiy/) has come a long way in the last 6 months.
 It pulls in a lot more content from the various projects and structures it in a much
 more accessible way. Look at the [standards](https://docs.scs.community/standards) pages
 there to get an impression.
 
+### Highlighted blog posts
+
+* Oct'23: [Progress: OpenStack API access with OpenID Connect in Sovereign Cloud Stack](https://scs.community/2023/10/19/progress-openstack-cli-with-federation/)
+* Nov'23: [Confidential Computing in digital sovereign environments](https://scs.community/tech/2023/11/21/confidential-computing-in-digital-sovereign-environments/)
+* Dec'23: [SCS observability and monitoring - An opinionated proposal](https://scs.community/tech/2023/12/06/mvp-monitoring/)
+* Dec'23: [Cluster Stacks](https://scs.community/2023/12/23/clusterstacks/)
+* Feb'24: [SDN scalability improvements](https://scs.community/2024/02/09/sdn-scalability/)
+
+### IAM
+
+The documentation now contains an [IAM overview document](https://docs.scs.community/docs/iam) which explains current
+limitations for the dynamic mapping of user roles and shall be extended to explain configuration options for Operators.
+
 ## Standards Conformance
+
 The standards have evolved, increasing the amount of guarantees that software developers
 and operators have for workloads that work across SCS-compatible clouds.
 The [SCS-compatible IaaS-v4](https://docs.scs.community/standards/scs-compatible-iaas)
@@ -166,6 +214,7 @@ we cut it in stone. We aim for both KaaSv1 and v2 to fulfill the standards.
 (Future standards will likely not be fulfilled by KaaSv1 as it's being deprecated.)
 
 ## Release Tagging
+
 A number of repositories follow OSISM's example and use the `7.0.0` or `v7.0.0` tag
 to denote SCS Release 6.
 
@@ -174,6 +223,7 @@ to denote SCS Release 6.
 ### IaaS
 
 #### Loadbalancer service (octavia)
+
 * Creating loadbalancers in Cloud-in-a-Box installations fails with the
   error message that the VIP subnet does not exist. [OSISM #890](https://github.com/osism/issues/issues/890)
 * When using `--provider ovn` with a loadbalancer health-monitor, we leak ports `ovn-lb-hm-$SUBNETID` in all
@@ -188,10 +238,16 @@ to denote SCS Release 6.
 We expect to resolve these issues with a maintenance update.
 
 ### KaaS
+
 Some features of KaaS v1 are not available yet in KaaS v2 because they are WIP in upstream CAPO.
 This includes the creation of some of the optional components such as e.g. the deployment
 of ingress service, cert-manager, flux, harbor. More importantly, we do not yet have the
 handling of restrictive security groups implemented nor the ability to avoid OpenStack
+
+Some features of KaaS v1 are not available yet in KaaS v2 because they are WIP in upstream CAPO.
+This includes the creation of some of the optional components such as e.g. the deployment
+of ingress service, cert-manager, flux, harbor. More importantly, we do not yet have the
+handling of restrctive security groups implemented nor the ability to avoid OpenStack
 scheduling more than one control plane node on the same host (hypervisor).
 
 For this reason, we are including KaaS v1 (k8s-cluster-api-provider) in the R6 release,
@@ -202,6 +258,14 @@ We will address most of the gaps during the next release cycle.
 
 KaaS v1 should not be used for new deployments; we intend to remove it with the next
 release (R7).
+
+### IAM
+
+Since Keycloak is a Java application it requires importing certificates into its certificate store.
+As the Keycloak pod in k3s now runs the service as non-root user, it gets more challenging to import
+custom certificates from arbitrary customers for IdP federation. In case this topic is intersting for
+specific deployments, SCS would be interesting to hear about it and discuss how to implement this in
+a usable way.
 
 ## Contributing
 
