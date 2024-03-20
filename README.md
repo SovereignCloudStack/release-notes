@@ -46,7 +46,7 @@ Support for diskless flavors, and IPv6 support for east-west and north-south.
 
 See [Release Notes for R5](Release5.md) for more information.
 
-### Release 6 (2023-03-20)
+### Release 6 (2024-03-20)
 
 Along the outcomes that were defined for the R6 development cycle many things have been
 added, improved and fixed through the last six months. The list of highlights is lead by
