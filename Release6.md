@@ -33,6 +33,10 @@ and delivers the following components:
 
 ### KaaS
 
+On the KaaS level, the development of the Cluster Stacks as KaaS V2 has reached a state where the approach is finally usable. With Cluster Stacks it is possible to bundle all components of Kubernetes clusters, i.e. node images, Kubernetes configuration, and cluster addons (core applications necessary to use a Kubernetes cluster) together and use the bundles to create and update clusters with one simple command. 
+
+One bundle, a Cluster Stack, can be tested extensively and is only released if both creating and upgrading clusters works smoothly. Users of these Cluster Stacks profit from the Cluster Stack Operator that works alongside with Cluster API to create and update ready-to-use clusters easily. 
+
 * [k8s-cluster-api-provider](https://github.com/SovereignCloudStack/k8s-cluster-api-provider) (KaaS v1)
   * Moved to OpenTofu
   * Migrated to ClusterClass (last not least to ease the migration to Cluster Stacks)
