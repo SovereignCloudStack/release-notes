@@ -242,11 +242,6 @@ Some features of KaaS v1 are not available yet in KaaS v2 because they are WIP i
 This includes the creation of some of the optional components such as e.g. the deployment
 of ingress service, cert-manager, flux, harbor. More importantly, we do not yet have the
 handling of restrictive security groups implemented nor the ability to avoid OpenStack
-
-Some features of KaaS v1 are not available yet in KaaS v2 because they are WIP in upstream CAPO.
-This includes the creation of some of the optional components such as e.g. the deployment
-of ingress service, cert-manager, flux, harbor. More importantly, we do not yet have the
-handling of restrictive security groups implemented nor the ability to avoid OpenStack
 scheduling more than one control plane node on the same host (hypervisor).
 
 For this reason, we are including KaaS v1 (k8s-cluster-api-provider) in the R6 release,
