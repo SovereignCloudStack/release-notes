@@ -208,7 +208,7 @@ fulfills all of these standards in the default configuration.
 
 For the Kubernetes layer, we have our first set of standards almost finalized.
 Some of the standards for [SCS-compatible KaaS-v1](https://docs.scs.community/standards/scs-compatible-kaas)
-are unfortunately hard to test, so are working on adding some more tests before
+are unfortunately hard to test, so we are working on adding some more tests before
 we cut it in stone. We aim for both KaaSv1 and v2 to fulfill the standards.
 (Future standards will likely not be fulfilled by KaaSv1 as it's being deprecated.)
 
