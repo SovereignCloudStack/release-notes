@@ -21,7 +21,7 @@ Overall with Release 6 it becomes apparent that SCS is efficient to operate.
 
 ### IaaS
 
-The IaaS reference implementation is based on [OSISM 7.0.0](https://release.osism.tech/notes/7.0.0.html)
+The IaaS reference implementation is based on [OSISM 7.0.0](https://release.osism.tech/notes/7.html)
 and delivers the following components:
 
 * [OpenStack 2023.2 (Bobcat)](https://releases.openstack.org/bobcat/highlights.html)
