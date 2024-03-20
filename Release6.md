@@ -131,11 +131,11 @@ mapping of users, groups and roles from OpenID-Connect token claims to the OpenS
 
 ## Upgrade/Migration notes
 
-* For the IaaS reference implementation, please refer to the [OSISM 7.0.0 Upgrade Notes](https://release.osism.tech/notes/7.0.0.html#upgrade-notes).
+* For the IaaS reference implementation, please refer to the [OSISM 7.0.0 Upgrade Notes](https://release.osism.tech/notes/7.html#upgrade-notes).
 
 ## Removals
 
-* Please check the removals for OSISM in the [upstream removal notices](https://release.osism.tech/notes/7.0.0.html#removals).
+* Please check the removals for OSISM in the [upstream removal notices](https://release.osism.tech/notes/7.html#removals).
 
 ## Deprecations
 
