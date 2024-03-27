@@ -1,7 +1,7 @@
 # Release Notes for SCS Release X
 
 This document is work in progress for the upcoming Release X.
-Release 4 will be released in <Months/Year>. 
+Release 4 will be released in Months/Year.
 This note will be removed, once Release X is released and these notes are valid.
 
 
