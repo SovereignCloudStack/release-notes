@@ -61,7 +61,7 @@ a Release as production-ready software in one of the next releases. We certainly
 hope to do so.
 
 To test how our k8s aaS platform will look like, have a look at
-https://github.com/SovereignCloudStack/k8s-cluster-api-provider
+[https://github.com/SovereignCloudStack/k8s-cluster-api-provider](https://github.com/SovereignCloudStack/k8s-cluster-api-provider)
 You can follow the documentation to set up the k8s cluster API on an SCS
 cloud (or other well configured OpenStack clouds that support octavia).
 

@@ -32,7 +32,7 @@ https://github.com/SovereignCloudStack/zuul-sandbox.
 We provide generic configuration examples and blueprints for prometheus rules
 and grafana dashboards. The examples need to be understood and adapted to the
 particular needs of your environment. You can find the examples at
-<https://github.com/osism/kolla-operations>.
+[https://github.com/osism/kolla-operations](https://github.com/osism/kolla-operations)].
 
 With R2 we plan to implement a basic set of these alerts and dashboards in the
 testbed deployment in order to make them even easier consumable for new users.

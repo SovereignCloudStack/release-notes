@@ -75,7 +75,7 @@ For these please also refer to the [upstream deprecation notices](https://releas
 * Heat is deprecated in favor of more generic Infrastructure as Code tools like Terraform as of now and will be removed in the future (exact removal date is not yet known)
 * Swift (currently available as Technical Preview) will be removed in favor of Ceph RGW
 * Trove (currently available as Technical Preview) will be removed in favor of Kubernetes database operators
-* Skydive (currently available as Technical Preview) will be removed in the future, the project is not maintained anymore, last commit is 8th Jan 2022 (<https://review.opendev.org/c/openstack/kolla/+/869191>)
+* Skydive (currently available as Technical Preview) will be removed in the future, the project is not maintained anymore, last commit is 8th Jan 2022 [https://review.opendev.org/c/openstack/kolla/+/869191](https://review.opendev.org/c/openstack/kolla/+/869191)
 * The login to a registry with the `osism.services.docker` role is deprecated in favor of the new `osism.commons.docker_login` role.
 
 ## Security Fixes
