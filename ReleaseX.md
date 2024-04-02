@@ -1,9 +1,8 @@
 # Release Notes for SCS Release X
 
 This document is work in progress for the upcoming Release X.
-Release 4 will be released in <Months/Year>. 
+Release X will be released in Months/Year.
 This note will be removed, once Release X is released and these notes are valid.
-
 
 ## Scope
 
@@ -38,4 +37,3 @@ our community -- or just leave input on the github issues and PRs.
 Have a look at our [How to contribute page](https://scs.community/contribute/).
 
 ## Thanks
-
