@@ -32,7 +32,6 @@ Our community has created a growing amount of [blog articles](https://scs.commun
 * With [osism/node-image](https://github.com/osism/node-image) an iso image for much easier bootstrapping of new OSISM environments is available now
 * The software for our [Kubernetes Cluster-API reference implementation](https://github.com/SovereignCloudStack/k8s-cluster-api-provider) has been updated and highlights are covered in own [release notes](https://github.com/SovereignCloudStack/k8s-cluster-api-provider/blob/main/Release-Notes-R4.md).<!--FIXME: We should link to docs.scs.community here.-->
 
-
 ## New Features (Highlights)
 
 ### Operator focused improvements
@@ -75,7 +74,7 @@ For these please also refer to the [upstream deprecation notices](https://releas
 * Heat is deprecated in favor of more generic Infrastructure as Code tools like Terraform as of now and will be removed in the future (exact removal date is not yet known)
 * Swift (currently available as Technical Preview) will be removed in favor of Ceph RGW
 * Trove (currently available as Technical Preview) will be removed in favor of Kubernetes database operators
-* Skydive (currently available as Technical Preview) will be removed in the future, the project is not maintained anymore, last commit is 8th Jan 2022 [https://review.opendev.org/c/openstack/kolla/+/869191](https://review.opendev.org/c/openstack/kolla/+/869191)
+* Skydive (currently available as Technical Preview) will be removed in the future, the project is not maintained anymore, last commit is 8th Jan 2022: [https://review.opendev.org/c/openstack/kolla/+/869191](https://review.opendev.org/c/openstack/kolla/+/869191)
 * The login to a registry with the `osism.services.docker` role is deprecated in favor of the new `osism.commons.docker_login` role.
 
 ## Security Fixes
