@@ -21,7 +21,7 @@ Overall with Release 6 it becomes apparent that SCS is efficient to operate.
 
 ### IaaS
 
-The IaaS reference implementation is based on [OSISM 7.0.0](https://release.osism.tech/notes/7.html)
+The IaaS reference implementation is based on [OSISM 7.0.0](https://osism.tech/docs/release-notes/osism-7)
 and delivers the following components:
 
 * [OpenStack 2023.2 (Bobcat)](https://releases.openstack.org/bobcat/highlights.html)
@@ -135,11 +135,11 @@ mapping of users, groups and roles from OpenID-Connect token claims to the OpenS
 
 ## Upgrade/Migration notes
 
-* For the IaaS reference implementation, please refer to the [OSISM 7.0.0 Upgrade Notes](https://release.osism.tech/notes/7.html#upgrade-notes).
+* For the IaaS reference implementation, please refer to the [OSISM 7.0.0 Upgrade Notes](https://osism.tech/docs/release-notes/osism-7#upgrade-notes).
 
 ## Removals
 
-* Please check the removals for OSISM in the [upstream removal notices](https://release.osism.tech/notes/7.html#removals).
+* Please check the removals for OSISM in the [upstream removal notices](https://osism.tech/docs/release-notes/osism-7#removals--deprecations).
 
 ## Deprecations
 
