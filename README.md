@@ -55,7 +55,12 @@ reference implementation being updated to OpenStack 2023.2 (Bobcat).
 
 See [Release Notes for R6](Release6.md) for more information.
 
+### Release 7 (2024-09-04)
+
+See [Release Notes for R7](Release7.md) for more information.
+
+
 ## Roadmap
 
-We have a 6 month release cadence -- R7 will follow in September 2024.
-Until then, we will provide bugfixes and security fixes for R6.
+We have a 6 month release cadence -- R8 will follow in March 2025.
+Until then, we will provide bugfixes and security fixes for R7.
