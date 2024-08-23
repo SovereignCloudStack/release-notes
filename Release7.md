@@ -8,6 +8,11 @@ This note will be removed, once Release X is released and these notes are valid.
 
 ## Component Versions and User-visible improvements (highlights)
 
+### KaaS
+
+- Cluster Stack `SCS`
+- Cluster Stack releases can be hosted on an OCI registry
+
 ## New Features (Highlights)
 
 ### Operator focused improvements
@@ -54,11 +59,24 @@ During the test run, metrics and results are collected and exported via a Promet
 * Repository: https://github.com/SovereignCloudStack/scs-health-monitor
 
 
+### KaaS
+
+- Multi-Stage-Addons
+- GUI for generating Cluster objects
+- csctl-plugin-openstack
+- More Providers
+  - Kamaji
+  - Metal³
+  - KubeVirt
+- csp-helper
+
 ## Upgrade/Migration notes
 
 ## Removals
 
 ## Deprecations
+
+- KaaS v1 (k8s-cluster-api-provider)
 
 ## Security Fixes
 
@@ -68,7 +86,14 @@ During the test run, metrics and results are collected and exported via a Promet
 
 ## Release Tagging
 
-## List of known issues & restrictions in RX
+## List of known issues & restrictions in R7
+
+### KaaS
+
+As alread in R6, we do not yet have the handling of restrictive security groups
+implemented nor the ability to avoid OpenStack scheduling more than one control
+plane node on the same host (hypervisor).
+Those features are in review upstream.
 
 ## Contributing
 
