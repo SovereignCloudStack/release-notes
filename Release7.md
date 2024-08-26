@@ -25,8 +25,19 @@ have been shipped as part of one of the minor releases working towards Release 7
 
 ### KaaS
 
-- Cluster Stack `SCS`
-- Cluster Stack releases can be hosted on an OCI registry
+#### Cluster Stack `SCS`
+
+SCS KaaS v1, better known as SCS Cluster Stacks are the new reference implementation for managing SCS compliant Kubernetes on SCS compliant infrastructure.
+While there is the possibility to build Cluster Stacks for own purposes, the SCS projects provides preassembled Cluster Stacks for immediate use. These are simply called `SCS` and come with a number of configuration options, see https://github.com/SovereignCloudStack/cluster-stacks/blob/main/docs/providers/openstack/configuration.md.
+
+#### Host Cluster Stack release assets on an OCI registry
+
+With the first versions of SCS Cluster Stacks the only way to host the release assets was GitHub Releases. This made cross-team testing harder and lead to an unusual amount of releases on specific GitHub repositories.  
+With SCS R7 it will be possible to put publish the Cluster Stack release assets on an OCI registry.
+
+#### Build node images with csctl for use in openstack
+
+The [csctl-plugin-openstack](https://github.com/SovereignCloudStack/csctl-plugin-openstack) can now be used to build node images and upload them directly to Swift Object Store.
 
 ## New Features (Highlights)
 
@@ -76,14 +87,21 @@ During the test run, metrics and results are collected and exported via a Promet
 
 ### KaaS
 
-- Multi-Stage-Addons
-- GUI for generating Cluster objects
-- csctl-plugin-openstack
-- More Providers
-  - Kamaji
-  - Metal³
-  - KubeVirt
-- csp-helper
+#### Multi-Stage-Addons support in Cluster Stack Operator
+
+The Multi-Stage-Addons mark a key feature of the Cluster Stacks approach. It enables the Cluster Stack Operator to upgrade clusters in predefined ways using Cluster API Lifecycle Hooks. Cluster upgrades can be painful, if e.g. new Kubernetes versions won't support the current used CNI. With the Multi-Stage-Addons the order of upgrades can be defined in a specific order which ensures the compatibility of components.
+
+#### Tech Preview: Cluster Gen - GUI for generating Cluster objects
+
+As a user of a ClusterAPI based managed Kubernetes the interface is the `Cluster` object. To define this can be complicated and depends on the used ClusterClass. With [Cluster-Gen](https://github.com/SovereignCloudStack/cluster-gen/) the possible options will be pulled from an existing ClusterClass to provide a form which can be used to create the `Cluster` object to apply it to the management cluster, which results in the usable workload cluster.
+
+#### Tech Preview: Kamaji
+
+Kamaji is a Control Plane manager which makes it possible to host Control Planes on pods instead on dedicated VMs. This makes them highly scalable and safes a lot of resources. We now provide Cluster Stacks using Kamaji as Control Plane provider, which can be especially interesting for smaller CSPs.
+
+#### Openstack csp helper
+
+The [openstack-csp-helper](https://github.com/SovereignCloudStack/openstack-csp-helper) is a simple Helm Chart to build and deploy the needed secrets used in the mangement cluster (to create the machines) and in the workload cluster (to get persistent volumes and loadbalancers) from a usual `clouds.yaml` file.
 
 ## Upgrade/Migration notes
 
@@ -112,9 +130,9 @@ in the upcoming R7 release. These include:
 
 ### KaaS
 
-As alread in R6, we do not yet have the handling of restrictive security groups
-implemented nor the ability to avoid OpenStack scheduling more than one control
-plane node on the same host (hypervisor).
+As already in R6, we do not yet have the handling of restrictive security
+groups implemented nor the ability to avoid OpenStack scheduling more than one
+control plane node on the same host (hypervisor).
 Those features are in review upstream.
 
 ## Contributing
