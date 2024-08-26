@@ -124,7 +124,7 @@ in the upcoming R7 release. These include:
 
 ## Standards Conformance
 
-This release brings quality-of-live improvements such as:
+This release brings quality-of-life improvements such as:
 
 - improved documentation of the certification scopes: they now include formal parameters,
   such as the image spec file for the standard on standard images ([SCS-compatible IaaS
