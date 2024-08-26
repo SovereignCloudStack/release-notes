@@ -124,6 +124,26 @@ in the upcoming R7 release. These include:
 
 ## Standards Conformance
 
+This release brings quality-of-live improvements such as:
+
+- improved documentation of the certification scopes: they now include formal parameters,
+  such as the image spec file for the standard on standard images ([SCS-compatible IaaS
+  v4](https://docs-staging.scs.community/standards/scs-compatible-iaas/)),
+- removal of unnecessary strictness from the standard
+  [scs-0103-v1](https://docs.scs.community/standards/scs-0103-v1-standard-flavors/)
+  on standard flavors, enabling operators to provide more meaningful information via `extra_specs`,
+- improved output and documentation of the main check script,
+- and bug fixes on the test scripts.
+
+We are quite pleased that it could be shown in May that compliance with the certificate scope
+SCS-compatible IaaS v4 can be achieved with an alternative implementation (other than our reference
+implementation), namely Yaook,
+[with reasonable effort](https://scs.community/de/2024/05/13/cost-of-making-an-openstack-cluster-scs-compliant/).
+
+Finally, we are also happy that we could welcome new partners to our table of SCS clouds, namely AOV,
+SysEleven, and, with proof-of-concept environments, the companies KDO Service GmbH and Cloud&Heat
+Technologies GmbH.
+
 ## Release Tagging
 
 ## List of known issues & restrictions in R7
