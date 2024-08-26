@@ -91,6 +91,13 @@ During the test run, metrics and results are collected and exported via a Promet
 
 ## Security Fixes
 
+During the R7 development cycle a few security issues were reported and we issued security
+advisories and addressed them via maintenance updates. All of these issues are also fixed
+in the upcoming R7 release. These include:
+
+* A [Security Advisory on arbitrary file access through QCOW2 external data file (CVE-2024-32498)](https://scs.community/security/2024/07/02/cve-2024-32498/)
+* A [Security Advisory on incomplete QCOW2 and VMDK image handling protections (CVE-2024-40767)](https://scs.community/security/2024/07/23/cve-2024-40767/)
+
 ## Resolved Issues
 
 ## Standards Conformance
