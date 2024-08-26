@@ -2,7 +2,7 @@
 
 This document is work in progress for the upcoming Release 7.
 Release 7 will be published on September 4th 2024.
-This note will be removed, once Release X is released and these notes are valid.
+This note will be removed, once Release 7 is released and these notes are valid.
 
 ## Scope
 
