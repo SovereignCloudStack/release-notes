@@ -8,6 +8,17 @@ This note will be removed, once Release 7 is released and these notes are valid.
 
 ## Component Versions and User-visible improvements (highlights)
 
+### IaaS
+
+The IaaS reference implementation is based on [OSISM 8.0.0](https://osism.tech/docs/release-notes/osism-8)
+and delivers the following components:
+
+* [OpenStack 2024.1 (Caracal)](https://releases.openstack.org/caracal/highlights.html)
+* Default Ceph version is [Ceph Reef](https://docs.ceph.com/en/latest/releases/reef/#v18-2-4-reef)
+  * Technical preview of Ceph deployments via Rook
+* Support for deployments on Ubuntu 24.04, CentOS 9 and Debian 12
+
+
 ### KaaS
 
 - Cluster Stack `SCS`
