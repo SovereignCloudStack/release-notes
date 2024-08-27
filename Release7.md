@@ -27,7 +27,7 @@ have been shipped as part of one of the minor releases working towards Release 7
 
 #### Cluster Stack `SCS`
 
-SCS KaaS v1, better known as SCS Cluster Stacks are the new reference implementation for managing SCS compliant Kubernetes on SCS compliant infrastructure.
+SCS KaaS v2, better known as SCS Cluster Stacks are the new reference implementation for managing SCS compliant Kubernetes on SCS compliant infrastructure.
 While there is the possibility to build Cluster Stacks for own purposes, the SCS projects provides preassembled Cluster Stacks for immediate use. These are simply called `SCS` and come with a number of configuration options, see https://github.com/SovereignCloudStack/cluster-stacks/blob/main/docs/providers/openstack/configuration.md.
 
 #### Host Cluster Stack release assets on an OCI registry
