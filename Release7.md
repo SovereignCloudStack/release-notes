@@ -128,7 +128,7 @@ This release brings quality-of-life improvements such as:
 
 - improved documentation of the certification scopes: they now include formal parameters,
   such as the image spec file for the standard on standard images ([SCS-compatible IaaS
-  v4](https://docs-staging.scs.community/standards/scs-compatible-iaas/)),
+  v4](https://docs.scs.community/standards/scs-compatible-iaas/)),
 - removal of unnecessary strictness from the standard
   [scs-0103-v1](https://docs.scs.community/standards/scs-0103-v1-standard-flavors/)
   on standard flavors, enabling operators to provide more meaningful information via `extra_specs`,
