@@ -91,23 +91,25 @@ The Status Page, [formerly available as a tech preview](https://scs.community/de
 
 The status page is the web frontend to our status API server, a record keeper of any incidents that may limit or break parts of your SCS infrastructure. While the tech preview version was limited to displaying this data, this full release contains not just improvements to the code working in the background, but also two new features:
 
- - The new *Maintenance Events* are a type of incident that are set in the future and allow you to announce planned times of limited or non-existant service well in advance, right on the status page.
- - The *Management Page* provides a convenient interface to create and update incidents and maintenance events using a web UI, secured behind an authorization system using OpenID.
+* The new *Maintenance Events* are a type of incident that are set in the future and allow you to announce planned times of limited or non-existant service well in advance, right on the status page.
+* The *Management Page* provides a convenient interface to create and update incidents and maintenance events using a web UI, secured behind an authorization system using OpenID.
 
-The [status-page-deployment repository](https://github.com/SovereignCloudStack/status-page-deployment) and [its documentation](https://docs.scs.community/docs/operating-scs/components/status-page-deployment/docs/overview) contain full example and development setups. Check the [Quickstart Guide](https://docs.scs.community/docs/operating-scs/components/status-page-deployment/docs/quickstart) to see what you need to run your own API server with status page or visit the SCS project's [publicly hosted installation]((https://status.k8s.scs.community/)) to get an impression.
+The [status-page-deployment repository](https://github.com/SovereignCloudStack/status-page-deployment) and [its documentation](https://docs.scs.community/docs/operating-scs/components/status-page-deployment/docs/overview) contain full example and development setups. Check the [Quickstart Guide](https://docs.scs.community/docs/operating-scs/components/status-page-deployment/docs/quickstart) to see what you need to run your own API server with status page or visit the SCS project's [publicly hosted installation](https://status.k8s.scs.community/) to get an impression.
 
 * `status-page-openapi` (concepts)
-  * Repository:https://github.com/SovereignCloudStack/status-page-openapi
-  * Documentation:https://docs.scs.community/docs/category/concepts
+  * [Repository](https://github.com/SovereignCloudStack/status-page-openapi)
+  * [Documentation](https://docs.scs.community/docs/category/concepts)
 * `status-page-api` (API server reference implementation)
-  * Repository: https://github.com/SovereignCloudStack/status-page-api
-  * Documentation:https://docs.scs.community/docs/category/api
+  * [Repository](https://github.com/SovereignCloudStack/status-page-api)
+  * [Documentation](https://docs.scs.community/docs/category/api)
 * `status-page-deployment` (examples and templates, including a development setup based on kind)
-  * Repository:https://github.com/SovereignCloudStack/status-page-deployment
-  * Documentation: https://docs.scs.community/docs/operating-scs/components/status-page-deployment/docs/overview
+  * [Repository](https://github.com/SovereignCloudStack/status-page-deployment)
+  * [Documentation](https://docs.scs.community/docs/operating-scs/components/status-page-deployment/docs/overview)
 * `status-page-web` (frontend code and development instructions)
-  * Repository: https://github.com/SovereignCloudStack/status-page-web
-* Tech preview announcement post: https://scs.community/de/tech/2024/04/30/status-page-tech-preview-release/
+  * [Repository](https://github.com/SovereignCloudStack/status-page-web)
+  * [Documentation](https://docs.scs.community/docs/category/web)
+
+Also see the [Tech preview announcement post](https://scs.community/de/tech/2024/04/30/status-page-tech-preview-release/).
 
 ### KaaS
 
