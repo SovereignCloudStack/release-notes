@@ -69,8 +69,8 @@ Since both layers produce vulnerability reports, which CSPs might want to delega
 
 For non-vulnerability reports, an export to S3/Swift was implemented and can be adjusted according to the CSP's needs.
 
-* Documentation (currently for IaaS): https://docs.scs.community/docs/operating-scs/components/automated-pentesting/overview/
-* Docs for KaaS: https://github.com/SovereignCloudStack/security-k8s-scan-pipeline/tree/feat/initial-pipeline-setup/docs
+* Documentation for IaaS pentesting: https://docs.scs.community/docs/operating-scs/components/automated-pentesting-iaas/overview/
+* Documentation for KaaS pentesting: https://docs.scs.community/docs/operating-scs/components/automated-pentesting-kaas/overview/
 
 
 ### Tech Preview: SCS Health Monitor
