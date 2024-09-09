@@ -43,6 +43,17 @@ The [csctl-plugin-openstack](https://github.com/SovereignCloudStack/csctl-plugin
 
 ### Operator focused improvements
 
+### IaaS
+
+* The Prometheus node-exporter is now deployed on all nodes by default.
+* cAdvisor is now deployed on all nodes by default.
+* It is now possible to manage custom images with `osism manage images`.
+* It is now possible to manage custom flavors with `osism manage flavors`.
+* Various commands for disabling nodes, such as `osism apply disable-compute-node` have been added.
+* With the osism manage image octavia command it is possible to rotate the Octavia Amphora image, which is rebuilt daily.
+* With the osism manage image clusterapi command it is possible to import all currently stable Cluster API images
+
+
 ### SCS Developer focused improvements (testbed and k8s cluster management)
 
 ### Tech Preview: Central API
