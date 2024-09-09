@@ -144,6 +144,14 @@ The [openstack-csp-helper](https://github.com/SovereignCloudStack/openstack-csp-
 
 ## Removals
 
+* The following roles have been removed from OSISM, most of them do not affect the SCS operators in any real matter:
+  * `osism.services.bird`
+  * `osism.commons.kompose`
+  * `osism.services.openldap`
+  * `osism.services.openstack_health_monitor`
+  * `osism.validations.refstack`
+
+
 ## Deprecations
 
 - KaaS v1 (k8s-cluster-api-provider)
