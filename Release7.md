@@ -1,10 +1,22 @@
 # Release Notes for SCS Release 7
 
-This document is work in progress for the upcoming Release 7.
-Release 7 will be published on September 4th 2024.
-This note will be removed, once Release 7 is released and these notes are valid.
+Release 7 has been published on September 11, 2024.
 
 ## Scope
+
+We had stated the goals of previous releases in terms of desired outcomes. For R7, we built on top of
+[R6](https://docs.scs.community/docs/releases/Release6#scope) and continued in the same direction.
+
+With R7 being the last release during the original funded SCS project, we put a lot of focus on finalizing
+the work on many of the components. Major progress was achieved for example in the area of observability
+(status page, new health monitor) and of course again in the cluster stacks, our Kubernetes as a Service
+framework. Finalizing also means a lot of non-feature work, such as ensuring that tests exist and pass,
+documentation, guides and blog articles are written and upstream contributions are done. An extra
+focus was put on integrating the components well with each other and documenting the performance of a
+complete SCS deployment better. One result of this is the [turnkey solution overview table](Link:TODO),
+another one the Technical Preview for our
+[Central API](https://scs.community/tech/2024/08/13/central-api-tech-preview-release/) where we
+demonstrate our vision of one API for all of the SCS stack in a usable form.
 
 ## Component Versions and User-visible improvements (highlights)
 
@@ -140,6 +152,18 @@ Kamaji is a Control Plane manager which makes it possible to host Control Planes
 
 The [openstack-csp-helper](https://github.com/SovereignCloudStack/openstack-csp-helper) is a simple Helm Chart to build and deploy the needed secrets used in the mangement cluster (to create the machines) and in the workload cluster (to get persistent volumes and loadbalancers) from a usual `clouds.yaml` file.
 
+### IAM
+
+The keycloak container has been updated and the build process has seen further automation.
+THe container is now deployed into the internal infrastructure k3s, using the modern
+Kubernetes-based interfaces that OSISM has provided to allow providers to plug-in
+additional components at the management layer.
+
+The work that SCS has done on a clean role model including the domain manager role
+needed for self-service user and role management has successfully been discussed
+upstream and contributed there. This means that the SCS downstream implementation
+can be dropped and replaced by the upstream one in the next release R8.
+
 ## Upgrade/Migration notes
 
 ## Removals
@@ -159,15 +183,16 @@ The [openstack-csp-helper](https://github.com/SovereignCloudStack/openstack-csp-
 ## Security Fixes
 
 During the R7 development cycle a few security issues were reported and we issued security
-advisories and addressed them via maintenance updates. All of these issues are also fixed
-in the upcoming R7 release. These include:
+advisories and addressed them via maintenance updates for R6 (and some also R5). All of these
+issues are also fixed in the upcoming R7 release. These include:
 
 * A [Security Advisory on arbitrary file access through QCOW2 external data file (CVE-2024-32498)](https://scs.community/security/2024/07/02/cve-2024-32498/)
 * A [Security Advisory on incomplete QCOW2 and VMDK image handling protections (CVE-2024-40767)](https://scs.community/security/2024/07/23/cve-2024-40767/)
 * A [Security Advisory on Image Processing in Ironic](https://scs.community/security/2024/09/07/cve-2024-44082/)
 
+<!--
 ## Resolved Issues
-
+-->
 ## Standards Conformance
 
 This release brings quality-of-life improvements such as:
@@ -192,7 +217,30 @@ Technologies GmbH.
 
 ## Release Tagging
 
+OSISM uses the tag 8.0.0 for SCS R7 and some of the related repositories in the SCS project
+use a similar tag. Some repositories use maintained (stable) branches where the amount of changes
+is limited to mainly bug and security fixes to make life easier for our operators that need to
+stay on top of our security fixes without incurring too much change. Please note that by default,
+we will stop maintaining the old R6 branches after October. Also note that we have been
+able to establish a larger number of smaller changes during the R6 lifecycle to facilitate
+the increasing insight that 4 (well-tested) small changes are less risky that one step with
+3x the amount of changes. We will continue to work with our operators to ensure there is a
+good balance between effort (4 small changes is more operational effort!) and risk.
+
 ## List of known issues & restrictions in R7
+
+### IAM
+
+The most underestimated topic for SCS as probably the creation of a self-service federated
+Identity- and Access Management. While we were able to connect an external Identity Provider
+via OpenID Connect and fix the issues with API access before, we still have not achieved
+the full vision with customers being able to configuring everything via self-service.
+Our work on the domain-manager role (persona) in OpenStack has been contributed upstream, so
+we have an aligned view on this finally. Unfortunately, we will only get the results of
+this into the next release (R8) when we use OpenStack 2024.2 (Dalamatian). Discussing with
+our operators, we also learned about new requirements where *some* user identities need to
+work across several tenants and thus escape our simple view of users always belonging to
+a tenant. This topic will keep us busy for the next few releases.
 
 ### KaaS
 
@@ -201,10 +249,37 @@ groups implemented nor the ability to avoid OpenStack scheduling more than one
 control plane node on the same host (hypervisor).
 Those features are in review upstream.
 
+### OVN Loadbalancers
+
+The octavia ovn load balancer provider has a file descriptor leak which can lead
+to a dysfunctional octavia-api service. The [bug](https://github.com/osism/issues/issues/959)
+is still in analysis; for now,
+restarting the octavia-api service before the exhaustion is the workaround.
+
 ## Contributing
 
 We appreciate contribution to strategy and implementation, please join
 our community -- or just leave input on the github issues and PRs.
 Have a look at our [How to contribute page](https://scs.community/contribute/).
 
+## On to R8 ...
+
+We expect the continuation of our half-yearly cycle and thus an R8 in March. A lot of the work on the
+SCS components was done via tenders paid for and managed by the OSBA (with the funding from the german
+government / BMWK). The inclusion and exclusion of software components in future releases will depend
+more on the willingness of the component maintainers than on the setup of the SCS work packages; we
+anticipate more projects to seek alignment with SCS while existing projects can more easily work
+with loser coupling. We will make this transparent to the community in order to ensure that we
+maintain predictability for operators that rely on our technology.
+
 ## Thanks
+
+Even more contribution from upstream communities and partners in the SCS ecosystem, too many
+to mention here. Technology can only be improved to a certain degree in the hands of capable
+development teams; the real push comes through usage and very well-working feedback loops
+from operators and users back into engineering. Not everyone realizes it, but Open Source
+allows for extremely direct feedback, as users have the full bandwidth of option from just
+channeling a requirement or idea into the development via a full bug analysis up to code
+contributions. So let us use the opportunity for calling out to our operators and users.
+We have been working on growing the SCS adoption further and are looking forward to
+further announcements during the next weeks.
