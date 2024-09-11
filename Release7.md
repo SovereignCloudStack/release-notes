@@ -164,7 +164,10 @@ needed for self-service user and role management has successfully been discussed
 upstream and contributed there. This means that the SCS downstream implementation
 can be dropped and replaced by the upstream one in the next release R8.
 
+
 ## Upgrade/Migration notes
+
+* For the IaaS reference implementation, please refer to the [OSISM 8.0.0 Upgrade Notes](https://osism.tech/docs/release-notes/osism-8#800-20240911).
 
 ## Removals
 
