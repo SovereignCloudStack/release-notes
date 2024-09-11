@@ -100,7 +100,7 @@ For non-vulnerability reports, an export to S3/Swift was implemented and can be 
 
 As announced in the Release Notes for R6, a new health monitor was in the works during the last months. With R7 we are now at the state of releasing the first Tech Preview of the new SCS Health Monitor. It not only covers the infrastructure-as-a-service layer, but also has workflows for Kubernetes tests.
 
-While the SCSHM took many IaaS-related inspirations from the OSHM, the developer team for the new SCSHM has built an entirely new foundation for behavior-driven testing in SCS. The implementation is based on the Python `behave` framework, using the Gherkin language for test definitions. Using Python allows the tool to then use Python-native API cients for OpenStack and Kubernetes, with room for extension for many other tools in SCS as well.
+While the SCSHM took many IaaS-related inspirations from the OSHM, the developer team for the new SCSHM has built an entirely new foundation for behavior-driven testing in SCS. The implementation is based on the Python `behave` framework, using the Gherkin language for test definitions. Using Python allows the tool to then use Python-native API clients for OpenStack and Kubernetes, with room for extension for many other tools in SCS as well.
 
 During the test run, metrics and results are collected and exported via a Prometheus Push Gateway into a Grafana-based dashboard.
 
@@ -114,7 +114,7 @@ The Status Page, [formerly available as a tech preview](https://scs.community/de
 
 The status page is the web frontend to our status API server, a record keeper of any incidents that may limit or break parts of your SCS infrastructure. While the tech preview version was limited to displaying this data, this full release contains not just improvements to the code working in the background, but also two new features:
 
-* The new *Maintenance Events* are a type of incident that are set in the future and allow you to announce planned times of limited or non-existant service well in advance, right on the status page.
+* The new *Maintenance Events* are a type of incident that are set in the future and allow you to announce planned times of limited or non-existent service well in advance, right on the status page.
 * The *Management Page* provides a convenient interface to create and update incidents and maintenance events using a web UI, secured behind an authorization system using OpenID.
 
 The [status-page-deployment repository](https://github.com/SovereignCloudStack/status-page-deployment) and [its documentation](https://docs.scs.community/docs/operating-scs/components/status-page-deployment/docs/overview) contain full example and development setups. Check the [Quickstart Guide](https://docs.scs.community/docs/operating-scs/components/status-page-deployment/docs/quickstart) to see what you need to run your own API server with status page or visit the SCS project's [publicly hosted installation](https://status.k8s.scs.community/) to get an impression.
@@ -150,12 +150,12 @@ Kamaji is a Control Plane manager which makes it possible to host Control Planes
 
 #### Openstack csp helper
 
-The [openstack-csp-helper](https://github.com/SovereignCloudStack/openstack-csp-helper) is a simple Helm Chart to build and deploy the needed secrets used in the mangement cluster (to create the machines) and in the workload cluster (to get persistent volumes and loadbalancers) from a usual `clouds.yaml` file.
+The [openstack-csp-helper](https://github.com/SovereignCloudStack/openstack-csp-helper) is a simple Helm Chart to build and deploy the needed secrets used in the management cluster (to create the machines) and in the workload cluster (to get persistent volumes and loadbalancers) from a usual `clouds.yaml` file.
 
 ### IAM
 
 The keycloak container has been updated and the build process has seen further automation.
-THe container is now deployed into the internal infrastructure k3s, using the modern
+The container is now deployed into the internal infrastructure k3s, using the modern
 Kubernetes-based interfaces that OSISM has provided to allow providers to plug-in
 additional components at the management layer.
 
