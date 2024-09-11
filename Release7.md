@@ -13,7 +13,8 @@ the work on many of the components. Major progress was achieved for example in t
 framework. Finalizing also means a lot of non-feature work, such as ensuring that tests exist and pass,
 documentation, guides and blog articles are written and upstream contributions are done. An extra
 focus was put on integrating the components well with each other and documenting the performance of a
-complete SCS deployment better. One result of this is the [turnkey solution overview table](Link:TODO),
+complete SCS deployment better. One result of this is the
+[turnkey solution overview table](https://docs.scs.community/docs/turnkey-solution/overview),
 another one the Technical Preview for our
 [Central API](https://scs.community/tech/2024/08/13/central-api-tech-preview-release/) where we
 demonstrate our vision of one API for all of the SCS stack in a usable form.
