@@ -1,0 +1,65 @@
+---
+# Upload every SBOM produced using `images` variable to DependencyTrack
+# - Get the vault access token
+- hosts: localhost
+  vars:
+    vault_addr: "{{ zuul_vault_addr }}"
+    vault_secret_dest: "{{ zuul.executor.work_root }}/.approle-secret"
+    vault_token_dest: "{{ zuul.executor.work_root }}/.approle-token"
+    vault_role_name: "{{ zuul_vault.vault_role_name }}"
+  roles:
+
+    - role: "create-vault-approle-token"
+      vault_role_id: "{{ zuul_vault.vault_role_id }}"
+      vault_wrapping_token_id: "{{ lookup('file', vault_secret_dest) }}"
+
+# - get DT creds from Vault and upload artifacts
+- hosts: all
+  vars:
+    vault_addr: "{{ zuul_vault_addr }}"
+    vault_token_dest: "{{ zuul.executor.work_root }}/.approle-token"
+  tasks:
+    - name: "Read release deliverables data"
+      ansible.builtin.include_vars:
+        file: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}/releases/{{ scs_version }}/data.yaml"
+        name: "release_data"
+
+    - name: "Read dTrack name mapping"
+      ansible.builtin.include_vars:
+        file: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}/releases/{{ scs_version }}/dtrack_project_mapping.yaml"
+        name: "dtrack_mapping"
+
+    - name: "Get Dependencytrack credentials"
+      no_log: true
+      ansible.builtin.uri:
+        url: "{{ vault_addr }}/v1/secret/data/{{ dependencytrack_vault_secret_path | default('dependency-track/main') }}"
+        method: "GET"
+        headers:
+          "X-Vault-Token": "{{ lookup('file', vault_token_dest) }}"
+        body_format: "json"
+        return_content: true
+      register: "dt_credentials"
+      failed_when: false
+
+    - name: "Upload BOMs to dependency track"
+      ansible.builtin.include_role:
+        name: "upload-bom-to-dependencytrack"
+      vars:
+        dependencytrack_credentials: "{{ dt_credentials.json.data.data }}"
+        bom_artifacts:
+          - project_name: "{{ dtrack_mapping.image_project_mapping[(zj_image.registry + '/' + zj_image.name)]['project_name'] | default(zj_image.name) }}"
+            project_version: "{{ zj_image.tag }}"
+            bom_path: "{{ ansible_user_dir }}/zuul-output/artifacts/sboms/{{ zj_image.name | regex_replace('/', '_') }}.trivy.json"
+      loop: "{{ release_data.images }}"
+      loop_control:
+        loop_var: "zj_image"
+      when:
+        - "dt_credentials is defined"
+        - "dt_credentials.json is defined"
+        - "dt_credentials.json.data is defined"
+        - "release_data is defined"
+
+    - name: "Remove vault token file"
+      file:
+        path: "{{ vault_token_dest }}"
+        state: "absent"
