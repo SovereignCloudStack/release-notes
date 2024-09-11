@@ -29,7 +29,7 @@ and delivers the following components:
 * [OpenStack 2024.1 (Caracal)](https://releases.openstack.org/caracal/highlights.html)
 * Default Ceph version is [Ceph Quincy](https://docs.ceph.com/en/latest/releases/quincy/#v17-2-7-quincy)
   * [Ceph Reef](https://docs.ceph.com/en/latest/releases/reef/#v18-2-4-reef) is available as an option
-* Support for deployments on Ubuntu 24.04, CentOS 9 and Debian 12
+* Support for deployments on Ubuntu 22.04, Ubuntu 24.04, CentOS 9 and Debian 12
 
 Throughout the R7 development cycle numerous, eight in total, minor releases of OSISM have been released.
 One of the core ideas of SCS is to move towards a very incremental approach so that keeping infrastructure
