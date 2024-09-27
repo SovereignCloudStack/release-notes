@@ -1,0 +1,246 @@
+---
+# Mapping of the image to the dTrack project name
+image_project_mapping:
+  # IaaS
+  osism.harbor.regio.digital/kolla/release/ironic-prometheus-exporter:
+    project_name: kolla/ironic-prometheus-exporter
+  osism.harbor.regio.digital/kolla/release/neutron-infoblox-ipam-agent:
+    project_name: kolla/neutron-infoblox-ipam-agent
+  osism.harbor.regio.digital/kolla/release/ovn-sb-db-server:
+    project_name: kolla/ovn-sb-db-server
+  osism.harbor.regio.digital/kolla/release/ovn-controller:
+    project_name: kolla/ovn-controller
+  osism.harbor.regio.digital/kolla/release/ovn-northd:
+    project_name: kolla/ovn-northd
+  osism.harbor.regio.digital/kolla/release/ovn-nb-db-server:
+    project_name: kolla/ovn-nb-db-server
+  osism.harbor.regio.digital/kolla/release/manila-data:
+    project_name: kolla/manila-data
+  osism.harbor.regio.digital/kolla/release/manila-share:
+    project_name: kolla/manila-share
+  osism.harbor.regio.digital/kolla/release/manila-scheduler:
+    project_name: kolla/manila-scheduler
+  osism.harbor.regio.digital/kolla/release/manila-api:
+    project_name: kolla/manila-api
+  osism.harbor.regio.digital/kolla/release/kuryr-libnetwork:
+    project_name: kolla/kuryr-libnetwork
+  osism.harbor.regio.digital/kolla/release/ironic-conductor:
+    project_name: kolla/ironic-conductor
+  osism.harbor.regio.digital/kolla/release/ironic-pxe:
+    project_name: kolla/ironic-pxe
+  osism.harbor.regio.digital/kolla/release/ironic-api:
+    project_name: kolla/ironic-api
+  osism.harbor.regio.digital/kolla/release/cinder-scheduler:
+    project_name: kolla/cinder-scheduler
+  osism.harbor.regio.digital/kolla/release/cinder-backup:
+    project_name: kolla/cinder-backup
+  osism.harbor.regio.digital/kolla/release/cinder-volume:
+    project_name: kolla/cinder-volume
+  osism.harbor.regio.digital/kolla/release/cinder-api:
+    project_name: kolla/cinder-api
+  osism.harbor.regio.digital/kolla/release/barbican-keystone-listener:
+    project_name: kolla/barbican-keystone-listener
+  osism.harbor.regio.digital/kolla/release/barbican-worker:
+    project_name: kolla/barbican-worker
+  osism.harbor.regio.digital/kolla/release/barbican-api:
+    project_name: kolla/barbican-api
+  osism.harbor.regio.digital/kolla/release/keystone:
+    project_name: kolla/keystone
+  osism.harbor.regio.digital/kolla/release/keystone-fernet:
+    project_name: kolla/keystone-fernet
+  osism.harbor.regio.digital/kolla/release/keystone-ssh:
+    project_name: kolla/keystone-ssh
+  osism.harbor.regio.digital/kolla/release/heat-engine:
+    project_name: kolla/heat-engine
+  osism.harbor.regio.digital/kolla/release/heat-api:
+    project_name: kolla/heat-api
+  osism.harbor.regio.digital/kolla/release/heat-api-cfn:
+    project_name: kolla/heat-api-cfn
+  osism.harbor.regio.digital/kolla/release/gnocchi-api:
+    project_name: kolla/gnocchi-api
+  osism.harbor.regio.digital/kolla/release/gnocchi-metricd:
+    project_name: kolla/gnocchi-metricd
+  osism.harbor.regio.digital/kolla/release/gnocchi-statsd:
+    project_name: kolla/gnocchi-statsd
+  osism.harbor.regio.digital/kolla/release/magnum-api:
+    project_name: kolla/magnum-api
+  osism.harbor.regio.digital/kolla/release/magnum-conductor:
+    project_name: kolla/magnum-conductor
+  osism.harbor.regio.digital/kolla/release/ceilometer-central:
+    project_name: kolla/ceilometer-central
+  osism.harbor.regio.digital/kolla/release/ceilometer-compute:
+    project_name: kolla/ceilometer-compute
+  osism.harbor.regio.digital/kolla/release/ceilometer-notification:
+    project_name: kolla/ceilometer-notification
+  osism.harbor.regio.digital/kolla/release/ceilometer-ipmi:
+    project_name: kolla/ceilometer-ipmi
+  osism.harbor.regio.digital/kolla/release/aodh-expirer:
+    project_name: kolla/aodh-expirer
+  osism.harbor.regio.digital/kolla/release/aodh-evaluator:
+    project_name: kolla/aodh-evaluator
+  osism.harbor.regio.digital/kolla/release/aodh-api:
+    project_name: kolla/aodh-api
+  osism.harbor.regio.digital/kolla/release/aodh-listener:
+    project_name: kolla/aodh-listener
+  osism.harbor.regio.digital/kolla/release/aodh-notifier:
+    project_name: kolla/aodh-notifier
+  osism.harbor.regio.digital/kolla/release/nova-spicehtml5proxy:
+    project_name: kolla/nova-spicehtml5proxy
+  osism.harbor.regio.digital/kolla/release/nova-compute-ironic:
+    project_name: kolla/nova-compute-ironic
+  osism.harbor.regio.digital/kolla/release/nova-api:
+    project_name: kolla/nova-api
+  osism.harbor.regio.digital/kolla/release/nova-scheduler:
+    project_name: kolla/nova-scheduler
+  osism.harbor.regio.digital/kolla/release/nova-conductor:
+    project_name: kolla/nova-conductor
+  osism.harbor.regio.digital/kolla/release/nova-novncproxy:
+    project_name: kolla/nova-novncproxy
+  osism.harbor.regio.digital/kolla/release/nova-compute:
+    project_name: kolla/nova-compute
+  osism.harbor.regio.digital/kolla/release/nova-serialproxy:
+    project_name: kolla/nova-serialproxy
+  osism.harbor.regio.digital/kolla/release/nova-ssh:
+    project_name: kolla/nova-ssh
+  osism.harbor.regio.digital/kolla/release/glance-api:
+    project_name: kolla/glance-api
+  osism.harbor.regio.digital/kolla/release/designate-sink:
+    project_name: kolla/designate-sink
+  osism.harbor.regio.digital/kolla/release/designate-api:
+    project_name: kolla/designate-api
+  osism.harbor.regio.digital/kolla/release/designate-worker:
+    project_name: kolla/designate-worker
+  osism.harbor.regio.digital/kolla/release/designate-mdns:
+    project_name: kolla/designate-mdns
+  osism.harbor.regio.digital/kolla/release/designate-central:
+    project_name: kolla/designate-central
+  osism.harbor.regio.digital/kolla/release/designate-backend-bind9:
+    project_name: kolla/designate-backend-bind9
+  osism.harbor.regio.digital/kolla/release/designate-producer:
+    project_name: kolla/designate-producer
+  osism.harbor.regio.digital/kolla/release/ironic-neutron-agent:
+    project_name: kolla/ironic-neutron-agent
+  osism.harbor.regio.digital/kolla/release/neutron-ovn-agent:
+    project_name: kolla/neutron-ovn-agent
+  osism.harbor.regio.digital/kolla/release/neutron-sriov-agent:
+    project_name: kolla/neutron-sriov-agent
+  osism.harbor.regio.digital/kolla/release/neutron-linuxbridge-agent:
+    project_name: kolla/neutron-linuxbridge-agent
+  osism.harbor.regio.digital/kolla/release/neutron-openvswitch-agent:
+    project_name: kolla/neutron-openvswitch-agent
+  osism.harbor.regio.digital/kolla/release/neutron-mlnx-agent:
+    project_name: kolla/neutron-mlnx-agent
+  osism.harbor.regio.digital/kolla/release/neutron-ovn-vpn-agent:
+    project_name: kolla/neutron-ovn-vpn-agent
+  osism.harbor.regio.digital/kolla/release/neutron-l3-agent:
+    project_name: kolla/neutron-l3-agent
+  osism.harbor.regio.digital/kolla/release/neutron-dhcp-agent:
+    project_name: kolla/neutron-dhcp-agent
+  osism.harbor.regio.digital/kolla/release/neutron-server:
+    project_name: kolla/neutron-server
+  osism.harbor.regio.digital/kolla/release/neutron-metadata-agent:
+    project_name: kolla/neutron-metadata-agent
+  osism.harbor.regio.digital/kolla/release/neutron-metering-agent:
+    project_name: kolla/neutron-metering-agent
+  osism.harbor.regio.digital/kolla/release/neutron-bgp-dragent:
+    project_name: kolla/neutron-bgp-dragent
+  osism.harbor.regio.digital/kolla/release/octavia-health-manager:
+    project_name: kolla/octavia-health-manager
+  osism.harbor.regio.digital/kolla/release/octavia-driver-agent:
+    project_name: kolla/octavia-driver-agent
+  osism.harbor.regio.digital/kolla/release/octavia-housekeeping:
+    project_name: kolla/octavia-housekeeping
+  osism.harbor.regio.digital/kolla/release/octavia-worker:
+    project_name: kolla/octavia-worker
+  osism.harbor.regio.digital/kolla/release/octavia-api:
+    project_name: kolla/octavia-api
+  osism.harbor.regio.digital/kolla/release/skyline-apiserver:
+    project_name: kolla/skyline-apiserver
+  osism.harbor.regio.digital/kolla/release/skyline-console:
+    project_name: kolla/skyline-console
+  osism.harbor.regio.digital/kolla/release/placement-api:
+    project_name: kolla/placement-api
+  osism.harbor.regio.digital/kolla/release/redis:
+    project_name: kolla/redis
+  osism.harbor.regio.digital/kolla/release/redis-sentinel:
+    project_name: kolla/redis-sentinel
+  osism.harbor.regio.digital/kolla/release/prometheus-mysqld-exporter:
+    project_name: kolla/prometheus-mysqld-exporter
+  osism.harbor.regio.digital/kolla/release/prometheus-cadvisor:
+    project_name: kolla/prometheus-cadvisor
+  osism.harbor.regio.digital/kolla/release/prometheus-mtail:
+    project_name: kolla/prometheus-mtail
+  osism.harbor.regio.digital/kolla/release/prometheus-alertmanager:
+    project_name: kolla/prometheus-alertmanager
+  osism.harbor.regio.digital/kolla/release/prometheus-node-exporter:
+    project_name: kolla/prometheus-node-exporter
+  osism.harbor.regio.digital/kolla/release/prometheus-libvirt-exporter:
+    project_name: kolla/prometheus-libvirt-exporter
+  osism.harbor.regio.digital/kolla/release/prometheus-memcached-exporter:
+    project_name: kolla/prometheus-memcached-exporter
+  osism.harbor.regio.digital/kolla/release/prometheus-elasticsearch-exporter:
+    project_name: kolla/prometheus-elasticsearch-exporter
+  osism.harbor.regio.digital/kolla/release/prometheus-openstack-exporter:
+    project_name: kolla/prometheus-openstack-exporter
+  osism.harbor.regio.digital/kolla/release/prometheus-msteams:
+    project_name: kolla/prometheus-msteams
+  osism.harbor.regio.digital/kolla/release/prometheus-v2-server:
+    project_name: kolla/prometheus-v2-server
+  osism.harbor.regio.digital/kolla/release/prometheus-blackbox-exporter:
+    project_name: kolla/prometheus-blackbox-exporter
+  osism.harbor.regio.digital/kolla/release/mariadb-clustercheck:
+    project_name: kolla/mariadb-clustercheck
+  osism.harbor.regio.digital/kolla/release/mariadb-server:
+    project_name: kolla/mariadb-server
+  osism.harbor.regio.digital/kolla/release/openvswitch-db-server:
+    project_name: kolla/openvswitch-db-server
+  osism.harbor.regio.digital/kolla/release/openvswitch-vswitchd:
+    project_name: kolla/openvswitch-vswitchd
+  osism.harbor.regio.digital/kolla/release/ironic-inspector:
+    project_name: kolla/ironic-inspector
+  osism.harbor.regio.digital/kolla/release/horizon:
+    project_name: kolla/horizon
+  osism.harbor.regio.digital/kolla/release/multipathd:
+    project_name: kolla/multipathd
+  osism.harbor.regio.digital/kolla/release/opensearch:
+    project_name: kolla/opensearch
+  osism.harbor.regio.digital/kolla/release/opensearch-dashboards:
+    project_name: kolla/opensearch-dashboards
+  osism.harbor.regio.digital/kolla/release/memcached:
+    project_name: kolla/memcached
+  osism.harbor.regio.digital/kolla/release/dnsmasq:
+    project_name: kolla/dnsmasq
+  osism.harbor.regio.digital/kolla/release/haproxy:
+    project_name: kolla/haproxy
+  osism.harbor.regio.digital/kolla/release/haproxy-ssh:
+    project_name: kolla/haproxy-ssh
+  osism.harbor.regio.digital/kolla/release/iscsid:
+    project_name: kolla/iscsid
+  osism.harbor.regio.digital/kolla/release/keepalived:
+    project_name: kolla/keepalived
+  osism.harbor.regio.digital/kolla/release/grafana:
+    project_name: kolla/grafana
+  osism.harbor.regio.digital/kolla/release/nova-libvirt:
+    project_name: kolla/nova-libvirt
+  osism.harbor.regio.digital/kolla/release/rabbitmq:
+    project_name: kolla/rabbitmq
+  osism.harbor.regio.digital/kolla/release/fluentd:
+    project_name: kolla/fluentd
+  osism.harbor.regio.digital/kolla/release/proxysql:
+    project_name: kolla/proxysql
+  osism.harbor.regio.digital/kolla/release/cron:
+    project_name: kolla/cron
+  osism.harbor.regio.digital/kolla/release/kolla-toolbox:
+    project_name: kolla/kolla-toolbox
+  osism.harbor.regio.digital/kolla/release/tgtd:
+    project_name: kolla/tgtd
+  # KaaS
+  ghcr.io/sovereigncloudstack/cso:
+    project_name: cluster-stacks-operator
+  ghcr.io/sovereigncloudstack/cspo:
+    project_name: cluster-stacks-provider-openstack
+  # Status page
+  registry.scs.community/status-page/status-page-web:
+    project_name: status-page-web
+  registry.scs.community/status-page/status-page-api:
+    project_name: status-page-api

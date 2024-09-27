@@ -1,0 +1,33 @@
+---
+# Generate SBOM for container images using trivy and syft
+# Release data is read from releases/VER/data.yaml file
+- hosts: all
+  tasks:
+    - name: "Read release deliverables data"
+      ansible.builtin.include_vars:
+        file: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}/releases/{{ scs_version }}/data.yaml"
+        name: "release_data"
+
+#    - name: "Generate SBOM with syft"
+#      ansible.builtin.include_role:
+#        name: "generate-sbom-syft"
+#      vars:
+#        generate_sbom_syft_source: "{{ zj_item.registry }}/{{ zj_item.name }}:{{ zj_item.tag }}@{{ zj_item.digest }}"
+#        generate_sbom_syft_path: "{{ ansible_user_dir }}/zuul-output/artifacts/sboms/{{ zj_item.name }}.syft.json"
+#      when: "release_data is defined"
+#      loop: "{{ release_data.images }}"
+#      loop_control:
+#        loop_var: "zj_item"
+
+# NOTE(gtema): Trivy generates sbom 50% smaller, but at the same time it recognizes licenses better
+    - name: "Generate SBOM with trivy"
+      ansible.builtin.include_role:
+        name: "generate-sbom-trivy"
+      vars:
+        generate_sbom_trivy_source: "{{ zj_item.registry }}/{{ zj_item.name }}:{{ zj_item.tag }}@{{ zj_item.digest }}"
+        generate_sbom_trivy_path: "{{ ansible_user_dir }}/zuul-output/artifacts/sboms/{{ zj_item.name | regex_replace('/', '_') }}.trivy.json"
+        generate_sbom_trivy_command: "image"
+      when: "release_data is defined"
+      loop: "{{ release_data.images }}"
+      loop_control:
+        loop_var: "zj_item"
