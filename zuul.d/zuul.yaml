@@ -1,0 +1,47 @@
+---
+# Jobs
+- job:
+    name: scs-sbom-containers
+    parent: scs-generate-sbom-container-images
+    description: |
+      Produce SBOMs for SCS release container deliverables
+
+      .. zuul:jobvar:: scs_release
+         :type: string
+
+         Release version. `releases/VER/data.yaml` file with
+         release metadata must be present.
+    run: playbooks/run-containers.yaml
+    timeout: 3600
+    vars:
+      images: "{{ release_data.images }}"
+
+- job:
+    name: scs-sbom-containers-r7
+    parent: scs-sbom-containers
+    description: |
+      Produce SBOMs for SCS release R7
+    vars:
+      scs_version: 7
+
+- job:
+    name: scs-upload-sbom-dt-containers-r7
+    parent: scs-sbom-containers-r7
+    description: |
+      Upload SBOMs for SCS release R7 to DependencyTrack
+    post-run: playbooks/post-sbom.yaml
+    vars:
+      zuul_vault:
+        vault_role_id: 76adf1fc-2b61-21c4-856f-6a8beb187be0
+        vault_role_name: "zuul_scs_sovereigncloudstack_release-notes"
+
+# Project config
+- project:
+    default-branch: main
+    merge-mode: "squash-merge"
+    check:
+      jobs:
+        - scs-sbom-containers-r7
+    check-post:
+      jobs:
+        - scs-upload-sbom-dt-containers-r7

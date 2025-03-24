@@ -1,0 +1,491 @@
+---
+images:
+#   :type: list
+#   :list_type: dict
+#     registry: registry fqdn 
+#     name: image name in the registry
+#     tag: image tag
+#     digest: image digest
+  # IaaS
+  - digest: sha256:f814078c98ee59fc17c741508560dfe727f17cb58615511d9317e9b94cd3b94f
+    name: kolla/release/ironic-prometheus-exporter
+    registry: osism.harbor.regio.digital
+    tag: 24.1.2.20240909
+  - digest: sha256:6be1be7a204bb0d54d9cd8ae25f222c923d63f41922938818f7d30cc9d9e7b14
+    name: kolla/release/neutron-infoblox-ipam-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:aa444bd5939314371476df559dba45060bfe1cf95695a628ec65bfc51471fdda
+    name: kolla/release/ovn-sb-db-server
+    registry: osism.harbor.regio.digital
+    tag: 24.3.3.20240909
+  - digest: sha256:108131c93bd3cd23534f7a655ed6d5a36b3fe0581a933b57409276cef184dd88
+    name: kolla/release/ovn-controller
+    registry: osism.harbor.regio.digital
+    tag: 24.3.3.20240909
+  - digest: sha256:741db38ab4083e5ebf4f6f6dec3e1ae2263c029164e752cc9d4f45d64f5ce278
+    name: kolla/release/ovn-northd
+    registry: osism.harbor.regio.digital
+    tag: 24.3.3.20240909
+  - digest: sha256:74f57301c48fbfcd518d317f9c505d5e160c5f2db0043e9e202f02e54f736df1
+    name: kolla/release/ovn-nb-db-server
+    registry: osism.harbor.regio.digital
+    tag: 24.3.3.20240909
+  - digest: sha256:c9c7545092bdb084cb157e016cdb4828abfd2ded88e9958bf94fe3db6cf43390
+    name: kolla/release/manila-data
+    registry: osism.harbor.regio.digital
+    tag: 18.1.1.20240909
+  - digest: sha256:e1a6f215f2ff575baf6d0d788ef3475896788dada312f56cc6ce1ed11863883c
+    name: kolla/release/manila-share
+    registry: osism.harbor.regio.digital
+    tag: 18.1.1.20240909
+  - digest: sha256:69bb41257ed6d17952400aa5eaa3fe61b8bd8a45cd71e566845c68247c8a9aeb
+    name: kolla/release/manila-scheduler
+    registry: osism.harbor.regio.digital
+    tag: 18.1.1.20240909
+  - digest: sha256:669472d6635eb55c235349f87a03ba8c640690100e072b70559e276079824224
+    name: kolla/release/manila-api
+    registry: osism.harbor.regio.digital
+    tag: 18.1.1.20240909
+  - digest: sha256:7722f26982eedf3f36cb13224e7ff73bf67777b6d1a8b5e60659ef609911f2d4
+    name: kolla/release/kuryr-libnetwork
+    registry: osism.harbor.regio.digital
+    tag: 13.0.0.20240909
+  - digest: sha256:771f491317d76a39730497e96482cd3571695cdaff96e88739b0546188f2bd93
+    name: kolla/release/ironic-conductor
+    registry: osism.harbor.regio.digital
+    tag: 24.1.2.20240909
+  - digest: sha256:993d815b0622897d33a2345f8a82337c0b09e28b4bcb089e2b2ac1f1913b0f2e
+    name: kolla/release/ironic-pxe
+    registry: osism.harbor.regio.digital
+    tag: 24.1.2.20240909
+  - digest: sha256:db68176dfa6089a5552b40dc99759836c5ad8599dafa0d52a8a903a6c2a34700
+    name: kolla/release/ironic-api
+    registry: osism.harbor.regio.digital
+    tag: 24.1.2.20240909
+  - digest: sha256:db272dcd845d60c55997352558fb0a6bf4abf75923f8b6b3b78eeaa44b831df3
+    name: kolla/release/cinder-scheduler
+    registry: osism.harbor.regio.digital
+    tag: 24.1.1.20240909
+  - digest: sha256:5602005c9e969ddc9e38518e090f59e76902b8adf87b5ec503d3166192825ac4
+    name: kolla/release/cinder-backup
+    registry: osism.harbor.regio.digital
+    tag: 24.1.1.20240909
+  - digest: sha256:c110c160cb526abd5374b97e518fd1047b53b23184f24e8f86f12ba50fa7d7ed
+    name: kolla/release/cinder-volume
+    registry: osism.harbor.regio.digital
+    tag: 24.1.1.20240909
+  - digest: sha256:2e83ebf6658cbf316f93c5070cb262e846c0ad928c7b4d0b7fa826353ca1ec8d
+    name: kolla/release/cinder-api
+    registry: osism.harbor.regio.digital
+    tag: 24.1.1.20240909
+  - digest: sha256:5067eb56045cbf91130256d37a16aa84a5e6765160d0fec2cb4adc7b23b4d8e8
+    name: kolla/release/barbican-keystone-listener
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:53d69ac9656905623ec35bd149b2682a2ebae3569ef703877c7785e43656e103
+    name: kolla/release/barbican-worker
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:e257f7961d4767cbfe7b2627b1372087438f718b31bf5253bd045bad61f7bff5
+    name: kolla/release/barbican-api
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:397a2d0bc8e2c8dab766d36332d63a9d925698acaa6e9a98f90e10701d3e0c58
+    name: kolla/release/keystone
+    registry: osism.harbor.regio.digital
+    tag: 25.0.1.20240909
+  - digest: sha256:6e5da59475e92bb670ffd7fc64a9a9e445b4f9b98a3251445ed27737a4145375
+    name: kolla/release/keystone-fernet
+    registry: osism.harbor.regio.digital
+    tag: 25.0.1.20240909
+  - digest: sha256:585b2d75a102ff6dc54106f1648884436110aef6452191d8cdce05d82bdf9e04
+    name: kolla/release/keystone-ssh
+    registry: osism.harbor.regio.digital
+    tag: 25.0.1.20240909
+  - digest: sha256:3ac660fb555a137ce4d24d120ebb5783d0f24e1cdfa52a9db3da34406a5286c3
+    name: kolla/release/heat-engine
+    registry: osism.harbor.regio.digital
+    tag: 22.0.2.20240909
+  - digest: sha256:1d8ef66bdd7a1340ed7dd73ae5a6a5c803e0dc5c081e42f049fccadb003b377b
+    name: kolla/release/heat-api
+    registry: osism.harbor.regio.digital
+    tag: 22.0.2.20240909
+  - digest: sha256:19183dbfb4c7af724aee04aa5c377804186d07ade4a90ff860142b5eb5477f04
+    name: kolla/release/heat-api-cfn
+    registry: osism.harbor.regio.digital
+    tag: 22.0.2.20240909
+  - digest: sha256:89902cd79862c6b697fc0665ea729bce933ace2665d64b0e2773be38be08555c
+    name: kolla/release/gnocchi-api
+    registry: osism.harbor.regio.digital
+    tag: 4.6.2.20240909
+  - digest: sha256:f5bdc2a491b0cd55be72cb2ad133de1290936a29765f2efbf48da7c96c4a6de7
+    name: kolla/release/gnocchi-metricd
+    registry: osism.harbor.regio.digital
+    tag: 4.6.2.20240909
+  - digest: sha256:c74d4a45518d78725ebb9aaa987c7f2acfed20bce22f7e2b97384db641954f53
+    name: kolla/release/gnocchi-statsd
+    registry: osism.harbor.regio.digital
+    tag: 4.6.2.20240909
+  - digest: sha256:b3af38da71543b5e67d6b9d9f0144642b26254b69ebe11a200262824fe415b9f
+    name: kolla/release/magnum-api
+    registry: osism.harbor.regio.digital
+    tag: 18.0.1.20240909
+  - digest: sha256:f7d8209ea43a1be69c5ca7dc8d99c5425c2fd01f5d74b25ff7bb428df9cbd62b
+    name: kolla/release/magnum-conductor
+    registry: osism.harbor.regio.digital
+    tag: 18.0.1.20240909
+  - digest: sha256:a9b9d5e18e4f1c5a651413b0f8a750e6c4184b6b4991b82d9f295ef703a750ae
+    name: kolla/release/ceilometer-central
+    registry: osism.harbor.regio.digital
+    tag: 22.0.0.20240909
+  - digest: sha256:b5280f81126641685fbac7727e479c46ee5be70a67b14912903cc004c4e172fc
+    name: kolla/release/ceilometer-compute
+    registry: osism.harbor.regio.digital
+    tag: 22.0.0.20240909
+  - digest: sha256:d9c29f2b1a629f84e0d7d80b32f12847fac65a49f85721abdf91e74ca222ab54
+    name: kolla/release/ceilometer-notification
+    registry: osism.harbor.regio.digital
+    tag: 22.0.0.20240909
+  - digest: sha256:83c68b8f2a6c2a2074452e70894cd68aaea542b05d5cb48ab99b0a045fe137a6
+    name: kolla/release/ceilometer-ipmi
+    registry: osism.harbor.regio.digital
+    tag: 22.0.0.20240909
+  - digest: sha256:f2c81e17addcf90a17c1be95323c29a6858b1d990a4032bad96f8b0f3f88f06b
+    name: kolla/release/aodh-expirer
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:2212fd22c4ee979beef902c0c7560ac67a8c3c9553367c07d1136088f0e2a1b3
+    name: kolla/release/aodh-evaluator
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:1119b23f9110c6823e9293a1aa13825342956e37b3090e9fd7c503870ace53d8
+    name: kolla/release/aodh-api
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:95c2b5d009fa11680b3923ca365f38c0b7e33dcdd83f8d534ff0d3c6b2143ed2
+    name: kolla/release/aodh-listener
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:0d9669c17c65b65eeed74302c425ee0d0070938c47dfb2c5ddf8943f3a83773c
+    name: kolla/release/aodh-notifier
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:ee58b7afd80056d17fbc7d410db622a425ee47faad2c354b1cdf7f159e19b3c0
+    name: kolla/release/nova-spicehtml5proxy
+    registry: osism.harbor.regio.digital
+    tag: 29.2.1.20240909
+  - digest: sha256:180f57d0846352b78497233b1c16d1395b0a7ec8cc8596c06e99dcecefea5822
+    name: kolla/release/nova-compute-ironic
+    registry: osism.harbor.regio.digital
+    tag: 29.2.1.20240909
+  - digest: sha256:18029b4caac669672af7bcacebfd636cc0fb2e13fa2300a4e0c64e6703743425
+    name: kolla/release/nova-api
+    registry: osism.harbor.regio.digital
+    tag: 29.2.1.20240909
+  - digest: sha256:2b001e1823ae67acec49526aac091b1fa8b2585919663d67a1d7faa65f8c032a
+    name: kolla/release/nova-scheduler
+    registry: osism.harbor.regio.digital
+    tag: 29.2.1.20240909
+  - digest: sha256:71b05863d4eca027dcd9bedb1ae22b6b4ad7c6cf6a01926b1beae3de64399202
+    name: kolla/release/nova-conductor
+    registry: osism.harbor.regio.digital
+    tag: 29.2.1.20240909
+  - digest: sha256:74937e6bbd106ac6fec15cd1e448d4189612e0a9776d5441dfd1216390b6055a
+    name: kolla/release/nova-novncproxy
+    registry: osism.harbor.regio.digital
+    tag: 29.2.1.20240909
+  - digest: sha256:c24896350dc4297e65891eb567533b86af8840cf8c8b070ff56d43d59e1603c7
+    name: kolla/release/nova-compute
+    registry: osism.harbor.regio.digital
+    tag: 29.2.1.20240909
+  - digest: sha256:516cbb7b001295b9204f8a73c1f211ebd837163e58776f7d3f3226a30a941540
+    name: kolla/release/nova-serialproxy
+    registry: osism.harbor.regio.digital
+    tag: 29.2.1.20240909
+  - digest: sha256:bcd3886f7e8ee23d78e0278fd797b79ff057e5134f7ad9151992b731eb4d377c
+    name: kolla/release/nova-ssh
+    registry: osism.harbor.regio.digital
+    tag: 29.2.1.20240909
+  - digest: sha256:609c8cc3ee2ae19d2eb61efde20a268465bd213d47c5040914eac6c20e564f41
+    name: kolla/release/glance-api
+    registry: osism.harbor.regio.digital
+    tag: 28.1.1.20240909
+  - digest: sha256:be27dc1d722ffbe9924de466c439f2654ef18e6b8f687d929bf9c9f0ebfa2674
+    name: kolla/release/designate-sink
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:7a9cfb7ef822bccfac09db3d636a12d2a9ce0570485ca8588d8ed7c9d25b029d
+    name: kolla/release/designate-api
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:cd41d2e4a6331533deb05690c80f035197149cab4b9987b12081a24865a34763
+    name: kolla/release/designate-worker
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:86c375744a2516a303ca8ac45e2b03e8a74108c23ed982c62b34bed41837b8be
+    name: kolla/release/designate-mdns
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:5d741d757fc2055fca07129adc5bcbafa7c9918c4614dd2caec9c69c8dd24c8d
+    name: kolla/release/designate-central
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:d6d964734079188995eb169f1b79a28c1f89e42c1199eea18349b699c7369a6a
+    name: kolla/release/designate-backend-bind9
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:fd2d827e9c18d04fdfee42362ba9347a04722941a6c1b4ef78d50d7046db6568
+    name: kolla/release/designate-producer
+    registry: osism.harbor.regio.digital
+    tag: 18.0.0.20240909
+  - digest: sha256:91a65771edeb7c0e310d0b479c438979db905a1eb55931259d006dbc311ee3f6
+    name: kolla/release/ironic-neutron-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:efbfcdd0507251be1c3142697f496e05e3af6c69d33a27642bf930372bb5e663
+    name: kolla/release/neutron-ovn-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:fcdae44721fea5cc980d4063a042351166b29ba6984b97ff37ed253e3133159e
+    name: kolla/release/neutron-sriov-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:5ef55064bfc2b0ef79b24ae99352be52b611a2f93e3cc6cb95ad30d7bc943edc
+    name: kolla/release/neutron-linuxbridge-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:be5e72d080dfcff522c94888e0e8756268272490f8d68448265c11ba93cf2b5c
+    name: kolla/release/neutron-openvswitch-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:7c71651e2caa9341658dae3ce4a76bc71cc644b09500d2acf6c86b50bf04ceeb
+    name: kolla/release/neutron-mlnx-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:efca50da6769a383509aefe9f88ffde709d5443c9717e43850052544f4e6b293
+    name: kolla/release/neutron-ovn-vpn-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:e5946f1dbddedc5c03a01e5f29b9b01efeddd25deb834efb7454198c19b0e029
+    name: kolla/release/neutron-l3-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:8d72b43b5580c96b8aafa0374f155e7853e61b747cd65678c53f54035a689d65
+    name: kolla/release/neutron-dhcp-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:97c928170e621743a0b3477c5871172c5254ea05733e80c462b4868e821134e0
+    name: kolla/release/neutron-server
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:297fce0d7527288899a21ffc650aa9c7bb16313686bf2363d2f41ac5b6f1e882
+    name: kolla/release/neutron-metadata-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:c687fc26bc3cfe6f4967b9e654f114b1b2e78cc9cfeb2c3cb22710c15ce11202
+    name: kolla/release/neutron-metering-agent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:dd8148a6f4e0d858ffd09e67d80804108f49d499c77ff2ca247c71c23f9891e8
+    name: kolla/release/neutron-bgp-dragent
+    registry: osism.harbor.regio.digital
+    tag: 24.0.2.20240909
+  - digest: sha256:ab50cc66c11d9382e95e7db96b5f6bcea62b2166873a75a722c8291c7da16b07
+    name: kolla/release/octavia-health-manager
+    registry: osism.harbor.regio.digital
+    tag: 14.0.1.20240909
+  - digest: sha256:ac3342210fdf6db1edb2fd3dd4d5f31291785ab76cff373b45eb5c2ea07dbf8c
+    name: kolla/release/octavia-driver-agent
+    registry: osism.harbor.regio.digital
+    tag: 14.0.1.20240909
+  - digest: sha256:62d8747c868ce1cb77ff55bbf448d1991c244f3cd701abc4ebd352b9673e18ab
+    name: kolla/release/octavia-housekeeping
+    registry: osism.harbor.regio.digital
+    tag: 14.0.1.20240909
+  - digest: sha256:870cf9275c2e1e2069fb44688e9485ec2a07dfcfcd2693c7239c3dbd55e79bd9
+    name: kolla/release/octavia-worker
+    registry: osism.harbor.regio.digital
+    tag: 14.0.1.20240909
+  - digest: sha256:bccfa49bd0a7e4ee6e4b47ec9391169503bb46a099e804d64b591fd7f0b2c91c
+    name: kolla/release/octavia-api
+    registry: osism.harbor.regio.digital
+    tag: 14.0.1.20240909
+  - digest: sha256:1e5f762ab16ad28718af2834bdb2d7d712a04434b707d76925940aec10a9d4d9
+    name: kolla/release/skyline-apiserver
+    registry: osism.harbor.regio.digital
+    tag: 4.0.2.20240909
+  - digest: sha256:6652e646f16ef436ae6b0cf62eeff9b74647a2e34b5ba9697db0dae0bfd71c89
+    name: kolla/release/skyline-console
+    registry: osism.harbor.regio.digital
+    tag: 4.0.0.20240909
+  - digest: sha256:1789c482797a701ee0b9a84332823c6cfec1a062e226b7258ea0ffeb055d76e2
+    name: kolla/release/placement-api
+    registry: osism.harbor.regio.digital
+    tag: 11.0.0.20240909
+  - digest: sha256:691635544c7f40510aa0c6bc7555dda605cd4eba9580a807064dc3cc2210a191
+    name: kolla/release/redis
+    registry: osism.harbor.regio.digital
+    tag: 6.0.16.20240909
+  - digest: sha256:1a34407730db72cb796bab855472eab72578b1369ec2ebcf5564194225636a71
+    name: kolla/release/redis-sentinel
+    registry: osism.harbor.regio.digital
+    tag: 6.0.16.20240909
+  - digest: sha256:b8d93983457d2771d4b68b6464e503183561263821f16248bef3c2eb39a8024d
+    name: kolla/release/prometheus-mysqld-exporter
+    registry: osism.harbor.regio.digital
+    tag: 0.15.1.20240909
+  - digest: sha256:aff627578a106ad94c3ee2e7138d70b3089d6b8a5c0c06edf5e07ffc6133c8ad
+    name: kolla/release/prometheus-cadvisor
+    registry: osism.harbor.regio.digital
+    tag: 0.49.1.20240909
+  - digest: sha256:4df398937a0da28112751f934f0fda51d2686bf0142f8d307b64768bd05291bf
+    name: kolla/release/prometheus-mtail
+    registry: osism.harbor.regio.digital
+    tag: 3.0.0.20240909
+  - digest: sha256:1d581ee53531ca112a0236ae6c00f9c72c0cdaf381870a69c76e3cbbf442fbfd
+    name: kolla/release/prometheus-alertmanager
+    registry: osism.harbor.regio.digital
+    tag: 0.27.0.20240909
+  - digest: sha256:1b93e1abc6bf435a86b331cb00fded9256cac33dd710eaa4f754e88f7e85310e
+    name: kolla/release/prometheus-node-exporter
+    registry: osism.harbor.regio.digital
+    tag: 1.7.0.20240909
+  - digest: sha256:a4830a07f489cf343940bff614a643b6803e9f0d1b0af5c913afef34f1822737
+    name: kolla/release/prometheus-libvirt-exporter
+    registry: osism.harbor.regio.digital
+    tag: 8.0.0.20240909
+  - digest: sha256:214d5382d9faf4185c2109878dd391d3823dde5c658beb4393e9cec7f7088e83
+    name: kolla/release/prometheus-memcached-exporter
+    registry: osism.harbor.regio.digital
+    tag: 0.14.2.20240909
+  - digest: sha256:b09c7a113bb4adbe540e1f7ada3b61f8d39ec619828af2173329f6eb094b67cd
+    name: kolla/release/prometheus-elasticsearch-exporter
+    registry: osism.harbor.regio.digital
+    tag: 1.7.0.20240909
+  - digest: sha256:05276562ebb2859ef2d2f758545da279bf673eeab296bb4ee8f810f777d55190
+    name: kolla/release/prometheus-openstack-exporter
+    registry: osism.harbor.regio.digital
+    tag: 8.0.0.20240909
+  - digest: sha256:2d8d6da628f00b7f57447207e9da6bb8d0b22c7d2aa710ba6abd50b123611edb
+    name: kolla/release/prometheus-msteams
+    registry: osism.harbor.regio.digital
+    tag: 1.5.2.20240909
+  - digest: sha256:c91c90917d8fbe5f5efcda06a1cee4cf03a745a353493d1e0bc148c145978e5f
+    name: kolla/release/prometheus-v2-server
+    registry: osism.harbor.regio.digital
+    tag: 2.50.1.20240909
+  - digest: sha256:9e7eef100ded1e6636d5020f624372391cfc73b491484bc88966b3a2aa9b8552
+    name: kolla/release/prometheus-blackbox-exporter
+    registry: osism.harbor.regio.digital
+    tag: 0.24.0.20240909
+  - digest: sha256:0fec942c02bab8044efb2c1b7799aea2aa78f5cb9ff9776633f05501f935531a
+    name: kolla/release/mariadb-clustercheck
+    registry: osism.harbor.regio.digital
+    tag: 10.11.9.20240909
+  - digest: sha256:462e7a7c28dc0492505f8c13ee8178a2f249fb5d06b5218dd02021c9aae71f8a
+    name: kolla/release/mariadb-server
+    registry: osism.harbor.regio.digital
+    tag: 10.11.9.20240909
+  - digest: sha256:a75d204d288e73748d35b2811269bcc8fa3b523e9437c02a0c646e48eb79d118
+    name: kolla/release/openvswitch-db-server
+    registry: osism.harbor.regio.digital
+    tag: 3.3.1.20240909
+  - digest: sha256:a64409d2a8c4b3ae2923aa12cd0fd709ccd72def3fa37dd0418b7aa4a0bca3b7
+    name: kolla/release/openvswitch-vswitchd
+    registry: osism.harbor.regio.digital
+    tag: 3.3.1.20240909
+  - digest: sha256:2fd9aa945ac8b92432f24f48a00893446905952be971c0f2b9e085a5c5858864
+    name: kolla/release/ironic-inspector
+    registry: osism.harbor.regio.digital
+    tag: 12.1.1.20240909
+  - digest: sha256:d2d199e6eeed94c6be39b7a8f94d8225404da08a846da15c8154112d58eec091
+    name: kolla/release/horizon
+    registry: osism.harbor.regio.digital
+    tag: 24.0.1.20240909
+  - digest: sha256:aff0159000c68a17240b5e8bc56a549d8ba7026652da43199032ff6941956ab7
+    name: kolla/release/multipathd
+    registry: osism.harbor.regio.digital
+    tag: 0.8.8.20240909
+  - digest: sha256:30a948730dcbc67e89db923be130431b50a0682a6b18b7d8429bedc3cc4590f1
+    name: kolla/release/opensearch
+    registry: osism.harbor.regio.digital
+    tag: 2.16.0.20240909
+  - digest: sha256:c3bb022faf64d3fce0acf077d291af36873f5d53adf41e66817aa8fe99a1df81
+    name: kolla/release/opensearch-dashboards
+    registry: osism.harbor.regio.digital
+    tag: 2.16.0.20240909
+  - digest: sha256:572bab96e4f097973646ff8846c38db23c83d64c5595d9297eb12aaac00c16a6
+    name: kolla/release/memcached
+    registry: osism.harbor.regio.digital
+    tag: 1.6.14.20240909
+  - digest: sha256:fb52c29d68190689dd66066e1e5e6476a8f121bb2ef48eb54ac3b16dc9271259
+    name: kolla/release/dnsmasq
+    registry: osism.harbor.regio.digital
+    tag: 2.90.20240909
+  - digest: sha256:a4f114a2881e907bcccc504446eb3f95a09cbfb5bc9e2f391051e1c022d16306
+    name: kolla/release/haproxy
+    registry: osism.harbor.regio.digital
+    tag: 2.4.24.20240909
+  - digest: sha256:75a1ef2fad719e5d97c6a70c3193c46c731ff09d185a2979a04376301f910b18
+    name: kolla/release/haproxy-ssh
+    registry: osism.harbor.regio.digital
+    tag: 8.9.20240909
+  - digest: sha256:624a03732ae1a847b23d0b5d1701a18c3aca78dea4aa403f4c4be1a8312f6aba
+    name: kolla/release/iscsid
+    registry: osism.harbor.regio.digital
+    tag: 2.1.5.20240909
+  - digest: sha256:6635572e90529ec3cd2591303e023c3bc75ee6287f4b2d49b01c76c4258fcbd5
+    name: kolla/release/keepalived
+    registry: osism.harbor.regio.digital
+    tag: 2.2.4.20240909
+  - digest: sha256:67829d36f89df63faf9f66579542fedfcfdf5b225bb599a8fa696e8c44bb729f
+    name: kolla/release/grafana
+    registry: osism.harbor.regio.digital
+    tag: 11.2.0.20240909
+  - digest: sha256:15a2f390372c20b6bdcc9deeb36bb6ea6cec1f38d67fe565e35e0636cf0a480e
+    name: kolla/release/nova-libvirt
+    registry: osism.harbor.regio.digital
+    tag: 8.0.0.20240909
+  - digest: sha256:e47aa9bdee61a742aef9ba00ed6e0ea2b24eba833cb8f3137704998fdb87383f
+    name: kolla/release/rabbitmq
+    registry: osism.harbor.regio.digital
+    tag: 3.13.7.20240909
+  - digest: sha256:446a561a17870b678e6b335657abd819bb035523354a1bd40831e28b46540d95
+    name: kolla/release/fluentd
+    registry: osism.harbor.regio.digital
+    tag: 5.0.4.20240909
+  - digest: sha256:e9e25a0bfe4ff0f362773f89e55ffce25d19bc9eace507f068002a5ff1e65e16
+    name: kolla/release/proxysql
+    registry: osism.harbor.regio.digital
+    tag: 2.6.5.20240909
+  - digest: sha256:4259be83038d084fe0f7d8e0f33db7f4622c5692a647dd66d90b81847e1b148b
+    name: kolla/release/cron
+    registry: osism.harbor.regio.digital
+    tag: 3.0.20240909
+  - digest: sha256:3a7e5a0876ce5584b453a356301ce7b6c9d50827930157b82ffdf4fba05a1909
+    name: kolla/release/kolla-toolbox
+    registry: osism.harbor.regio.digital
+    tag: 18.1.1.20240909
+  - digest: sha256:f1b8387ef3dca8a5ea71054297032ebd514a8840469a2bd2ec9d599cac4dee4a
+    name: kolla/release/tgtd
+    registry: osism.harbor.regio.digital
+    tag: 1.0.80.20240909
+  # KaaS
+  - digest: "sha256:67c585b70bc635ab357157b1f78b591d45790304716b1dc797e34f8e93b766bb"
+    name: "sovereigncloudstack/cso"
+    tag: "v0.1.0-alpha.7"
+    registry: "ghcr.io"
+  - digest: "sha256:b28f7335bda6f58073bc72c6182e11bf48fbe23cc394ae90cbc1f8d1f560257e"
+    name: "sovereigncloudstack/cspo"
+    registry: "ghcr.io"
+    tag: "v0.1.0-alpha.5"
+  # Status page
+  - digest: "sha256:bbc899f6a1845e0e11109933bd31968a17593ccb8f6162bb2191e8fbb7a5ae30"
+    name: "status-page/status-page-web"
+    registry: "registry.scs.community"
+    tag: "v1.0.0"
+  - digest: "sha256:0e1c408a0caa3bd2faea0e667db5ba99e14c9639dbde959ed15985e2963daa32"
+    name: "status-page/status-page-api"
+    registry: "registry.scs.community"
+    tag: "v1.0.0"
