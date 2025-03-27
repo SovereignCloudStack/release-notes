@@ -8,7 +8,18 @@ This note will be removed, once Release 8 is released and these notes are valid.
 
 ## Component Versions and User-visible improvements (highlights)
 
+- Cluster API Provider OpenStack v0.12
+  - adds OpenStack Resource Controller (ORC) as external component
+
 ## New Features (Highlights)
+
+### KaaS
+
+- Cluster Stacks `SCS` to use Multi Stage Addons
+- ORC Image kind in Cluster Stacks `SCS`
+- Helm charts to manage Cluster Stack Operator
+  - simplifies configuration of release source
+  - additional RBAC for provider specific resources can be configured
 
 ### Operator focused improvements
 
@@ -18,7 +29,17 @@ This note will be removed, once Release 8 is released and these notes are valid.
 
 ## Removals
 
+### KaaS
+
+- Node Image from Cluster Stacks `SCS`
+  - keeps specific provider configuration on ClusterAPI level
+
 ## Deprecations
+
+### KaaS
+
+- Cluster Stack Provider OpenStack
+  - in favor of ORC
 
 ## Security Fixes
 
