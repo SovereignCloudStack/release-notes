@@ -27,6 +27,11 @@ This note will be removed, once Release 8 is released and these notes are valid.
 
 ## Upgrade/Migration notes
 
+- The container registry has been upgraded to Harbor v2.12.2
+  - The backup and restore procedure was successfully tested with production data during the migration from SCS1 to SCS2 environment
+- The observability platform has been upgraded to dN Kubernetes Monitoring Stack v3.8.1
+  - It has been deployed in the new SCS2 environment, providing visibility into the SCS environment
+
 ## Removals
 
 ### KaaS
