@@ -16,6 +16,10 @@ This note will be removed, once Release 8 is released and these notes are valid.
 ### KaaS
 
 - Cluster Stacks `SCS` to use Multi Stage Addons
+  - Support for Multi Stage Addons, a Cluster Stack Operator feature that enables structured addon upgrades, was introduced in R7 as part of KaaS.
+    In R8, this feature has been fully implemented into the stable SCS Cluster Stacks for OpenStack.
+    Now, key addons, including the Container Network Interface (CNI), Container Storage Interface (CSI), and Cloud Controller Manager (CCM), are installed in a predefined sequence after the Kubernetes control plane is initialized.
+    The upgrade order of these addons is also orchestrated before the Kubernetes cluster version is upgraded. This ensures smooth upgrades and stability throughout the Kubernetes version transitions.
 - ORC Image kind in Cluster Stacks `SCS`
 - Helm charts to manage Cluster Stack Operator
   - simplifies configuration of release source
