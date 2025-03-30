@@ -13,6 +13,20 @@ This note will be removed, once Release 8 is released and these notes are valid.
 
 ## New Features (Highlights)
 
+### IaaS
+
+- Support of OpenStack 2024.1 and OpenStack 2024.2 (the SLURP model will be supported in future,
+  OpenStack 2025.1 is the first SLURP release, do not upgrade to 2024.2 if the SLURP model is to
+  be used in the future)
+- Support of Ceph Quincy and Ceph Reef
+- Support of Kubernetes 1.31 for the integrated Kubernetes cluster
+- The Netbox integration has been completely revised, there is now a dedicated tool called
+  Netbox Manager that allows you to manage content from the Netbox with an independent repository
+- There is now a special burn-in image for preparing new hardware (this is used when new cloudpods
+  are created and Ironic cannot yet be used)
+- A bunch of new services like such as Wazuh agent, Teleport agent or Dnsmasq
+- Enhancement of the testbed, in specific with Ironic to improve the CI capabilities
+
 ### KaaS
 
 - Cluster Stacks `SCS` to use Multi Stage Addons
@@ -48,6 +62,14 @@ This note will be removed, once Release 8 is released and these notes are valid.
 The container registry and observability platform are fundamental and reliable components of the Sovereign Cloud Stack. By actively using them ourselves, we validate their functionality and ensure they are well-suited for seamless adoption by Cloud Service Providers.
 
 ## Removals
+
+### IaaS
+
+- virtualbmc service (in favor of Redfish with sushy)
+- keycloak and cloudnative_pg service
+- tang and clevis service
+- SCS metering service
+- OpenStack health monitor service
 
 ### KaaS
 
