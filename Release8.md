@@ -45,6 +45,8 @@ This note will be removed, once Release 8 is released and these notes are valid.
 
 ## Upgrade/Migration notes
 
+- Upgrading SCS KaaS R7 to R8 for all OpenStack installations requires installing the ORC component, which was removed from Cluster-API Provider OpenStack v0.12
+  - [ORC installation]((https://github.com/k-orc/openstack-resource-controller?tab=readme-ov-file#installation) should be performed as part of the upgrade to Cluster-API Provider OpenStack v0.12
 - The container registry has been upgraded to Harbor v2.12.2
   - Since the last SCS release, the container registry has introduced numerous features and enhancements. Key highlights include:
     - Improved granular access control for robot accounts, enhancing security and automation
