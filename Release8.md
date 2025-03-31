@@ -35,6 +35,8 @@ This note will be removed, once Release 8 is released and these notes are valid.
     Now, key addons, including the Container Network Interface (CNI), Container Storage Interface (CSI), and Cloud Controller Manager (CCM), are installed in a predefined sequence after the Kubernetes control plane is initialized.
     The upgrade order of these addons is also orchestrated before the Kubernetes cluster version is upgraded. This ensures smooth upgrades and stability throughout the Kubernetes version transitions.
 - ORC Image kind in Cluster Stacks `SCS`
+  - Cluster Stacks `SCS` can now include an ORC Image resource, which simplifies and automates the upload of cloud images to OpenStack
+  - This functionality was previously handled by the Cluster Stack Provider for OpenStack, which is now deprecated in favor of ORC. ORC offers enhanced support, including checksum verification for improved reliability
 - Helm charts to manage Cluster Stack Operator
   - simplifies configuration of release source
   - additional RBAC for provider specific resources can be configured
