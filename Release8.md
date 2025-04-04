@@ -16,8 +16,8 @@ This note will be removed, once Release 8 is released and these notes are valid.
 ### IaaS
 
 - Support of OpenStack 2024.1 and OpenStack 2024.2 (the SLURP model will be supported in future,
-  OpenStack 2025.1 is the first SLURP release, do not upgrade to 2024.2 if the SLURP model is to
-  be used in the future)
+  OpenStack 2025.1 is the first SLURP release, you can upgrade to 2025.1 from 2024.2, but (new)
+  also directly from 2024.1 if you prefer to skip the .2 release.
 - Support of Ceph Quincy and Ceph Reef
 - Support of Kubernetes 1.31 for the integrated Kubernetes cluster
 - The Netbox integration has been completely revised, there is now a dedicated tool called
