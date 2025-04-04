@@ -16,8 +16,10 @@ This note will be removed, once Release 8 is released and these notes are valid.
 ### IaaS
 
 - Support of OpenStack 2024.1 and OpenStack 2024.2 (the SLURP model will be supported in future,
-  OpenStack 2025.1 is the first SLURP release, you can upgrade to 2025.1 from 2024.2, but (new)
-  also directly from 2024.1 if you prefer to skip the .2 release.
+  OpenStack 2025.1 (Epoxy) is the first SLURP release, you can upgrade to 2025.1 from 2024.2 (Dalmatian),
+  but (new) also directly from 2024.1 (Caracal) if you prefer to skip the .2 release.
+    - The domain-manager enhancements from the SCS community have been included in the upstream
+      2024.2 OpenStack release.
 - Support of Ceph Quincy and Ceph Reef
 - Support of Kubernetes 1.31 for the integrated Kubernetes cluster
 - The Netbox integration has been completely revised, there is now a dedicated tool called
@@ -40,6 +42,7 @@ This note will be removed, once Release 8 is released and these notes are valid.
 - Helm charts to manage Cluster Stack Operator
   - simplifies configuration of release source
   - additional RBAC for provider specific resources can be configured
+- Cluster Stacks with latest Kubernetes Cluster API and latest Kubernetes versions (1.32)
 
 ### Operator focused improvements
 
