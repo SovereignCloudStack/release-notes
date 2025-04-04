@@ -43,12 +43,11 @@ This note will be removed, once Release 8 is released and these notes are valid.
 
 ### Operator focused improvements
 
-### SCS Developer focused improvements (testbed and k8s cluster management)
-
-## Upgrade/Migration notes
-
-- Upgrading SCS KaaS R7 to R8 for all OpenStack installations requires installing the ORC component, which was removed from Cluster-API Provider OpenStack v0.12
-  - [ORC installation]((https://github.com/k-orc/openstack-resource-controller?tab=readme-ov-file#installation) should be performed as part of the upgrade to Cluster-API Provider OpenStack v0.12
+- The openstack-health-monitor has seen minor improvements:
+  - The calculation of the percentage of IOs that have latencies above 10ms has been corrected.
+  - It can monitor the availability of endpoints for heat, swift, manila, octavia, barbican, senlin, magnum, aodh, gnocchi and ironic
+    just doing simple list (GET) calls if these are available and the client tooling is present (option -X).
+  - The plan is still to replace openstack-health-monitor with the scs-health-monitor in the future.
 - The container registry (SCS release v8.0.0) has been upgraded to Harbor v2.12.2
   - Since the last SCS release, the container registry has introduced numerous features and enhancements. Key highlights include:
     - Improved granular access control for robot accounts, enhancing security and automation
@@ -65,6 +64,13 @@ This note will be removed, once Release 8 is released and these notes are valid.
 
 The container registry and observability platform are fundamental and reliable components of the Sovereign Cloud Stack. By actively using them ourselves, we validate their functionality and ensure they are well-suited for seamless adoption by Cloud Service Providers.
 
+
+### SCS Developer focused improvements (testbed and k8s cluster management)
+
+## Upgrade/Migration notes
+
+- Upgrading SCS KaaS R7 to R8 for all OpenStack installations requires installing the ORC component, which was removed from Cluster-API Provider OpenStack v0.12
+  - [ORC installation]((https://github.com/k-orc/openstack-resource-controller?tab=readme-ov-file#installation) should be performed as part of the upgrade to Cluster-API Provider OpenStack v0.12
 ## Removals
 
 ### IaaS
