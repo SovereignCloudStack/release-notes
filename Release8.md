@@ -74,6 +74,8 @@ The container registry and observability platform are fundamental and reliable c
 
 - Upgrading SCS KaaS R7 to R8 for all OpenStack installations requires installing the ORC component, which was removed from Cluster-API Provider OpenStack v0.12
   - [ORC installation]((https://github.com/k-orc/openstack-resource-controller?tab=readme-ov-file#installation) should be performed as part of the upgrade to Cluster-API Provider OpenStack v0.12
+  - Also the CSO needs permissions to manage ORC images. This can be applied with CSO Helm values, see [SCS Cluster Stack](https://github.com/SovereignCloudStack/cluster-stacks/blob/main/providers/openstack/scs/README.md) for an example.
+
 ## Removals
 
 ### IaaS
