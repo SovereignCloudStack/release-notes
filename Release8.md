@@ -11,6 +11,15 @@ This note will be removed, once Release 8 is released and these notes are valid.
 - Cluster API Provider OpenStack v0.12
   - adds OpenStack Resource Controller (ORC) as external component
 
+### Cluster Stacks
+
+The SCS Cluster Stacks for R8 can be found on the SCS Harbor at
+registry.scs.community/kaas/cluster-stacks with the tags
+
+- openstack-scs-1-30-v3
+- openstack-scs-1-31-v2
+- openstack-scs-1-32-v1
+
 ## New Features (Highlights)
 
 ### IaaS
