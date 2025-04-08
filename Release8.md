@@ -42,7 +42,7 @@ registry.scs.community/kaas/cluster-stacks with the tags
   Netbox Manager that allows you to manage content from the Netbox with an independent repository
 - There is now a special burn-in image for preparing new hardware (this is used when new cloudpods
   are created and Ironic cannot yet be used)
-- A bunch of new services like such as Wazuh agent, Teleport agent or Dnsmasq
+- A bunch of new services such as Wazuh agent, Teleport agent or Dnsmasq
 - Enhancement of the testbed, in specific with Ironic to improve the CI capabilities
 
 ### KaaS
