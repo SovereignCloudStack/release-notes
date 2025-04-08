@@ -4,10 +4,10 @@ The SCS Software (reference implementation) is released in version 8 on 2025-04-
 
 ## Scope
 
-SCS continues to deliver a coordinated release cvoering the various modules that comprise
+SCS continues to deliver a coordinated release covering the various modules that comprise
 the SCS reference implementation. SCS includes the latest proven upstream technologies and
 ensures that upgrades to R8 are smooth using the CI processes. The reference implementation
-with the default settings fulfills the requirements from SCS-compatibel IaaS v5.1 and
+with the default settings fulfills the requirements from SCS-compatible IaaS v5.1 and
 KaaS v1.0 standards.
 
 ## Component Versions and User-visible improvements (highlights)
@@ -15,7 +15,7 @@ KaaS v1.0 standards.
 - Cluster API Provider OpenStack v0.12
   - adds OpenStack Resource Controller (ORC) as external component
 - OpenStack 2024.2 is included in R8, but can be skipped in case Operators
-  want to make use of skipping over it and do directly from 2024.1 to 2025.1
+  want to make use of skipping over it and upgrade directly from 2024.1 to 2025.1
   (with the next release of SCS).
 
 ### Cluster Stacks
@@ -42,7 +42,7 @@ registry.scs.community/kaas/cluster-stacks with the tags
   Netbox Manager that allows you to manage content from the Netbox with an independent repository
 - There is now a special burn-in image for preparing new hardware (this is used when new cloudpods
   are created and Ironic cannot yet be used)
-- A bunch of new services like such as Wazuh agent, Teleport agent or Dnsmasq
+- A bunch of new services such as Wazuh agent, Teleport agent or Dnsmasq
 - Enhancement of the testbed, in specific with Ironic to improve the CI capabilities
 
 ### KaaS
@@ -163,7 +163,7 @@ As before, the documentation has been kept up-to-date with changes in the implem
 
 We appreciate contribution to strategy and implementation, please join
 our community -- or just leave input on the github issues and PRs.
-Have a look at our [How to contribute page](https://scs.community/contribute/).
+Have a look at our [How to contribute page](https://docs.scs.community/community/).
 
 ## Next releases
 
@@ -178,7 +178,7 @@ Numerous community members and companies have contributed to this release. Notab
 elected members of the project board have stepped up and taken responsibility to drive
 the efforts to develop the software. We'd like to call out dNation, OSISM, UhuruTec,
 syself, syseleven and S7n Cloud Services for their contributions. We'd also like to
-thank ScaleUp Technologies, PlusServer, Wavecon, Artcodix, and Cleura for sponsoring
+thank ScaleUp Technologies, plusserver, Wavecon, Artcodix, and Cleura for sponsoring
 infrastructure. We also rely on the standardization work that is governed by the Forum
 SCS-Standards in the OSBA and funded by 17 supporting companies and supported by
 the ALASCA association. SCS has received funding from the German Government (BMWK)
