@@ -163,7 +163,7 @@ As before, the documentation has been kept up-to-date with changes in the implem
 
 We appreciate contribution to strategy and implementation, please join
 our community -- or just leave input on the github issues and PRs.
-Have a look at our [How to contribute page](https://scs.community/contribute/).
+Have a look at our [How to contribute page](https://docs.scs.community/community/).
 
 ## Next releases
 
