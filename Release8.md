@@ -15,7 +15,7 @@ KaaS v1.0 standards.
 - Cluster API Provider OpenStack v0.12
   - adds OpenStack Resource Controller (ORC) as external component
 - OpenStack 2024.2 is included in R8, but can be skipped in case Operators
-  want to make use of skipping over it and do directly from 2024.1 to 2025.1
+  want to make use of skipping over it and upgrade directly from 2024.1 to 2025.1
   (with the next release of SCS).
 
 ### Cluster Stacks
