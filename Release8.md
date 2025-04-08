@@ -178,7 +178,7 @@ Numerous community members and companies have contributed to this release. Notab
 elected members of the project board have stepped up and taken responsibility to drive
 the efforts to develop the software. We'd like to call out dNation, OSISM, UhuruTec,
 syself, syseleven and S7n Cloud Services for their contributions. We'd also like to
-thank ScaleUp Technologies, PlusServer, Wavecon, Artcodix, and Cleura for sponsoring
+thank ScaleUp Technologies, plusserver, Wavecon, Artcodix, and Cleura for sponsoring
 infrastructure. We also rely on the standardization work that is governed by the Forum
 SCS-Standards in the OSBA and funded by 17 supporting companies and supported by
 the ALASCA association. SCS has received funding from the German Government (BMWK)
