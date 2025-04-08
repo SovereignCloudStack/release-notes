@@ -7,7 +7,7 @@ The SCS Software (reference implementation) is released in version 8 on 2025-04-
 SCS continues to deliver a coordinated release covering the various modules that comprise
 the SCS reference implementation. SCS includes the latest proven upstream technologies and
 ensures that upgrades to R8 are smooth using the CI processes. The reference implementation
-with the default settings fulfills the requirements from SCS-compatibel IaaS v5.1 and
+with the default settings fulfills the requirements from SCS-compatible IaaS v5.1 and
 KaaS v1.0 standards.
 
 ## Component Versions and User-visible improvements (highlights)
