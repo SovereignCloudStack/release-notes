@@ -131,7 +131,7 @@ The Kubernetes clusters created with the scs and scs2 cluster stacks
 pass the [CNCF e2e conformance tests](https://github.com/cncf/k8s-conformance),
 with the exception of the `HostPort validates that there is no conflict
 between pods with same hostPort but different hostIP and protocol`
-test, which is not supported with the our default cilium CNI.
+test, which is not supported with our default cilium CNI.
 This test tests implementation details that are not portable and
 we have thus decided to officially ignore it in the conformance
 assessment.
