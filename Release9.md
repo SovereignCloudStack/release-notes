@@ -54,22 +54,22 @@ has streamlined configuration.
 Rather than generating the secrets in two different formats (which was done
 using a [helper helm chart](https://github.com/SovereignCloudStack/openstack-csp-helper)
 previously), we now use only one secret, simplifying
-the handling by only requiring one clusterResourceSet to be managed.
+the handling by only requiring one ClusterResourceSet to be managed.
 This also allows to support self-signed certificates (a custom CA for
 the OpenStack API) without trouble.
 
-The [clusterClass variables](https://github.com/SovereignCloudStack/cluster-stacks/blob/f5f9a4260d32bac33ff87146cb1f88ac55288bc9/providers/openstack/scs2/cluster-class/templates/cluster-class.yaml#L35)
+The [ClusterClass variables](https://github.com/SovereignCloudStack/cluster-stacks/blob/f5f9a4260d32bac33ff87146cb1f88ac55288bc9/providers/openstack/scs2/cluster-class/templates/cluster-class.yaml#L35)
 have been cleaned up and now follow a more
 consistent camelCase naming scheme. The defaults now use diskless flavors,
 providing a better preconfiguration on SCS virtualization infrastructure.
-Loadbalancers, flavors, disks etc. can be configured using clusterClass
-variables. The clusterClass releases no longer bundle the helm charts
-for the clusterAddons (such as CNI, CSI, CCM, metrics). Instead, they
+Load balancers, flavors, disks etc. can be configured using ClusterClass
+variables. The ClusterClass releases no longer bundle the Helm charts
+for the cluster addons (such as CNI, CSI, CCM, metrics). Instead, they
 are retrieved alongside the container images during cluster setup time
 by the Cluster Stack Operator (CSO). A new version v0.2.0-alpha.1 of
 CSO has been released to support this -- it also still supports the old
 way with bundled helm charts. In either case, the version is pinned by
-the specific clusterClass, so users remain on validated paths.
+the specific ClusterClass, so users remain on validated paths.
 
 The [node images](https://swift.services.a.regiocloud.tech/swift/v1/AUTH_b182637428444b9aa302bb8d5a5a418c/openstack-k8s-capi-images/)
 are now built using Ubuntu 24.04 LTS by default.
@@ -151,17 +151,17 @@ work.
 As mentioned above, the migration script and docs are still in
 development for conversion of `scs` to `scs2` cluster stacks.
 
-Due to the way that the helm chart of the OCCM currently creates
+Due to the way that the Helm chart of the OCCM currently creates
 the `cloud.conf` configuration file, it is not straightforward
-to control the type of Loadbalancer that OCCM creates for the
+to control the type of load balancer that OCCM creates for the
 cluster upon demand. So, currently, the cloud's default provider
-will be used. We wanted to add a clusterClass variable that
+will be used. We wanted to add a ClusterClass variable that
 allows to override this and explicitly configure `octavia-ovn`
 or `octavia-amphora`, but the best way to achieve this is still
 under discussion. This will be delivered with a future update
 and will not be a breaking change.
  
-Currently, when creating clusters, the successful start of coredns
+Currently, when creating clusters, the successful start of CoreDNS
 and many other pods depends on internal name resolution, which
 only succeeds after the OCCM has started successfully. As OCCM
 is scheduled on the worker nodes, this slows down the availability
