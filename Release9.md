@@ -17,11 +17,10 @@ easier maintainability and improved hardware management
 now use Ubuntu 24.04 LTS by default everywhere.
 
 ### KaaS
-The node images are also built with Ubuntu 24.04 LTS now. The new cluster
-stack series ["scs2"](https://github.com/SovereignCloudStack/cluster-stacks/tree/main/providers/openstack/scs2)
+The node images are also built with Ubuntu 24.04 LTS now. The new cluster stack ["scs2"](https://github.com/SovereignCloudStack/cluster-stacks/tree/main/providers/openstack/scs2)
 starts with [Kubernetes 1.33.x](https://kubernetes.io/releases/)
-and leverages cluster-api v1.10 and cluster-api-provider-openstack v0.12
-as well as the matching cilium, cinder-csi and OCCM versions.
+and leverages Cluster API v1.10 and Cluster API Provider OpenStack v0.12
+as well as the matching Cilium, Cinder CSI and OCCM versions.
 
 ## New Features (Highlights)
 
@@ -50,7 +49,7 @@ that are used for AI acceleration.
 
 ~...TODO... OSISM testbed, CiaB~
 
-The new `openstack-scs2` cluster class series which succeeds `openstack-scs`
+The new `scs2` cluster stack which succeeds the `scs` cluster stack
 has streamlined configuration.
 Rather than generating the secrets in two different formats (which was done
 using a [helper helm chart](https://github.com/SovereignCloudStack/openstack-csp-helper)
@@ -84,7 +83,7 @@ upgrade from OpenStack 2024.1 (OSISM-8 and 9), leveraging the work
 that the upstream OpenStack community does to support the so-called
 Skip-Level-Upgrade-Release-Process ([SLURP](https://docs.openstack.org/project-team-guide/release-cadence-adjustment.html)).
 
-The new cluster stack series "scs2" can live next to existing "scs"
+The new cluster stack "scs2" can live next to existing "scs"
 cluster stacks. The required update to the new CSO (v0.2.0-alpha.1)
 does support both. The [script collection](https://github.com/SovereignCloudStack/scs-training-kaas-scripts/)
 (that was developed for the international SCS trainings) also supports
@@ -99,7 +98,7 @@ in development and will be carefully tested before being released.
 The scs2 clusters support Kubernetes 1.33.x and future K8s versions.
 At release time, the cluster stack `openstack-scs2-1-33-v1` containing
 k8s-v1.33.4 was current.
-The old scs series will end with the final 1.31.x and 1.32.x patch
+The old `scs` cluster stack will end with the final 1.31.x and 1.32.x patch
 levels.
 
 ## Resolved Issues
