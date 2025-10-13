@@ -95,7 +95,7 @@ new cluster variables and a possibility to convert secrets this is
 possible. The code to do this conversion automatically is still
 in development and will be carefully tested before being released.
 
-The scs2 clusters support Kubernetes 1.33.x and future K8s versions.
+The scs2 clusters support Kubernetes 1.33.x and future Kubernetes versions.
 At release time, the cluster stack `openstack-scs2-1-33-v1` containing
 k8s-v1.33.4 was current.
 The old `scs` cluster stack will end with the final 1.31.x and 1.32.x patch
@@ -127,7 +127,7 @@ have become harder to perform as the upstream RefStack project is
 no longer maintained. The community is working on documentation
 and/or code to provide guidance to operators how to perform the tests.
 
-The k8s clusters created with the scs and scs2 cluster stacks
+The Kubernetes clusters created with the scs and scs2 cluster stacks
 pass the [CNCF e2e conformance tests](https://github.com/cncf/k8s-conformance),
 with the exception of the `HostPort validates that there is no conflict
 between pods with same hostPort but different hostIP and protocol`
