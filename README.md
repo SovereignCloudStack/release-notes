@@ -59,6 +59,10 @@ See [Release Notes for R6](Release6.md) for more information.
 
 See [Release Notes for R7](Release7.md) for more information.
 
+### Release 8 (2025-04-09)
+
+See [Release Notes for R8](Release8.md) for more information.
+
 
 ## Roadmap
 
